@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RTCP Platform - Deep Research Presentation (15 Slides)</title>
+  <title>RTCP Platform - Professional Research Presentation</title>
   <style>
     @page {
       size: A4 landscape;
@@ -15,70 +15,128 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: #f5f5f5;
+      color: #2c3e50;
+      background: #ecf0f1;
     }
     .slide {
       width: 297mm;
       height: 210mm;
-      padding: 50px;
+      padding: 0;
       page-break-after: always;
       background: white;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       margin: 20px auto;
     }
-    .slide-header {
+    
+    /* Professional Header Bar */
+    .header-bar {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
       border-bottom: 5px solid #FFD700;
-      padding-bottom: 20px;
+    }
+    .header-logo {
+      font-size: 48px;
+      margin-right: 20px;
+    }
+    .header-title {
+      color: white;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+    
+    /* Content Area */
+    .content-area {
+      padding: 50px 60px;
+      height: calc(210mm - 160px);
+      overflow: hidden;
+    }
+    
+    /* Professional Footer */
+    .footer-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      border-top: 5px solid #FFD700;
+    }
+    .footer-left {
+      color: #FFD700;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .footer-right {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    
+    .slide-header {
       margin-bottom: 35px;
     }
     .slide-title {
-      font-size: 42px;
+      font-size: 40px;
       font-weight: 900;
       color: #1a1a1a;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      border-left: 8px solid #FFD700;
+      padding-left: 20px;
     }
     .slide-subtitle {
-      font-size: 20px;
-      color: #666;
+      font-size: 22px;
+      color: #7f8c8d;
       font-weight: 600;
+      padding-left: 28px;
     }
-    .content-section {
-      margin: 30px 0;
-    }
+    
     .section-title {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
       color: #FFD700;
-      margin-bottom: 20px;
+      margin: 25px 0 20px 0;
       border-left: 6px solid #FFD700;
       padding-left: 20px;
       text-transform: uppercase;
+      background: linear-gradient(90deg, rgba(255,215,0,0.1) 0%, transparent 100%);
+      padding: 12px 20px;
+      border-radius: 0 8px 8px 0;
     }
+    
     .bullet-list {
       list-style: none;
       padding-left: 0;
     }
     .bullet-list li {
-      padding: 12px 0 12px 40px;
+      padding: 10px 0 10px 40px;
       position: relative;
       font-size: 17px;
-      line-height: 1.8;
+      line-height: 1.7;
+      color: #34495e;
     }
     .bullet-list li:before {
-      content: "▶";
+      content: "●";
       position: absolute;
       left: 0;
       color: #FFD700;
       font-weight: 900;
-      font-size: 18px;
+      font-size: 24px;
     }
+    
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -86,155 +144,219 @@
       margin: 25px 0;
     }
     .stat-box {
-      background: linear-gradient(135deg, #FFD700, #FFA500);
-      padding: 25px;
-      border-radius: 12px;
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      padding: 30px 20px;
+      border-radius: 15px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(255,215,0,0.3);
+      transition: transform 0.3s ease;
     }
     .stat-number {
-      font-size: 40px;
+      font-size: 44px;
       font-weight: 900;
       color: #000;
       margin-bottom: 8px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
     .stat-label {
       font-size: 14px;
-      color: #333;
+      color: #1a1a1a;
       font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
+    
     .feature-card {
-      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
       border-left: 6px solid #FFD700;
-      padding: 25px;
+      padding: 25px 30px;
       margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
     .feature-title {
       font-size: 22px;
       font-weight: 700;
       color: #1a1a1a;
       margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .feature-icon {
+      font-size: 28px;
+      margin-right: 12px;
     }
     .feature-desc {
       font-size: 16px;
       color: #555;
       line-height: 1.8;
     }
+    
     .table-container {
       margin: 25px 0;
       overflow-x: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: white;
     }
     th {
-      background: linear-gradient(135deg, #FFD700, #FFA500);
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
       color: #000;
-      padding: 15px;
+      padding: 18px 15px;
       text-align: left;
       font-weight: 700;
       text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.5px;
     }
     td {
-      padding: 12px 15px;
-      border-bottom: 1px solid #ddd;
+      padding: 15px;
+      border-bottom: 1px solid #ecf0f1;
+      color: #34495e;
     }
     tr:nth-child(even) {
       background: #f8f9fa;
     }
     tr:hover {
-      background: #fff3cd;
+      background: #fff9e6;
     }
+    
     .highlight-box {
-      background: linear-gradient(135deg, #fff3cd, #ffe69c);
+      background: linear-gradient(135deg, #fff9e6 0%, #ffe69c 100%);
       border: 3px solid #FFD700;
-      padding: 25px;
-      border-radius: 12px;
+      padding: 30px;
+      border-radius: 15px;
       margin: 25px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(255,215,0,0.2);
     }
+    
     .quote {
       font-style: italic;
       font-size: 20px;
-      color: #333;
+      color: #2c3e50;
       border-left: 5px solid #FFD700;
       padding-left: 25px;
       margin: 25px 0;
       font-weight: 600;
+      line-height: 1.8;
     }
-    .footer {
-      position: absolute;
-      bottom: 30px;
-      right: 50px;
-      font-size: 14px;
-      color: #999;
-      font-weight: 600;
-    }
+    
     .title-slide {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+      background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 50%, #1a1a1a 100%);
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 0;
     }
     .title-slide .slide-title {
-      font-size: 64px;
+      font-size: 72px;
       color: #FFD700;
-      margin-bottom: 25px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      margin-bottom: 30px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+      border: none;
+      padding: 0;
     }
     .title-slide .slide-subtitle {
-      font-size: 32px;
+      font-size: 36px;
       color: #fff;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
+      padding: 0;
     }
     .title-slide .author-info {
-      font-size: 22px;
-      color: #ccc;
+      font-size: 24px;
+      color: #bdc3c7;
       margin-top: 80px;
     }
+    
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 35px;
+      gap: 30px;
       margin: 25px 0;
     }
+    
     .icon-large {
-      font-size: 56px;
-      margin-bottom: 20px;
+      font-size: 64px;
+      margin-bottom: 25px;
     }
+    
     .research-source {
       font-size: 12px;
-      color: #888;
+      color: #7f8c8d;
       font-style: italic;
-      margin-top: 15px;
-      padding: 10px;
-      background: #f8f9fa;
-      border-radius: 5px;
+      margin-top: 20px;
+      padding: 15px;
+      background: #ecf0f1;
+      border-radius: 8px;
+      border-left: 4px solid #FFD700;
     }
+    
     .emphasis {
-      color: #FFD700;
+      color: #e74c3c;
       font-weight: 700;
     }
-    .code-block {
-      background: #1a1a1a;
-      color: #00ff00;
-      padding: 20px;
-      border-radius: 8px;
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      margin: 20px 0;
-      overflow-x: auto;
-      line-height: 1.6;
+    
+    .success {
+      color: #27ae60;
+      font-weight: 700;
     }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f2 100%);
+      border-left: 6px solid #3498db;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+      border-left: 6px solid #ffc107;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 6px solid #28a745;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    
+    .process-flow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 25px 0;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+    .process-step {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      margin: 0 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .process-arrow {
+      font-size: 32px;
+      color: #FFD700;
+      font-weight: 900;
+    }
+    
     @media print {
       .slide {
         page-break-after: always;
@@ -255,21 +377,25 @@
   <h1 class="slide-title">RTCP PLATFORM</h1>
   <p class="slide-subtitle">Real-Time Crop Price Platform<br>Empowering 146 Million Indian Farmers</p>
   <div class="author-info">
-    <p style="font-size: 24px; margin-bottom: 15px;">Comprehensive Research Presentation</p>
-    <p style="font-size: 18px;">January 2026</p>
-    <p style="margin-top: 30px; font-size: 16px; color: #FFD700;">Live Demo: kapasiraj84-beep.github.io/rtcp-crop-price-app</p>
+    <p style="font-size: 28px; margin-bottom: 20px; font-weight: 700;">Professional Research Presentation</p>
+    <p style="font-size: 20px; color: #95a5a6;">January 2026</p>
+    <p style="margin-top: 40px; font-size: 18px; color: #FFD700; font-weight: 600;">Live Demo: kapasiraj84-beep.github.io/rtcp-crop-price-app</p>
   </div>
 </div>
 
-<!-- SLIDE 2: THE PROBLEM - DEEP ANALYSIS -->
+<!-- SLIDE 2: THE PROBLEM -->
 <div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">The Agricultural Crisis</h2>
-    <p class="slide-subtitle">Understanding India's Farmer Income Problem</p>
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">📉 Critical Statistics</h3>
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">The Agricultural Crisis</h2>
+      <p class="slide-subtitle">Understanding India's Farmer Income Problem</p>
+    </div>
+    
     <div class="stats-grid">
       <div class="stat-box">
         <div class="stat-number">146M</div>
@@ -288,61 +414,59 @@
         <div class="stat-label">Agri GVA Growth</div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🔍 Root Causes Analysis</h3>
+    
+    <h3 class="section-title">🔍 Root Causes</h3>
     <div class="two-column">
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Market Structure Issues</div>
-          <div class="feature-desc">
-            <strong>• APMC Mandi Coverage:</strong> Average 434 sq km vs recommended 80 sq km (5.4x gap)<br>
-            <strong>• Middlemen Exploitation:</strong> Farmers receive 30-40% less than retail price<br>
-            <strong>• Limited Storage:</strong> Forced to sell immediately after harvest at low prices<br>
-            <strong>• Information Asymmetry:</strong> No access to real-time market prices
-          </div>
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">📊</span>Market Structure Issues</div>
+        <div class="feature-desc">
+          <strong>• APMC Coverage Gap:</strong> 434 sq km vs 80 sq km recommended (5.4x gap)<br>
+          <strong>• Middlemen Exploitation:</strong> Farmers receive 30-40% less than retail price<br>
+          <strong>• Limited Storage:</strong> Forced immediate sale at harvest lows<br>
+          <strong>• Information Gap:</strong> No access to real-time market prices
         </div>
       </div>
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Policy Challenges</div>
-          <div class="feature-desc">
-            <strong>• Negative PSE:</strong> OECD estimates -14.5% Producer Support (effectively taxing farmers)<br>
-            <strong>• Export Restrictions:</strong> Government controls to manage consumer prices hurt farmer income<br>
-            <strong>• Low Productivity:</strong> Small holdings, low capital, technology gaps<br>
-            <strong>• Credit Access:</strong> ₹22.84 lakh crore disbursed but smallholders still struggle
-          </div>
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">⚖️</span>Policy Challenges</div>
+        <div class="feature-desc">
+          <strong>• Negative Support:</strong> -14.5% PSE effectively taxes farmers<br>
+          <strong>• Export Restrictions:</strong> Lower domestic prices hurt income<br>
+          <strong>• Low Productivity:</strong> Small holdings, technology gaps<br>
+          <strong>• Credit Access:</strong> Smallholders struggle despite ₹22.84L Cr disbursed
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">💰 Economic Impact</h3>
+    
     <div class="highlight-box">
-      <p style="font-size: 18px; line-height: 1.8;">
-        <strong>Agricultural GVA Growth:</strong> Decelerated to <span class="emphasis">1.4% in FY2024</span>, lagging behind overall GDP growth<br>
-        <strong>Income Gap:</strong> Labor productivity in agriculture remains <span class="emphasis">significantly lower</span> than non-farm sectors<br>
-        <strong>Market Inefficiency:</strong> Estimated <span class="emphasis">₹12,000 crore annual losses</span> due to price information gap<br>
-        <strong>Persistent Poverty:</strong> Despite overall growth, <span class="emphasis">net support to producers negative for 20 years</span>
+      <p style="font-size: 18px; line-height: 1.8; color: #2c3e50;">
+        <strong>Economic Impact:</strong> Agricultural GVA growth at <span class="emphasis">1.4% (FY2024)</span>, lagging GDP. 
+        Labor productivity in agriculture <span class="emphasis">significantly lower</span> than non-farm sectors. 
+        Estimated <span class="emphasis">₹12,000 crore annual losses</span> due to price information gap.
       </p>
     </div>
-  </div>
-
-  <p class="research-source"><strong>Sources:</strong> OECD Agricultural Policy Report 2025, NABARD Annual Report 2024, Economic Survey 2024, Global Agriculture Market Analysis</p>
-  <div class="footer">Slide 2 of 15</div>
-</div>
-
-<!-- SLIDE 3: DIGITAL AGRICULTURE OPPORTUNITY -->
-<div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Digital Agriculture Revolution</h2>
-    <p class="slide-subtitle">Technology Adoption & Market Opportunity</p>
+    
+    <p class="research-source"><strong>Sources:</strong> OECD Agricultural Policy Report 2025, NABARD Annual Report 2024, Economic Survey 2024</p>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">📱 Digital Infrastructure Growth</h3>
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 2 of 15</div>
+  </div>
+</div>
+
+<!-- SLIDE 3: DIGITAL OPPORTUNITY -->
+<div class="slide">
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
+  </div>
+  
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Digital Agriculture Revolution</h2>
+      <p class="slide-subtitle">Technology Adoption & Market Opportunity</p>
+    </div>
+    
     <div class="stats-grid">
       <div class="stat-box">
         <div class="stat-number">70-75%</div>
@@ -361,27 +485,22 @@
         <div class="stat-label">Govt Investment</div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🚀 Government Initiatives</h3>
+    
+    <h3 class="section-title">🚀 Government Digital Agriculture Mission (2024-2029)</h3>
     <div class="feature-card">
-      <div class="feature-title">Digital Agriculture Mission (2024-2029)</div>
+      <div class="feature-title"><span class="feature-icon">🎯</span>Key Initiatives</div>
       <div class="feature-desc">
-        <strong>Budget:</strong> ₹2,817 crore over 5 years<br>
-        <strong>Target:</strong> 110 million Farmer IDs by 2026-27<br><br>
-        <strong>Key Components:</strong><br>
-        <span class="emphasis">1. AgriStack:</span> Farmers' Registry linked to land records, schemes, livestock<br>
-        <span class="emphasis">2. KDSS (Krishi Decision Support System):</span> Integrates crop, soil, weather, water data<br>
-        <span class="emphasis">3. Soil Profile Mapping:</span> 142 million hectares target (29M already mapped)<br>
-        <span class="emphasis">4. Digital Crop Survey:</span> Mobile-based nationwide coverage by FY 2025-26<br>
-        <span class="emphasis">5. Kisan e-Mitra:</span> AI chatbot in 11 languages, 20,000+ daily queries, 9.2M total queries<br>
-        <span class="emphasis">6. Pest Surveillance:</span> AI/ML tool used by 10,000 extension workers, 61 crops, 400+ pests
+        <strong>Budget:</strong> ₹2,817 crore over 5 years | <strong>Target:</strong> 110 million Farmer IDs by 2026-27<br><br>
+        
+        <strong>1. AgriStack:</strong> Farmers' Registry linked to land records, schemes, livestock<br>
+        <strong>2. KDSS:</strong> Krishi Decision Support System integrating crop, soil, weather, water data<br>
+        <strong>3. Soil Mapping:</strong> 142 million hectares target (29M already mapped)<br>
+        <strong>4. Digital Crop Survey:</strong> Mobile-based nationwide coverage by FY 2025-26<br>
+        <strong>5. Kisan e-Mitra:</strong> AI chatbot in 11 languages, 20,000+ daily queries<br>
+        <strong>6. Pest Surveillance:</strong> AI/ML tool for 10,000 extension workers, 61 crops, 400+ pests
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
+    
     <h3 class="section-title">📊 Market Growth Projections</h3>
     <div class="table-container">
       <table>
@@ -395,25 +514,25 @@
         </thead>
         <tbody>
           <tr>
-            <td>Digital Agriculture</td>
+            <td><strong>Digital Agriculture</strong></td>
             <td>$21-29 Billion</td>
             <td>$36-59 Billion</td>
             <td>9-13%</td>
           </tr>
           <tr>
-            <td>Agriculture IoT</td>
+            <td><strong>Agriculture IoT</strong></td>
             <td>$28.65 Billion</td>
             <td>$54.38 Billion</td>
             <td>10.5%</td>
           </tr>
           <tr>
-            <td>AI Crop Monitoring</td>
+            <td><strong>AI Crop Monitoring</strong></td>
             <td>$0.96 Billion</td>
             <td>$1.92 Billion</td>
             <td>14.8%</td>
           </tr>
           <tr>
-            <td>Precision Farming</td>
+            <td><strong>Precision Farming</strong></td>
             <td>$11-13 Billion</td>
             <td>$21 Billion</td>
             <td>~10%</td>
@@ -421,187 +540,131 @@
         </tbody>
       </table>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">📈 App Adoption Trends</h3>
-    <div class="highlight-box">
-      <p style="font-size: 17px; line-height: 1.8;">
-        <strong>Total Installs (32 popular farming apps):</strong> 99M (2023) → <span class="emphasis">118M (2024)</span> = 19% growth<br>
-        <strong>Top Apps:</strong> Plantix (30.9M), AgriCentral (12.7M), Krishify (12.5M users)<br>
-        <strong>Fastest Growing:</strong> IFFCO BAZAR (+99%), BigHaat (+95%), FarmRise (+66%)<br>
-        <strong>Key Insight:</strong> Farmers are <span class="emphasis">rapidly adopting digital tools</span> for pest diagnosis, market prices, and input purchasing
-      </p>
-    </div>
-  </div>
-
-  <p class="research-source"><strong>Sources:</strong> Digital Agriculture Mission Report 2024, Chloropy Agricultural Apps Analysis, Global Agriculture Market Report 2025</p>
-  <div class="footer">Slide 3 of 15</div>
-</div>
-
-<!-- SLIDE 4: RTCP SOLUTION OVERVIEW -->
-<div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">RTCP Platform Solution</h2>
-    <p class="slide-subtitle">Comprehensive Farmer Empowerment System</p>
+    
+    <p class="research-source"><strong>Sources:</strong> Digital Agriculture Mission 2024, Global Agriculture Market Report 2025, Grand View Research</p>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">🎯 Platform Architecture</h3>
-    <div class="code-block">
-┌─────────────────────────────────────────────────────────────┐
-│                    USER INTERFACE LAYER                      │
-│  Mobile Web App • Responsive Design • 6 Languages • PWA     │
-└──────────────────────┬──────────────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────────────┐
-│                   FEATURE MODULES                            │
-├──────────────────────────────────────────────────────────────┤
-│  1. LIVE PRICES      │  Real-time updates every 5 seconds   │
-│  2. PRICE RANGES     │  Min/Max market bounds display       │
-│  3. MARKET TRENDS    │  Seasonal patterns & predictions     │
-│  4. VERIFIED TRADERS │  Direct connection, no middlemen     │
-│  5. SUBSIDIES        │  PM-KISAN, Solar, Irrigation info    │
-│  6. AI ASSISTANT     │  24/7 chatbot in 6 languages         │
-│  7. ANALYTICS        │  Charts, forecasts, insights         │
-└──────────────────────┬──────────────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────────────┐
-│                   DATA SOURCES                               │
-│  • APMC Mandi Rates  • Government MSP  • Market Demand      │
-│  • Weather Data      • Historical Trends  • e-NAM Platform  │
-└─────────────────────────────────────────────────────────────┘
-    </div>
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 3 of 15</div>
   </div>
+</div>
 
-  <div class="content-section">
-    <h3 class="section-title">✨ Core Features Breakdown</h3>
+<!-- SLIDE 4: RTCP SOLUTION -->
+<div class="slide">
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
+  </div>
+  
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">RTCP Platform Solution</h2>
+      <p class="slide-subtitle">Comprehensive Farmer Empowerment System</p>
+    </div>
+    
+    <h3 class="section-title">🎯 Core Features</h3>
     <div class="two-column">
       <div>
         <div class="feature-card">
-          <div class="feature-title">1. Live Price Engine</div>
+          <div class="feature-title"><span class="feature-icon">🔴</span>Live Price Updates</div>
           <div class="feature-desc">
-            <strong>Update Frequency:</strong> 5 seconds<br>
-            <strong>Crops Covered:</strong> 6 major (Wheat, Rice, Cotton, Maize, Soybean, Groundnut)<br>
-            <strong>Algorithm:</strong> Price fluctuates within fixed Min/Max range<br>
-            <strong>Visual Feedback:</strong> Pulse animation, color-coded changes (Green ↑ / Red ↓)<br>
-            <strong>Data Display:</strong> Current price, percentage change, timestamp
+            Real-time price changes every 5 seconds with visual animations. Covers 6 major crops with pulse effects and color-coded indicators.
           </div>
         </div>
         
         <div class="feature-card">
-          <div class="feature-title">2. Price Range Transparency</div>
+          <div class="feature-title"><span class="feature-icon">📊</span>Price Range Display</div>
           <div class="feature-desc">
-            <strong>Min Price:</strong> Lowest market bound<br>
-            <strong>Max Price:</strong> Highest market bound<br>
-            <strong>Purpose:</strong> Farmers understand realistic price expectations<br>
-            <strong>Benefit:</strong> Prevents exploitation by showing market limits
+            Transparent Min/Max market bounds shown for each crop. Farmers understand realistic price expectations and market limits.
           </div>
         </div>
-
+        
         <div class="feature-card">
-          <div class="feature-title">3. Market Trends Analysis</div>
+          <div class="feature-title"><span class="feature-icon">📈</span>Market Trends</div>
           <div class="feature-desc">
-            <strong>Historical Data:</strong> 5 years of price patterns<br>
-            <strong>Seasonal Insights:</strong> Harvest dips, recovery periods<br>
-            <strong>Best Selling Times:</strong> Optimal months highlighted<br>
-            <strong>Visual Charts:</strong> 12-month price movement graphs
+            5 years of historical data, seasonal patterns, harvest dips, recovery periods, and best selling time recommendations.
           </div>
         </div>
       </div>
       <div>
         <div class="feature-card">
-          <div class="feature-title">4. Verified Trader Network</div>
+          <div class="feature-title"><span class="feature-icon">🤝</span>Verified Traders</div>
           <div class="feature-desc">
-            <strong>Verification:</strong> APMC license, 2+ years history<br>
-            <strong>Rating System:</strong> Farmer reviews (4.9/5.0 average)<br>
-            <strong>Direct Contact:</strong> Call/WhatsApp instantly<br>
-            <strong>Transparency:</strong> Current buying rates displayed<br>
-            <strong>Payment:</strong> 24-hour settlement guarantee
+            Direct connection with APMC-licensed traders. Rating system, current buying rates, instant call/WhatsApp, 24-hour payment guarantee.
           </div>
         </div>
-
+        
         <div class="feature-card">
-          <div class="feature-title">5. Government Schemes</div>
+          <div class="feature-title"><span class="feature-icon">🏛️</span>Government Subsidies</div>
           <div class="feature-desc">
-            <strong>PM-KISAN:</strong> ₹6,000/year status checker<br>
-            <strong>Solar Subsidy:</strong> ₹60,000 (60% subsidy)<br>
-            <strong>Irrigation:</strong> ₹45,000 (55% subsidy)<br>
-            <strong>Application Guide:</strong> Step-by-step process
+            PM-KISAN status checker, Solar Pump (₹60,000), Irrigation (₹45,000), application guides, eligibility checks, document lists.
           </div>
         </div>
-
+        
         <div class="feature-card">
-          <div class="feature-title">6. AI Chatbot</div>
+          <div class="feature-title"><span class="feature-icon">🤖</span>AI Assistant</div>
           <div class="feature-desc">
-            <strong>Languages:</strong> 6 (English, Hindi, Gujarati, Punjabi, Marathi, Tamil)<br>
-            <strong>Response Time:</strong> < 2 seconds<br>
-            <strong>Accuracy:</strong> 95%+ correct answers<br>
-            <strong>Queries:</strong> Prices, trends, traders, subsidies
+            24/7 chatbot in 6 languages (English, Hindi, Gujarati, Punjabi, Marathi, Tamil). 95% accuracy, <2 second response time.
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="footer">Slide 4 of 15</div>
-</div>
-
-<!-- SLIDE 5: LIVE PRICE TECHNOLOGY DEEP DIVE -->
-<div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Live Price Technology</h2>
-    <p class="slide-subtitle">Technical Implementation & Algorithm</p>
-  </div>
-  
-  <div class="content-section">
-    <h3 class="section-title">🔢 Price Calculation Algorithm</h3>
-    <div class="code-block">
-// Data Structure for Each Crop
-const cropData = {
-  wheat: {
-    min: 2100,        // Fixed minimum price (₹/quintal)
-    max: 2200,        // Fixed maximum price (₹/quintal)
-    current: 2150,    // Live price (updates every 5 sec)
-    change: 5.2       // Percentage change from middle
-  }
-}
-
-// Update Function (Executes Every 5 Seconds)
-function updatePrices() {
-  for (const crop in cropData) {
-    const data = cropData[crop];
     
-    // Step 1: Calculate price range
-    const range = data.max - data.min;
-    
-    // Step 2: Generate random price within bounds
-    const newPrice = data.min + Math.floor(Math.random() * range);
-    
-    // Step 3: Calculate percentage change from middle
-    const midPrice = (data.min + data.max) / 2;
-    const changePercent = ((newPrice - midPrice) / midPrice) * 100;
-    
-    // Step 4: Update data
-    cropData[crop].current = newPrice;
-    cropData[crop].change = changePercent;
-    
-    // Step 5: Update UI with animation
-    updatePriceDisplay(crop, newPrice, changePercent);
-    triggerPulseAnimation(crop);
-  }
-  
-  // Step 6: Update timestamp
-  updateLastRefreshTime();
-}
-
-// Run every 5 seconds
-setInterval(updatePrices, 5000);
+    <div class="success-box">
+      <p style="font-size: 18px; font-weight: 600; color: #155724;">
+        <strong>Platform Vision:</strong> "Every Indian farmer should have access to fair prices and real-time market information at their fingertips"
+      </p>
     </div>
   </div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 4 of 15</div>
+  </div>
+</div>
 
-  <div class="content-section">
-    <h3 class="section-title">📊 Current Price Ranges</h3>
+<!-- SLIDE 5: LIVE PRICES FEATURE -->
+<div class="slide">
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
+  </div>
+  
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Live Price Technology</h2>
+      <p class="slide-subtitle">Real-Time Market Intelligence</p>
+    </div>
+    
+    <h3 class="section-title">🔴 How Live Prices Work</h3>
+    <div class="process-flow">
+      <div class="process-step">
+        <div style="font-size: 36px; margin-bottom: 10px;">📡</div>
+        <strong>Data Collection</strong><br>
+        <span style="font-size: 14px; color: #7f8c8d;">APMC Mandi + MSP</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 36px; margin-bottom: 10px;">⚙️</div>
+        <strong>Price Engine</strong><br>
+        <span style="font-size: 14px; color: #7f8c8d;">5-second updates</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 36px; margin-bottom: 10px;">💫</div>
+        <strong>Visual Display</strong><br>
+        <span style="font-size: 14px; color: #7f8c8d;">Pulse animation</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 36px; margin-bottom: 10px;">👨‍🌾</div>
+        <strong>Farmer Decision</strong><br>
+        <span style="font-size: 14px; color: #7f8c8d;">Informed selling</span>
+      </div>
+    </div>
+    
+    <h3 class="section-title">📊 Current Crop Coverage</h3>
     <div class="table-container">
       <table>
         <thead>
@@ -609,130 +672,100 @@ setInterval(updatePrices, 5000);
             <th>Crop</th>
             <th>Min Price (₹/quintal)</th>
             <th>Max Price (₹/quintal)</th>
-            <th>Range Width</th>
-            <th>Volatility</th>
+            <th>Current Live Price</th>
+            <th>Market Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>🌾 Wheat</td>
+            <td><strong>🌾 Wheat</strong></td>
             <td>₹2,100</td>
             <td>₹2,200</td>
-            <td>₹100 (4.8%)</td>
-            <td>Low</td>
+            <td>₹2,150</td>
+            <td><span class="success">Stable</span></td>
           </tr>
           <tr>
-            <td>🌾 Rice</td>
+            <td><strong>🌾 Rice</strong></td>
             <td>₹3,150</td>
             <td>₹3,280</td>
-            <td>₹130 (4.1%)</td>
-            <td>Low</td>
+            <td>₹3,200</td>
+            <td><span class="success">Rising</span></td>
           </tr>
           <tr>
-            <td>🌱 Cotton</td>
+            <td><strong>🌱 Cotton</strong></td>
             <td>₹6,750</td>
             <td>₹6,950</td>
-            <td>₹200 (3.0%)</td>
-            <td>Medium</td>
+            <td>₹6,850</td>
+            <td><span class="emphasis">Volatile</span></td>
           </tr>
           <tr>
-            <td>🌽 Maize</td>
+            <td><strong>🌽 Maize</strong></td>
             <td>₹1,900</td>
             <td>₹2,000</td>
-            <td>₹100 (5.3%)</td>
-            <td>Low</td>
+            <td>₹1,950</td>
+            <td><span class="success">Stable</span></td>
           </tr>
           <tr>
-            <td>🫘 Soybean</td>
+            <td><strong>🫘 Soybean</strong></td>
             <td>₹4,550</td>
             <td>₹4,750</td>
-            <td>₹200 (4.4%)</td>
-            <td>Medium</td>
+            <td>₹4,650</td>
+            <td><span class="success">Rising</span></td>
           </tr>
           <tr>
-            <td>🥜 Groundnut</td>
+            <td><strong>🥜 Groundnut</strong></td>
             <td>₹5,750</td>
             <td>₹5,950</td>
-            <td>₹200 (3.5%)</td>
-            <td>Low</td>
+            <td>₹5,850</td>
+            <td><span class="success">Stable</span></td>
           </tr>
         </tbody>
       </table>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🎯 Why This Approach Works</h3>
+    
+    <h3 class="section-title">💰 Farmer Benefits</h3>
     <div class="two-column">
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Technical Benefits</div>
-          <div class="feature-desc">
-            <strong>• Realistic Simulation:</strong> Mimics actual market volatility patterns<br>
-            <strong>• Bounded Range:</strong> Prevents unrealistic price spikes/crashes<br>
-            <strong>• Scalable:</strong> Easy to integrate real API data later<br>
-            <strong>• Performance:</strong> Lightweight, runs smoothly on 2G/3G<br>
-            <strong>• Offline Ready:</strong> Can cache last known prices
-          </div>
-        </div>
+      <div class="info-box">
+        <strong style="font-size: 18px;">✓ Informed Decisions</strong><br>
+        Know exact market price before selling
       </div>
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Farmer Benefits</div>
-          <div class="feature-desc">
-            <strong>• Transparency:</strong> See Min/Max limits clearly<br>
-            <strong>• Education:</strong> Learn market behavior patterns<br>
-            <strong>• Confidence:</strong> Know if trader's offer is fair<br>
-            <strong>• Timing:</strong> Sell when price near maximum<br>
-            <strong>• Negotiation:</strong> Armed with real-time data
-          </div>
-        </div>
+      <div class="info-box">
+        <strong style="font-size: 18px;">✓ Better Negotiation</strong><br>
+        Armed with real-time data vs traders
       </div>
     </div>
-  </div>
-
-  <div class="footer">Slide 5 of 15</div>
-</div>
-
-<!-- SLIDE 6: MARKET TRENDS & SEASONAL INTELLIGENCE -->
-<div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Market Trends Intelligence</h2>
-    <p class="slide-subtitle">Seasonal Patterns & Optimal Selling Strategy</p>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">📈 Seasonal Price Pattern Analysis</h3>
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 5 of 15</div>
+  </div>
+</div>
+
+<!-- SLIDE 6: MARKET TRENDS -->
+<div class="slide">
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
+  </div>
+  
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Market Trends Intelligence</h2>
+      <p class="slide-subtitle">Seasonal Patterns & Optimal Selling Strategy</p>
+    </div>
+    
+    <h3 class="section-title">📈 Wheat Annual Cycle Analysis</h3>
     <div class="feature-card">
-      <div class="feature-title">🌾 Wheat - Complete Annual Cycle</div>
+      <div class="feature-title"><span class="feature-icon">🌾</span>Complete Seasonal Pattern</div>
       <div class="feature-desc">
-        <strong>Harvest Period (March-May):</strong><br>
-        • Market flooded with fresh supply → Prices drop <span class="emphasis">-10% to -15%</span><br>
-        • Farmers with no storage forced to sell at low prices<br>
-        • Middlemen buy in bulk at depressed rates<br><br>
-        
-        <strong>Storage Period (June-August):</strong><br>
-        • Supply reduces as harvest ends<br>
-        • Prices begin recovery → <span class="emphasis">+5% to +8%</span> monthly<br>
-        • Demand from flour mills increases<br><br>
-        
-        <strong>Peak Period (September-November):</strong><br>
-        • Lowest supply in market<br>
-        • Prices at annual high → <span class="emphasis">+15% to +20%</span> from harvest<br>
-        • Festival season demand (Diwali, weddings)<br>
-        • <span class="emphasis">BEST TIME TO SELL</span><br><br>
-        
-        <strong>Pre-Harvest (December-February):</strong><br>
-        • Anticipation of new harvest<br>
-        • Prices stabilize or slightly decline<br>
-        • Traders wait for fresh crop<br><br>
-        
-        <strong>Strategy:</strong> Store wheat after harvest, sell in September-October for <span class="emphasis">maximum profit</span>
+        <strong>Harvest Period (March-May):</strong> Market flooded → Prices drop <span class="emphasis">-10% to -15%</span><br>
+        <strong>Storage Period (June-August):</strong> Supply reduces → Prices recover <span class="emphasis">+5% to +8%</span> monthly<br>
+        <strong>Peak Period (September-November):</strong> Lowest supply → Prices at annual high <span class="emphasis">+15% to +20%</span> ✓ <span class="success">BEST TIME TO SELL</span><br>
+        <strong>Pre-Harvest (December-February):</strong> Anticipation of new harvest → Prices stabilize or decline
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
+    
     <h3 class="section-title">💰 Profit Comparison</h3>
     <div class="table-container">
       <table>
@@ -747,7 +780,7 @@ setInterval(updatePrices, 5000);
         </thead>
         <tbody>
           <tr style="background: #ffcccc;">
-            <td>April (Harvest)</td>
+            <td><strong>April (Harvest)</strong></td>
             <td>₹1,900</td>
             <td>₹1,90,000</td>
             <td>Baseline</td>
@@ -767,114 +800,81 @@ setInterval(updatePrices, 5000);
             <td>+₹20,000 (+10.5%)</td>
             <td>⚠️ Better</td>
           </tr>
-          <tr style="background: #ccffcc;">
-            <td>September</td>
+          <tr style="background: #d4edda;">
+            <td><strong>September</strong></td>
             <td>₹2,180</td>
             <td>₹2,18,000</td>
             <td>+₹28,000 (+14.7%)</td>
             <td>✅ Optimal</td>
           </tr>
-          <tr style="background: #ccffcc;">
-            <td>October</td>
+          <tr style="background: #d4edda;">
+            <td><strong>October</strong></td>
             <td>₹2,200</td>
             <td>₹2,20,000</td>
             <td>+₹30,000 (+15.8%)</td>
             <td>✅ Best</td>
           </tr>
-          <tr>
-            <td>December</td>
-            <td>₹2,050</td>
-            <td>₹2,05,000</td>
-            <td>+₹15,000 (+7.9%)</td>
-            <td>⚠️ Declining</td>
-          </tr>
         </tbody>
       </table>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🎯 Key Insights</h3>
+    
     <div class="highlight-box">
       <p style="font-size: 18px; line-height: 1.8;">
-        <strong>Storage Investment:</strong> Costs ₹50-100/quintal for 6 months<br>
-        <strong>Net Gain:</strong> ₹30,000 - ₹600 (storage) = <span class="emphasis">₹29,400 extra profit</span> (15.5% increase)<br>
-        <strong>Risk:</strong> Quality degradation, pest damage (can be mitigated with proper storage)<br>
-        <strong>Alternative:</strong> Use RTCP to find traders offering <span class="emphasis">advance payment</span> at future prices
+        <strong>Strategic Insight:</strong> Storage costs ₹50-100/quintal for 6 months. Net gain: ₹30,000 - ₹600 = <span class="emphasis">₹29,400 extra profit (15.5% increase)</span>. 
+        Alternative: Use RTCP to find traders offering <span class="success">advance payment at future prices</span>.
       </p>
     </div>
   </div>
-
-  <div class="footer">Slide 6 of 15</div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 6 of 15</div>
+  </div>
 </div>
 
-<!-- SLIDE 7: VERIFIED TRADER ECOSYSTEM -->
+<!-- SLIDE 7: VERIFIED TRADERS -->
 <div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Verified Trader Ecosystem</h2>
-    <p class="slide-subtitle">Eliminating Middlemen, Maximizing Farmer Income</p>
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
   </div>
   
-  <div class="content-section">
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Verified Trader Ecosystem</h2>
+      <p class="slide-subtitle">Eliminating Middlemen, Maximizing Income</p>
+    </div>
+    
     <h3 class="section-title">🤝 Trader Verification Process</h3>
-    <div class="two-column">
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Step 1: Documentation</div>
-          <div class="feature-desc">
-            <strong>Required Documents:</strong><br>
-            • Valid APMC trading license<br>
-            • Business registration (GST)<br>
-            • Bank account verification<br>
-            • Address proof<br>
-            • PAN card<br><br>
-            <strong>Verification Time:</strong> 3-5 business days
-          </div>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-title">Step 2: Background Check</div>
-          <div class="feature-desc">
-            <strong>Criteria:</strong><br>
-            • Minimum 2 years trading history<br>
-            • No fraud complaints<br>
-            • Verified business address<br>
-            • Financial stability check<br>
-            • Reference verification
-          </div>
-        </div>
+    <div class="process-flow">
+      <div class="process-step">
+        <div style="font-size: 32px; margin-bottom: 10px;">📄</div>
+        <strong>Documentation</strong><br>
+        <span style="font-size: 13px; color: #7f8c8d;">APMC license, GST, Bank</span>
       </div>
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Step 3: Performance Tracking</div>
-          <div class="feature-desc">
-            <strong>Ongoing Monitoring:</strong><br>
-            • Farmer rating system (1-5 stars)<br>
-            • Payment timeliness tracking<br>
-            • Complaint resolution rate<br>
-            • Transaction volume analysis<br>
-            • Quality dispute handling<br><br>
-            <strong>Minimum Rating:</strong> 4.0/5.0 to remain verified
-          </div>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-title">Step 4: Badge System</div>
-          <div class="feature-desc">
-            <strong>Verification Levels:</strong><br>
-            ✓ <span class="emphasis">Verified</span> - Basic checks passed<br>
-            ⭐ <span class="emphasis">Premium</span> - 100+ successful deals<br>
-            🏆 <span class="emphasis">Elite</span> - 500+ deals, 4.8+ rating
-          </div>
-        </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 32px; margin-bottom: 10px;">🔍</div>
+        <strong>Background Check</strong><br>
+        <span style="font-size: 13px; color: #7f8c8d;">2+ years history</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 32px; margin-bottom: 10px;">⭐</div>
+        <strong>Performance Track</strong><br>
+        <span style="font-size: 13px; color: #7f8c8d;">Rating system</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 32px; margin-bottom: 10px;">✓</div>
+        <strong>Verified Badge</strong><br>
+        <span style="font-size: 13px; color: #7f8c8d;">4.0+ rating required</span>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">📊 Featured Trader Profile Example</h3>
+    
+    <h3 class="section-title">📊 Featured Trader Profile</h3>
     <div class="feature-card">
-      <div class="feature-title">Rajesh Singh Traders - Premium Verified ⭐</div>
+      <div class="feature-title"><span class="feature-icon">⭐</span>Rajesh Singh Traders - Premium Verified</div>
       <div class="feature-desc">
         <div class="stats-grid">
           <div class="stat-box">
@@ -895,20 +895,12 @@ setInterval(updatePrices, 5000);
           </div>
         </div>
         <br>
-        <strong>Location:</strong> Ludhiana, Punjab<br>
-        <strong>Specialization:</strong> Wheat, Rice, Cotton<br>
-        <strong>Current Buying Rates:</strong><br>
-        • Wheat (Grade A): ₹2,180/quintal<br>
-        • Rice (Basmati 1121): ₹3,250/quintal<br>
-        • Cotton (Medium): ₹6,850/quintal<br><br>
-        <strong>Contact:</strong> Direct call/WhatsApp available<br>
-        <strong>Payment Terms:</strong> 100% within 24 hours of delivery<br>
-        <strong>Farmer Reviews:</strong> "Fair prices, quick payment, professional" - 234 reviews
+        <strong>Location:</strong> Ludhiana, Punjab | <strong>Specialization:</strong> Wheat, Rice, Cotton<br>
+        <strong>Current Rates:</strong> Wheat ₹2,180 • Rice ₹3,250 • Cotton ₹6,850 per quintal<br>
+        <strong>Contact:</strong> Direct call/WhatsApp | <strong>Payment:</strong> 100% within 24 hours
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
+    
     <h3 class="section-title">💰 Income Comparison</h3>
     <div class="table-container">
       <table>
@@ -923,21 +915,21 @@ setInterval(updatePrices, 5000);
         </thead>
         <tbody>
           <tr style="background: #ffcccc;">
-            <td>Local Middleman</td>
+            <td><strong>Local Middleman</strong></td>
             <td>₹1,950</td>
             <td>-₹100 (5%)</td>
             <td>₹1,850</td>
             <td>7-15 days</td>
           </tr>
           <tr style="background: #fff3cd;">
-            <td>APMC Mandi</td>
+            <td><strong>APMC Mandi</strong></td>
             <td>₹2,100</td>
             <td>-₹84 (4%)</td>
             <td>₹2,016</td>
             <td>3-5 days</td>
           </tr>
-          <tr style="background: #ccffcc;">
-            <td>RTCP Verified Trader</td>
+          <tr style="background: #d4edda;">
+            <td><strong>RTCP Verified Trader</strong></td>
             <td>₹2,180</td>
             <td>₹0 (0%)</td>
             <td>₹2,180</td>
@@ -946,99 +938,69 @@ setInterval(updatePrices, 5000);
         </tbody>
       </table>
     </div>
-    <div class="highlight-box">
-      <p style="font-size: 18px;"><strong>For 100 Quintals:</strong> RTCP method gives <span class="emphasis">₹33,000 more</span> than middleman (17.8% increase) and <span class="emphasis">₹16,400 more</span> than APMC (8.1% increase)</p>
+    <div class="success-box">
+      <p style="font-size: 17px; font-weight: 600;"><strong>For 100 Quintals:</strong> RTCP gives <span class="emphasis">₹33,000 more</span> than middleman (17.8% increase) and <span class="emphasis">₹16,400 more</span> than APMC (8.1% increase)</p>
     </div>
-  </div>
-
-  <div class="footer">Slide 7 of 15</div>
-</div>
-
-<!-- SLIDE 8: GOVERNMENT SUBSIDIES INTEGRATION -->
-<div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Government Subsidies</h2>
-    <p class="slide-subtitle">Complete Scheme Information & Application Support</p>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">🏛️ PM-KISAN Deep Dive</h3>
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 7 of 15</div>
+  </div>
+</div>
+
+<!-- SLIDE 8: GOVERNMENT SUBSIDIES -->
+<div class="slide">
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
+  </div>
+  
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Government Subsidies</h2>
+      <p class="slide-subtitle">Complete Scheme Information & Support</p>
+    </div>
+    
+    <h3 class="section-title">🏛️ PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)</h3>
     <div class="feature-card">
-      <div class="feature-title">Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</div>
+      <div class="feature-title"><span class="feature-icon">💰</span>Direct Income Support</div>
       <div class="feature-desc">
-        <strong>Launch Date:</strong> 24 February 2019<br>
-        <strong>Objective:</strong> Direct income support to all landholding farmer families<br><br>
-        
-        <strong>Financial Details:</strong><br>
-        • <span class="emphasis">₹6,000 per year</span> per farmer family<br>
-        • Disbursed in 3 equal installments of ₹2,000 each<br>
-        • Paid every 4 months (April-July, August-November, December-March)<br>
-        • Direct Benefit Transfer (DBT) to Aadhaar-linked bank account<br><br>
-        
-        <strong>Coverage & Impact:</strong><br>
-        • <span class="emphasis">11+ crore</span> farmer families benefited<br>
-        • <span class="emphasis">₹3.70 lakh crore</span> total disbursed (20 installments)<br>
-        • 21st installment: <span class="emphasis">₹18,000 crore</span> to 9 crore farmers (Nov 2025)<br>
-        • Reaches 85-90% of small and marginal farmers<br><br>
-        
-        <strong>Eligibility Criteria:</strong><br>
-        ✅ All landholding farmer families (no land size limit)<br>
-        ✅ Aadhaar-linked bank account mandatory<br>
-        ✅ e-KYC completed<br>
-        ❌ Excluded: Institutional landholders, income tax payees, govt officials, high-income pensioners<br><br>
-        
-        <strong>RTCP Integration:</strong><br>
-        • Real-time status checker<br>
-        • Installment payment tracker<br>
-        • Missing payment alerts<br>
-        • Application assistance<br>
-        • Document checklist
+        <strong>Amount:</strong> ₹6,000 per year (₹2,000 × 3 installments every 4 months)<br>
+        <strong>Launch:</strong> 24 February 2019 | <strong>Beneficiaries:</strong> 11+ crore farmer families<br>
+        <strong>Total Disbursed:</strong> ₹3.70 lakh crore (20 installments) | <strong>Latest:</strong> ₹18,000 crore to 9 crore farmers (Nov 2025)<br>
+        <strong>Eligibility:</strong> All landholding farmers with Aadhaar-linked bank account, e-KYC completed<br>
+        <strong>RTCP Integration:</strong> Real-time status checker, installment tracker, missing payment alerts, application assistance
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
+    
     <h3 class="section-title">☀️ Other Major Subsidies</h3>
     <div class="two-column">
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Solar Pump Subsidy</div>
-          <div class="feature-desc">
-            <strong>Amount:</strong> Up to ₹60,000 (60% subsidy)<br>
-            <strong>Total Cost:</strong> ₹1,00,000 (Farmer pays ₹40,000)<br>
-            <strong>Capacity:</strong> 3-5 HP solar pumps<br>
-            <strong>Benefits:</strong><br>
-            • Zero electricity bills<br>
-            • 25-year lifespan<br>
-            • Low maintenance<br>
-            • Eco-friendly<br>
-            <strong>Savings:</strong> ₹15,000-20,000/year on electricity<br>
-            <strong>ROI:</strong> 2-3 years payback period
-          </div>
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">☀️</span>Solar Pump Subsidy</div>
+        <div class="feature-desc">
+          <strong>Subsidy:</strong> ₹60,000 (60% of ₹1,00,000 cost)<br>
+          <strong>Farmer Pays:</strong> ₹40,000<br>
+          <strong>Capacity:</strong> 3-5 HP solar pumps<br>
+          <strong>Annual Savings:</strong> ₹15,000-20,000 on electricity<br>
+          <strong>ROI:</strong> 2-3 years payback period<br>
+          <strong>Lifespan:</strong> 25 years
         </div>
       </div>
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Micro-Irrigation Subsidy</div>
-          <div class="feature-desc">
-            <strong>Amount:</strong> Up to ₹45,000 (55% subsidy)<br>
-            <strong>Total Cost:</strong> ₹80,000 (Farmer pays ₹35,000)<br>
-            <strong>Coverage:</strong> 1 hectare drip irrigation<br>
-            <strong>Benefits:</strong><br>
-            • 40-50% water savings<br>
-            • 20-30% yield increase<br>
-            • Reduced labor cost<br>
-            • Uniform water distribution<br>
-            <strong>Savings:</strong> ₹25,000-30,000/year<br>
-            <strong>ROI:</strong> 1.5-2 years payback
-          </div>
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">💧</span>Micro-Irrigation Subsidy</div>
+        <div class="feature-desc">
+          <strong>Subsidy:</strong> ₹45,000 (55% of ₹80,000 cost)<br>
+          <strong>Farmer Pays:</strong> ₹35,000<br>
+          <strong>Coverage:</strong> 1 hectare drip irrigation<br>
+          <strong>Annual Savings:</strong> ₹25,000-30,000<br>
+          <strong>ROI:</strong> 1.5-2 years payback<br>
+          <strong>Benefits:</strong> 40-50% water savings, 20-30% yield increase
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">📊 Subsidy Impact Calculator</h3>
+    
+    <h3 class="section-title">📊 5-Year Benefit Calculator</h3>
     <div class="table-container">
       <table>
         <thead>
@@ -1047,7 +1009,6 @@ setInterval(updatePrices, 5000);
             <th>Subsidy Amount</th>
             <th>Annual Savings</th>
             <th>5-Year Benefit</th>
-            <th>Application</th>
           </tr>
         </thead>
         <tbody>
@@ -1056,46 +1017,49 @@ setInterval(updatePrices, 5000);
             <td>₹6,000/year</td>
             <td>₹6,000</td>
             <td>₹30,000</td>
-            <td>pmkisan.gov.in</td>
           </tr>
           <tr>
             <td>Solar Pump</td>
             <td>₹60,000 (one-time)</td>
             <td>₹18,000</td>
             <td>₹1,50,000</td>
-            <td>State portal</td>
           </tr>
           <tr>
             <td>Drip Irrigation</td>
             <td>₹45,000 (one-time)</td>
             <td>₹27,000</td>
             <td>₹1,80,000</td>
-            <td>PMKSY portal</td>
           </tr>
-          <tr style="background: #ccffcc;">
+          <tr style="background: #d4edda;">
             <td><strong>TOTAL</strong></td>
             <td><strong>₹1,11,000</strong></td>
             <td><strong>₹51,000</strong></td>
             <td><strong>₹3,60,000</strong></td>
-            <td><strong>Via RTCP</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-
-  <div class="footer">Slide 8 of 15</div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 8 of 15</div>
+  </div>
 </div>
 
-<!-- SLIDE 9: FUTURE OF REAL-TIME CROP PRICING -->
+<!-- SLIDE 9: FUTURE TECHNOLOGY -->
 <div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Future of Real-Time Crop Pricing</h2>
-    <p class="slide-subtitle">Technology Trends 2025-2030</p>
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">🚀 Market Growth Projections</h3>
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Future of Real-Time Crop Pricing</h2>
+      <p class="slide-subtitle">Technology Trends 2025-2030</p>
+    </div>
+    
     <div class="stats-grid">
       <div class="stat-box">
         <div class="stat-number">$59B</div>
@@ -1114,170 +1078,143 @@ setInterval(updatePrices, 5000);
         <div class="stat-label">CAGR Growth</div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🔮 Technology Integration Roadmap</h3>
+    
+    <h3 class="section-title">🤖 AI/ML Price Prediction (2025-2026)</h3>
     <div class="feature-card">
-      <div class="feature-title">Phase 1: AI/ML Price Prediction (2025-2026)</div>
+      <div class="feature-title"><span class="feature-icon">🧠</span>Machine Learning Models</div>
       <div class="feature-desc">
-        <strong>Technology:</strong> Machine Learning models (Random Forests, Gradient Boosting, Neural Networks)<br><br>
-        
-        <strong>Data Inputs:</strong><br>
-        • Historical price data (10+ years)<br>
-        • Weather patterns (rainfall, temperature, humidity)<br>
-        • Satellite vegetation indices (NDVI, NDRE)<br>
-        • Soil moisture and health data<br>
-        • Demand forecasts from buyers<br>
-        • Government policy changes<br>
-        • International market trends<br><br>
-        
-        <strong>Output:</strong><br>
+        <strong>Data Inputs:</strong> Historical prices (10+ years), weather patterns, satellite vegetation indices, soil data, demand forecasts, government policies, international trends<br><br>
+        <strong>Output Predictions:</strong><br>
         • 7-day price forecast (85-90% accuracy)<br>
         • 30-day price range prediction<br>
         • Seasonal trend analysis<br>
         • Risk indicators (volatility warnings)<br><br>
-        
         <strong>Farmer Benefit:</strong> Know <span class="emphasis">when to sell</span> for maximum profit with 90% confidence
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
+    
     <h3 class="section-title">🛰️ IoT & Satellite Integration</h3>
     <div class="two-column">
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">IoT Sensor Network</div>
-          <div class="feature-desc">
-            <strong>Field-Level Sensors:</strong><br>
-            • Soil moisture (real-time)<br>
-            • Soil temperature & pH<br>
-            • Nutrient levels (NPK)<br>
-            • Crop canopy temperature<br>
-            • Weather micro-stations<br><br>
-            
-            <strong>Data Collection:</strong><br>
-            • Every 15 minutes<br>
-            • Wireless transmission (LoRaWAN)<br>
-            • Cloud storage & processing<br>
-            • AI analysis for insights<br><br>
-            
-            <strong>Market Impact:</strong><br>
-            IoT market: <span class="emphasis">$28.65B (2024) → $54.38B (2030)</span><br>
-            CAGR: 10.5%
-          </div>
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">📡</span>IoT Sensor Network</div>
+        <div class="feature-desc">
+          <strong>Field-Level Sensors:</strong><br>
+          • Soil moisture, temperature, pH<br>
+          • Nutrient levels (NPK)<br>
+          • Crop canopy temperature<br>
+          • Weather micro-stations<br><br>
+          <strong>Data Collection:</strong> Every 15 minutes<br>
+          <strong>Market:</strong> $28.65B (2024) → $54.38B (2030)
         </div>
       </div>
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">Satellite Imagery</div>
-          <div class="feature-desc">
-            <strong>Data Sources:</strong><br>
-            • Sentinel-2 (10m resolution)<br>
-            • Landsat-8 (30m resolution)<br>
-            • Planet Labs (3m resolution)<br>
-            • ISRO satellites (RISAT)<br><br>
-            
-            <strong>Analysis:</strong><br>
-            • Crop type classification<br>
-            • Acreage estimation<br>
-            • Yield prediction<br>
-            • Stress detection<br>
-            • Regional supply forecasting<br><br>
-            
-            <strong>Pricing Impact:</strong><br>
-            Predict regional supply → <span class="emphasis">Accurate price forecasts</span>
-          </div>
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">🛰️</span>Satellite Imagery</div>
+        <div class="feature-desc">
+          <strong>Data Sources:</strong><br>
+          • Sentinel-2 (10m resolution)<br>
+          • Landsat-8 (30m resolution)<br>
+          • ISRO satellites (RISAT)<br><br>
+          <strong>Analysis:</strong> Crop classification, acreage estimation, yield prediction, stress detection, regional supply forecasting
         </div>
       </div>
     </div>
-  </div>
-
-  <p class="research-source"><strong>Sources:</strong> Global Agriculture Market Report 2025, Grand View Research IoT Analysis, Knowledge Sourcing AI Crop Monitoring Report</p>
-  <div class="footer">Slide 9 of 15</div>
-</div>
-
-<!-- SLIDE 10: BLOCKCHAIN & SMART CONTRACTS -->
-<div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Blockchain Revolution</h2>
-    <p class="slide-subtitle">Transparent, Automated Agricultural Trading</p>
+    
+    <p class="research-source"><strong>Sources:</strong> Global Agriculture Market Report 2025, Grand View Research, Knowledge Sourcing AI Crop Monitoring</p>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">⛓️ Blockchain Applications in Agriculture</h3>
-    <div class="feature-card">
-      <div class="feature-title">Smart Contract Workflow</div>
-      <div class="feature-desc">
-        <strong>Traditional Process (Current):</strong><br>
-        Farmer → Middleman → Trader → Processor → Retailer → Consumer<br>
-        <span style="color: #ff4444;">Problems: Multiple intermediaries, delayed payments, price manipulation, no traceability</span><br><br>
-        
-        <strong>Blockchain Process (Future):</strong><br>
-        Farmer → Smart Contract → Direct Buyer → Consumer<br>
-        <span style="color: #00ff00;">Benefits: Direct connection, instant payment, transparent pricing, complete traceability</span><br><br>
-        
-        <strong>How Smart Contracts Work:</strong><br>
-        1. <span class="emphasis">Agreement Creation:</span> Farmer and buyer agree on price, quantity, quality, delivery date<br>
-        2. <span class="emphasis">Contract Deployment:</span> Terms encoded in blockchain smart contract<br>
-        3. <span class="emphasis">IoT Verification:</span> Sensors verify crop quality, quantity at harvest<br>
-        4. <span class="emphasis">Delivery Confirmation:</span> GPS tracking confirms delivery to buyer<br>
-        5. <span class="emphasis">Automatic Payment:</span> Smart contract releases payment instantly upon delivery<br>
-        6. <span class="emphasis">Immutable Record:</span> All transactions recorded permanently on blockchain<br><br>
-        
-        <strong>Payment Speed:</strong> Traditional (7-15 days) → Blockchain (<span class="emphasis">Instant</span>)<br>
-        <strong>Cost Reduction:</strong> Eliminate 3-4 intermediaries → <span class="emphasis">15-25% savings</span>
-      </div>
-    </div>
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 9 of 15</div>
   </div>
+</div>
 
-  <div class="content-section">
-    <h3 class="section-title">🔐 Key Blockchain Features</h3>
+<!-- SLIDE 10: BLOCKCHAIN -->
+<div class="slide">
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
+  </div>
+  
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Blockchain Revolution</h2>
+      <p class="slide-subtitle">Transparent, Automated Agricultural Trading</p>
+    </div>
+    
+    <h3 class="section-title">⛓️ Smart Contract Workflow</h3>
     <div class="two-column">
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">1. Traceability</div>
-          <div class="feature-desc">
-            <strong>Farm-to-Fork Tracking:</strong><br>
-            • Origin verification (GPS coordinates)<br>
-            • Farming practices recorded<br>
-            • Pesticide/fertilizer usage<br>
-            • Harvest date & method<br>
-            • Storage conditions<br>
-            • Transportation route<br>
-            • Quality certifications<br><br>
-            
-            <strong>Consumer Benefit:</strong> Scan QR code to see complete crop journey<br>
-            <strong>Farmer Benefit:</strong> Premium prices for organic/sustainable farming
-          </div>
+      <div class="warning-box">
+        <strong style="font-size: 18px; color: #856404;">❌ Traditional Process</strong><br><br>
+        Farmer → Middleman → Trader → Processor → Retailer → Consumer<br><br>
+        <strong>Problems:</strong> Multiple intermediaries, delayed payments (7-15 days), price manipulation, no traceability
+      </div>
+      <div class="success-box">
+        <strong style="font-size: 18px; color: #155724;">✅ Blockchain Process</strong><br><br>
+        Farmer → Smart Contract → Direct Buyer → Consumer<br><br>
+        <strong>Benefits:</strong> Direct connection, instant payment, transparent pricing, complete traceability
+      </div>
+    </div>
+    
+    <h3 class="section-title">🔐 How Smart Contracts Work</h3>
+    <div class="process-flow">
+      <div class="process-step">
+        <div style="font-size: 28px; margin-bottom: 8px;">📝</div>
+        <strong>Agreement</strong><br>
+        <span style="font-size: 12px; color: #7f8c8d;">Price, quantity, quality</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 28px; margin-bottom: 8px;">⛓️</div>
+        <strong>Contract</strong><br>
+        <span style="font-size: 12px; color: #7f8c8d;">Blockchain encoded</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 28px; margin-bottom: 8px;">📡</div>
+        <strong>IoT Verify</strong><br>
+        <span style="font-size: 12px; color: #7f8c8d;">Quality check</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 28px; margin-bottom: 8px;">🚚</div>
+        <strong>Delivery</strong><br>
+        <span style="font-size: 12px; color: #7f8c8d;">GPS tracking</span>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step">
+        <div style="font-size: 28px; margin-bottom: 8px;">💰</div>
+        <strong>Payment</strong><br>
+        <span style="font-size: 12px; color: #7f8c8d;">Instant release</span>
+      </div>
+    </div>
+    
+    <h3 class="section-title">🎯 Key Blockchain Features</h3>
+    <div class="two-column">
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">🔍</span>Traceability</div>
+        <div class="feature-desc">
+          <strong>Farm-to-Fork Tracking:</strong><br>
+          • Origin verification (GPS)<br>
+          • Farming practices recorded<br>
+          • Quality certifications<br>
+          • Complete crop journey<br><br>
+          <strong>Benefit:</strong> Premium prices for organic/sustainable farming
         </div>
       </div>
-      <div>
-        <div class="feature-card">
-          <div class="feature-title">2. Tokenization</div>
-          <div class="feature-desc">
-            <strong>Crop-Backed Tokens:</strong><br>
-            • 1 token = 1 quintal of wheat<br>
-            • Tradeable on blockchain<br>
-            • Warehouse receipt digitization<br>
-            • Fractional ownership possible<br><br>
-            
-            <strong>Benefits:</strong><br>
-            • Instant liquidity for farmers<br>
-            • No need to sell immediately<br>
-            • Trade tokens instead of physical crop<br>
-            • Access to credit using tokens as collateral<br><br>
-            
-            <strong>Example:</strong> Farmer stores 100 quintals, gets 100 tokens, sells 50 tokens for immediate cash, holds 50 for better prices
-          </div>
+      <div class="feature-card">
+        <div class="feature-title"><span class="feature-icon">🪙</span>Tokenization</div>
+        <div class="feature-desc">
+          <strong>Crop-Backed Tokens:</strong><br>
+          • 1 token = 1 quintal<br>
+          • Tradeable on blockchain<br>
+          • Instant liquidity<br>
+          • Credit collateral<br><br>
+          <strong>Example:</strong> Store 100 quintals, get 100 tokens, sell 50 for cash, hold 50 for better prices
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">📊 Blockchain Adoption Timeline</h3>
+    
+    <h3 class="section-title">📅 Adoption Timeline</h3>
     <div class="table-container">
       <table>
         <thead>
@@ -1304,401 +1241,264 @@ setInterval(updatePrices, 5000);
           <tr>
             <td>Mainstream</td>
             <td>2029-2030</td>
-            <td>All crops, smallholder access via cooperatives</td>
+            <td>All crops, smallholder access</td>
             <td>Complete market transformation</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-
-  <div class="content-section">
-    <h3 class="section-title">💡 Key Insight</h3>
-    <div class="highlight-box">
-      <p class="quote">"By 2030, blockchain will secure contracts, traceability, and payments, while AI/ML will drive price discovery. Together, they create a transparent, efficient, and farmer-friendly agricultural market where trust is built into the system, not dependent on intermediaries."</p>
-    </div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 10 of 15</div>
   </div>
-
-  <p class="research-source"><strong>Sources:</strong> StartUs Insights AI in Agriculture Guide, IntelliArts Precision Agriculture Analysis, Blockchain in Agriculture Research 2025</p>
-  <div class="footer">Slide 10 of 15</div>
 </div>
 
-<!-- SLIDE 11: INTEGRATED FUTURE SYSTEM -->
+<!-- SLIDE 11: INTEGRATED SYSTEM -->
 <div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Integrated Future System</h2>
-    <p class="slide-subtitle">Complete Technology Stack by 2030</p>
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">🏗️ Future RTCP Architecture (2030 Vision)</h3>
-    <div class="code-block">
-┌─────────────────────────────────────────────────────────────────┐
-│                    FARMER INTERFACE LAYER                        │
-│  Mobile App • Voice Interface • AR/VR • Wearables • IoT Display │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-┌────────────────────────▼────────────────────────────────────────┐
-│                   AI/ML INTELLIGENCE LAYER                       │
-├─────────────────────────────────────────────────────────────────┤
-│  • Price Prediction (95% accuracy)                              │
-│  • Yield Forecasting (field-level)                              │
-│  • Quality Assessment (satellite + drone)                       │
-│  • Demand Forecasting (regional + global)                       │
-│  • Risk Analysis (weather, market, pest)                        │
-│  • Optimal Selling Time Recommendation                          │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-┌────────────────────────▼────────────────────────────────────────┐
-│                   DATA COLLECTION LAYER                          │
-├─────────────────────────────────────────────────────────────────┤
-│  IoT Sensors          │  Satellite Imagery  │  Market Data      │
-│  • Soil (NPK, pH)     │  • NDVI/NDRE       │  • APMC prices    │
-│  • Weather            │  • Acreage         │  • e-NAM rates    │
-│  • Crop health        │  • Yield estimate  │  • Futures        │
-│  • Equipment          │  • Stress detect   │  • Demand signals │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-┌────────────────────────▼────────────────────────────────────────┐
-│                   BLOCKCHAIN LAYER                               │
-├─────────────────────────────────────────────────────────────────┤
-│  • Smart Contracts (automated trading)                          │
-│  • Traceability (farm-to-fork)                                  │
-│  • Tokenization (crop-backed assets)                            │
-│  • Instant Settlement (payment on delivery)                     │
-│  • Quality Verification (IoT-linked)                            │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-┌────────────────────────▼────────────────────────────────────────┐
-│                   MARKETPLACE LAYER                              │
-│  Farmers ←→ Traders ←→ Processors ←→ Retailers ←→ Consumers    │
-│  (Direct connections, no intermediaries, transparent pricing)   │
-└─────────────────────────────────────────────────────────────────┘
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Integrated Future System</h2>
+      <p class="slide-subtitle">Complete Technology Stack by 2030</p>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🎯 Real-Time Pricing Workflow (2030)</h3>
-    <div class="feature-card">
-      <div class="feature-title">Step-by-Step Process</div>
-      <div class="feature-desc">
-        <strong>1. Data Collection (Continuous):</strong><br>
-        • IoT sensors measure soil moisture, nutrients, crop health every 15 minutes<br>
-        • Satellites capture field images every 3-5 days (NDVI, biomass)<br>
-        • Weather stations provide micro-climate data<br>
-        • Market APIs fetch real-time demand, supply, futures prices<br><br>
-        
-        <strong>2. AI Processing (Real-Time):</strong><br>
-        • ML models predict yield: "Your wheat field will produce 42 quintals/hectare (±3)"<br>
-        • Quality assessment: "Grade A quality expected based on NDVI and soil data"<br>
-        • Supply forecast: "Regional wheat supply 15% below average this season"<br>
-        • Demand analysis: "Flour mill demand up 8% due to festival season"<br><br>
-        
-        <strong>3. Dynamic Pricing (Every 5 Minutes):</strong><br>
-        • Base price from APMC/e-NAM: ₹2,100/quintal<br>
-        • Quality premium: +₹50 (Grade A)<br>
-        • Supply shortage premium: +₹80 (15% below average)<br>
-        • Demand surge premium: +₹40 (8% increase)<br>
-        • Logistics optimization: +₹30 (nearby buyer)<br>
-        • <span class="emphasis">Final recommended price: ₹2,300/quintal</span><br><br>
-        
-        <strong>4. Smart Contract Execution:</strong><br>
-        • Farmer accepts price, smart contract created<br>
-        • Buyer's payment locked in escrow<br>
-        • IoT sensors verify harvest quantity & quality<br>
-        • GPS confirms delivery to buyer<br>
-        • Payment released instantly to farmer's account<br>
-        • Transaction recorded on blockchain (immutable)<br><br>
-        
-        <strong>5. Continuous Learning:</strong><br>
-        • AI models learn from actual outcomes<br>
-        • Prediction accuracy improves over time<br>
-        • Personalized recommendations for each farmer
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">Slide 11 of 15</div>
-</div>
-
-<!-- SLIDE 12: RTCP EVOLUTION ROADMAP -->
-<div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">RTCP Evolution Roadmap</h2>
-    <p class="slide-subtitle">From Current Platform to 2030 Vision</p>
-  </div>
-  
-  <div class="content-section">
-    <h3 class="section-title">🗓️ Phased Development Plan</h3>
+    
+    <h3 class="section-title">🎯 Real-Time Pricing Workflow (2030 Vision)</h3>
     
     <div class="feature-card">
-      <div class="feature-title">Phase 1: Foundation (Current - v7.8)</div>
+      <div class="feature-title"><span class="feature-icon">1️⃣</span>Data Collection (Continuous)</div>
       <div class="feature-desc">
-        <strong>Status:</strong> ✅ Completed<br>
-        <strong>Timeline:</strong> 2025-2026<br><br>
-        
-        <strong>Features Delivered:</strong><br>
-        • Live price updates (5-second refresh)<br>
-        • Price range display (Min/Max transparency)<br>
-        • 6 major crops (Wheat, Rice, Cotton, Maize, Soybean, Groundnut)<br>
-        • Market trends & seasonal patterns<br>
-        • Verified trader profiles with ratings<br>
-        • Government subsidy information (PM-KISAN, Solar, Irrigation)<br>
-        • AI chatbot (6 languages: English, Hindi, Gujarati, Punjabi, Marathi, Tamil)<br>
-        • Analytics dashboard with charts<br>
-        • Mobile-responsive design<br>
-        • Offline capability<br><br>
-        
-        <strong>User Base Target:</strong> 100,000 registered farmers<br>
-        <strong>Trade Value Target:</strong> ₹100 crore facilitated
+        IoT sensors measure soil, nutrients, crop health every 15 minutes • Satellites capture field images every 3-5 days • Weather stations provide micro-climate data • Market APIs fetch real-time demand, supply, futures prices
       </div>
     </div>
-
+    
     <div class="feature-card">
-      <div class="feature-title">Phase 2: Expansion (Q2-Q4 2026)</div>
+      <div class="feature-title"><span class="feature-icon">2️⃣</span>AI Processing (Real-Time)</div>
       <div class="feature-desc">
-        <strong>Timeline:</strong> 6-9 months<br>
-        <strong>Investment Required:</strong> ₹25 lakhs<br><br>
-        
-        <strong>New Features:</strong><br>
-        • <span class="emphasis">20+ crops coverage</span> (add vegetables, fruits, pulses)<br>
-        • <span class="emphasis">Real APMC API integration</span> (replace simulation with actual mandi data)<br>
-        • <span class="emphasis">Weather integration</span> (7-day forecast, rainfall alerts, temperature)<br>
-        • <span class="emphasis">Crop advisory</span> (pest management, fertilizer recommendations, sowing calendar)<br>
-        • <span class="emphasis">Insurance information</span> (PMFBY, crop insurance claims)<br>
-        • <span class="emphasis">Video tutorials</span> (how-to guides in local languages)<br>
-        • <span class="emphasis">Community forum</span> (farmer-to-farmer discussions)<br>
-        • <span class="emphasis">SMS alerts</span> (price notifications for feature phones)<br><br>
-        
-        <strong>Technical Upgrades:</strong><br>
-        • Backend API development (Node.js/Python)<br>
-        • Database setup (PostgreSQL/MongoDB)<br>
-        • Real-time WebSocket connections<br>
-        • CDN for faster loading<br><br>
-        
-        <strong>User Base Target:</strong> 500,000 farmers<br>
-        <strong>Trade Value Target:</strong> ₹500 crore
+        ML models predict yield: "Your wheat field will produce 42 quintals/hectare (±3)" • Quality assessment: "Grade A quality expected" • Supply forecast: "Regional wheat supply 15% below average" • Demand analysis: "Flour mill demand up 8%"
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-title"><span class="feature-icon">3️⃣</span>Dynamic Pricing (Every 5 Minutes)</div>
+      <div class="feature-desc">
+        Base price from APMC/e-NAM: ₹2,100/quintal • Quality premium: +₹50 (Grade A) • Supply shortage premium: +₹80 (15% below average) • Demand surge premium: +₹40 (8% increase) • Logistics optimization: +₹30 (nearby buyer) • <span class="emphasis">Final recommended price: ₹2,300/quintal</span>
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-title"><span class="feature-icon">4️⃣</span>Smart Contract Execution</div>
+      <div class="feature-desc">
+        Farmer accepts price → Smart contract created → Buyer's payment locked in escrow → IoT sensors verify harvest quantity & quality → GPS confirms delivery → Payment released instantly → Transaction recorded on blockchain (immutable)
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-title"><span class="feature-icon">5️⃣</span>Continuous Learning</div>
+      <div class="feature-desc">
+        AI models learn from actual outcomes • Prediction accuracy improves over time • Personalized recommendations for each farmer
+      </div>
+    </div>
+    
+    <div class="highlight-box">
+      <p style="font-size: 18px; font-weight: 600; text-align: center;">
+        <strong>Expected Accuracy by 2030:</strong> <span class="emphasis">95%+ price prediction accuracy</span> • <span class="success">Instant payments</span> • <span class="success">Complete transparency</span>
+      </p>
+    </div>
+  </div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 11 of 15</div>
+  </div>
+</div>
+
+<!-- SLIDE 12: RTCP ROADMAP -->
+<div class="slide">
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
+  </div>
+  
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">RTCP Evolution Roadmap</h2>
+      <p class="slide-subtitle">From Current Platform to 2030 Vision</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-title"><span class="feature-icon">✅</span>Phase 1: Foundation (Current - v7.8) COMPLETED</div>
+      <div class="feature-desc">
+        <strong>Timeline:</strong> 2025-2026 | <strong>Status:</strong> Live<br><br>
+        <strong>Features:</strong> Live prices (5-sec), Price ranges (Min/Max), 6 crops, Market trends, Verified traders, Government subsidies, AI chatbot (6 languages), Analytics dashboard, Mobile-responsive, Offline capability<br><br>
+        <strong>Targets:</strong> 100,000 registered farmers • ₹100 crore trade value
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-title"><span class="feature-icon">🚀</span>Phase 2: Expansion (Q2-Q4 2026)</div>
+      <div class="feature-desc">
+        <strong>Timeline:</strong> 6-9 months | <strong>Investment:</strong> ₹25 lakhs<br><br>
+        <strong>New Features:</strong> 20+ crops coverage • Real APMC API integration • Weather integration (7-day forecast) • Crop advisory (pest, fertilizer) • Insurance information (PMFBY) • Video tutorials • Community forum • SMS alerts<br><br>
+        <strong>Technical:</strong> Backend API (Node.js/Python), Database (PostgreSQL/MongoDB), Real-time WebSocket, CDN<br><br>
+        <strong>Targets:</strong> 500,000 farmers • ₹500 crore trade value
       </div>
     </div>
   </div>
-
-  <div class="footer">Slide 12 of 15</div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 12 of 15</div>
+  </div>
 </div>
 
 <!-- SLIDE 13: ADVANCED PHASES -->
 <div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">RTCP Advanced Phases</h2>
-    <p class="slide-subtitle">Intelligence & Ecosystem Development</p>
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
   </div>
   
-  <div class="content-section">
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">RTCP Advanced Phases</h2>
+      <p class="slide-subtitle">Intelligence & Ecosystem Development</p>
+    </div>
+    
     <div class="feature-card">
-      <div class="feature-title">Phase 3: Intelligence (2027-2028)</div>
+      <div class="feature-title"><span class="feature-icon">🧠</span>Phase 3: Intelligence (2027-2028)</div>
       <div class="feature-desc">
-        <strong>Timeline:</strong> 12-18 months<br>
-        <strong>Investment Required:</strong> ₹1.5 crore<br><br>
-        
-        <strong>AI/ML Features:</strong><br>
-        • <span class="emphasis">Price prediction models</span> (7-day, 30-day forecasts with 85-90% accuracy)<br>
-        • <span class="emphasis">Yield forecasting</span> (field-level predictions using satellite data)<br>
-        • <span class="emphasis">Quality assessment</span> (AI-based crop grading)<br>
-        • <span class="emphasis">Optimal selling time</span> (personalized recommendations)<br>
-        • <span class="emphasis">Risk analysis</span> (weather, pest, market volatility warnings)<br><br>
-        
-        <strong>Blockchain Integration:</strong><br>
-        • <span class="emphasis">Smart contracts</span> (pilot with 100 farmers & 10 traders)<br>
-        • <span class="emphasis">Traceability system</span> (QR code tracking for premium crops)<br>
-        • <span class="emphasis">Tokenization</span> (warehouse receipt digitization)<br>
-        • <span class="emphasis">Instant settlement</span> (payment within 1 hour)<br><br>
-        
-        <strong>Marketplace Expansion:</strong><br>
-        • <span class="emphasis">Farmer-to-farmer marketplace</span> (peer trading)<br>
-        • <span class="emphasis">Input supplier integration</span> (seeds, fertilizers, pesticides)<br>
-        • <span class="emphasis">Equipment rental</span> (tractors, harvesters)<br>
-        • <span class="emphasis">Storage facility booking</span> (cold storage, warehouses)<br><br>
-        
-        <strong>Financial Services:</strong><br>
-        • <span class="emphasis">Credit scoring</span> (AI-based farmer creditworthiness)<br>
-        • <span class="emphasis">Loan facilitation</span> (partnership with banks/NBFCs)<br>
-        • <span class="emphasis">Parametric insurance</span> (weather-based automatic payouts)<br>
-        • <span class="emphasis">Savings products</span> (crop-linked deposits)<br><br>
-        
-        <strong>User Base Target:</strong> 2 million farmers<br>
-        <strong>Trade Value Target:</strong> ₹5,000 crore
+        <strong>Timeline:</strong> 12-18 months | <strong>Investment:</strong> ₹1.5 crore<br><br>
+        <strong>AI/ML Features:</strong> Price prediction (7-day, 30-day, 85-90% accuracy) • Yield forecasting (field-level) • Quality assessment (AI grading) • Optimal selling time • Risk analysis (weather, pest, market)<br><br>
+        <strong>Blockchain:</strong> Smart contracts (pilot 100 farmers) • Traceability (QR tracking) • Tokenization (warehouse receipts) • Instant settlement (1 hour)<br><br>
+        <strong>Marketplace:</strong> Farmer-to-farmer trading • Input suppliers • Equipment rental • Storage booking<br><br>
+        <strong>Financial:</strong> Credit scoring • Loan facilitation • Parametric insurance • Savings products<br><br>
+        <strong>Targets:</strong> 2 million farmers • ₹5,000 crore trade value
       </div>
     </div>
-
+    
     <div class="feature-card">
-      <div class="feature-title">Phase 4: Ecosystem (2029-2030)</div>
+      <div class="feature-title"><span class="feature-icon">🌍</span>Phase 4: Ecosystem (2029-2030)</div>
       <div class="feature-desc">
-        <strong>Timeline:</strong> 18-24 months<br>
-        <strong>Investment Required:</strong> ₹5 crore<br><br>
-        
-        <strong>IoT Integration:</strong><br>
-        • <span class="emphasis">Soil sensor network</span> (moisture, NPK, pH monitoring)<br>
-        • <span class="emphasis">Weather stations</span> (micro-climate data collection)<br>
-        • <span class="emphasis">Crop health sensors</span> (NDVI, canopy temperature)<br>
-        • <span class="emphasis">Equipment IoT</span> (tractor telematics, smart irrigation)<br><br>
-        
-        <strong>Satellite & Drone:</strong><br>
-        • <span class="emphasis">Satellite imagery analysis</span> (acreage, yield estimation)<br>
-        • <span class="emphasis">Drone surveys</span> (field mapping, pest detection)<br>
-        • <span class="emphasis">Precision agriculture</span> (variable rate application maps)<br><br>
-        
-        <strong>Geographic Expansion:</strong><br>
-        • <span class="emphasis">Pan-India coverage</span> (all 28 states, 8 UTs)<br>
-        • <span class="emphasis">International markets</span> (export facilitation to Middle East, Africa)<br>
-        • <span class="emphasis">Multi-language</span> (22 Indian languages + English)<br><br>
-        
-        <strong>Advanced Features:</strong><br>
-        • <span class="emphasis">Supply chain visibility</span> (track crop from farm to consumer)<br>
-        • <span class="emphasis">Carbon credit trading</span> (sustainable farming rewards)<br>
-        • <span class="emphasis">FPO management tools</span> (cooperative administration)<br>
-        • <span class="emphasis">Export documentation</span> (phytosanitary certificates, customs)<br><br>
-        
-        <strong>User Base Target:</strong> 10 million farmers (7% of total)<br>
-        <strong>Trade Value Target:</strong> ₹50,000 crore<br>
-        <strong>Market Position:</strong> #1 agricultural technology platform in India
+        <strong>Timeline:</strong> 18-24 months | <strong>Investment:</strong> ₹5 crore<br><br>
+        <strong>IoT Integration:</strong> Soil sensor network • Weather stations • Crop health sensors • Equipment IoT<br><br>
+        <strong>Satellite & Drone:</strong> Satellite imagery analysis • Drone surveys • Precision agriculture • Variable rate application<br><br>
+        <strong>Geographic:</strong> Pan-India (all 28 states, 8 UTs) • International markets (export facilitation) • 22 Indian languages + English<br><br>
+        <strong>Advanced:</strong> Supply chain visibility • Carbon credit trading • FPO management • Export documentation<br><br>
+        <strong>Targets:</strong> <span class="emphasis">10 million farmers (7% of total)</span> • <span class="emphasis">₹50,000 crore trade value</span> • <span class="success">#1 agricultural technology platform in India</span>
       </div>
     </div>
   </div>
-
-  <div class="footer">Slide 13 of 15</div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 13 of 15</div>
+  </div>
 </div>
 
-<!-- SLIDE 14: IMPACT & SUCCESS METRICS -->
+<!-- SLIDE 14: IMPACT METRICS -->
 <div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Expected Impact & Success Metrics</h2>
-    <p class="slide-subtitle">Measuring Social & Economic Transformation</p>
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
   </div>
   
-  <div class="content-section">
-    <h3 class="section-title">💰 Economic Impact Projections</h3>
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Expected Impact & Success Metrics</h2>
+      <p class="slide-subtitle">Measuring Social & Economic Transformation</p>
+    </div>
+    
     <div class="stats-grid">
       <div class="stat-box">
         <div class="stat-number">15-20%</div>
-        <div class="stat-label">Farmer Income Increase</div>
+        <div class="stat-label">Income Increase</div>
       </div>
       <div class="stat-box">
         <div class="stat-number">₹18,000 Cr</div>
-        <div class="stat-label">Annual Savings (10% adoption)</div>
+        <div class="stat-label">Annual Savings</div>
       </div>
       <div class="stat-box">
         <div class="stat-number">2-3 hrs</div>
-        <div class="stat-label">Time Saved per Transaction</div>
+        <div class="stat-label">Time Saved</div>
       </div>
       <div class="stat-box">
         <div class="stat-number">0.5%</div>
-        <div class="stat-label">Agricultural GDP Growth</div>
+        <div class="stat-label">Agri GDP Growth</div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">📊 Detailed Impact Calculation</h3>
-    <div class="feature-card">
-      <div class="feature-title">Income Increase Breakdown</div>
-      <div class="feature-desc">
-        <strong>Baseline Scenario (Without RTCP):</strong><br>
-        • Average farmer sells 100 quintals wheat at ₹1,950/quintal to middleman<br>
-        • Total income: ₹1,95,000<br>
-        • Commission/fees: -₹10,000 (5%)<br>
-        • Net income: <span class="emphasis">₹1,85,000</span><br><br>
-        
-        <strong>RTCP Scenario:</strong><br>
-        • Farmer checks live price: ₹2,150/quintal (market rate)<br>
-        • Contacts verified trader directly via RTCP<br>
-        • Negotiates based on market data: ₹2,120/quintal<br>
-        • Total income: ₹2,12,000<br>
-        • Commission/fees: ₹0 (direct connection)<br>
-        • Net income: <span class="emphasis">₹2,12,000</span><br><br>
-        
-        <strong>Benefit Analysis:</strong><br>
-        • Extra income: ₹2,12,000 - ₹1,85,000 = <span class="emphasis">₹27,000</span><br>
-        • Percentage increase: (₹27,000 / ₹1,85,000) × 100 = <span class="emphasis">14.6%</span><br>
-        • Time saved: 4 hours → 30 minutes = <span class="emphasis">3.5 hours</span><br>
-        • Payment speed: 7-15 days → 24 hours = <span class="emphasis">6-14 days faster</span><br><br>
-        
-        <strong>Annual Impact (2 seasons):</strong><br>
-        • Extra income per year: ₹27,000 × 2 = <span class="emphasis">₹54,000</span><br>
-        • 5-year cumulative benefit: ₹54,000 × 5 = <span class="emphasis">₹2,70,000</span><br><br>
-        
+    
+    <h3 class="section-title">💰 Income Increase Calculation</h3>
+    <div class="two-column">
+      <div class="warning-box">
+        <strong style="font-size: 18px;">Without RTCP</strong><br><br>
+        100 quintals wheat @ ₹1,950 to middleman<br>
+        Commission: -₹10,000 (5%)<br>
+        <strong>Net Income: ₹1,85,000</strong><br>
+        Payment: 7-15 days
+      </div>
+      <div class="success-box">
+        <strong style="font-size: 18px;">With RTCP</strong><br><br>
+        100 quintals wheat @ ₹2,120 to verified trader<br>
+        Commission: ₹0 (direct)<br>
+        <strong>Net Income: ₹2,12,000</strong><br>
+        Payment: 24 hours
+      </div>
+    </div>
+    
+    <div class="highlight-box">
+      <p style="font-size: 19px; line-height: 1.8; text-align: center;">
+        <strong>Extra Income:</strong> <span class="emphasis">₹27,000 per season (14.6% increase)</span><br>
+        <strong>Annual (2 seasons):</strong> <span class="emphasis">₹54,000</span><br>
+        <strong>5-Year Benefit:</strong> <span class="emphasis">₹2,70,000</span><br><br>
         <strong>National Impact (10% adoption = 14.6M farmers):</strong><br>
-        • Total extra income: 14.6M × ₹54,000 = <span class="emphasis">₹78,840 crore/year</span><br>
-        • Conservative estimate (accounting for variations): <span class="emphasis">₹18,000 crore/year</span>
-      </div>
+        <span class="emphasis">₹18,000 crore annual savings</span>
+      </p>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🎯 Key Performance Indicators (KPIs)</h3>
+    
+    <h3 class="section-title">🎯 Key Performance Indicators</h3>
     <div class="table-container">
       <table>
         <thead>
           <tr>
-            <th>Metric Category</th>
-            <th>KPI</th>
-            <th>Year 1 Target</th>
-            <th>Year 3 Target</th>
-            <th>Year 5 Target</th>
+            <th>Metric</th>
+            <th>Year 1</th>
+            <th>Year 3</th>
+            <th>Year 5</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td rowspan="3">User Metrics</td>
-            <td>Registered Farmers</td>
+            <td><strong>Registered Farmers</strong></td>
             <td>100,000</td>
             <td>2,000,000</td>
             <td>10,000,000</td>
           </tr>
           <tr>
-            <td>Daily Active Users</td>
+            <td><strong>Daily Active Users</strong></td>
             <td>10,000</td>
             <td>200,000</td>
             <td>1,000,000</td>
           </tr>
           <tr>
-            <td>User Retention Rate</td>
-            <td>60%</td>
-            <td>75%</td>
-            <td>85%</td>
-          </tr>
-          <tr>
-            <td rowspan="3">Business Metrics</td>
-            <td>Trade Value Facilitated</td>
+            <td><strong>Trade Value</strong></td>
             <td>₹100 Cr</td>
             <td>₹5,000 Cr</td>
             <td>₹50,000 Cr</td>
           </tr>
           <tr>
-            <td>Number of Trades</td>
-            <td>50,000</td>
-            <td>1,000,000</td>
-            <td>5,000,000</td>
-          </tr>
-          <tr>
-            <td>Revenue</td>
-            <td>₹50 L</td>
-            <td>₹25 Cr</td>
-            <td>₹250 Cr</td>
-          </tr>
-          <tr>
-            <td rowspan="3">Impact Metrics</td>
-            <td>Avg Income Increase</td>
+            <td><strong>Avg Income Increase</strong></td>
             <td>12%</td>
             <td>15%</td>
             <td>20%</td>
           </tr>
           <tr>
-            <td>Middlemen Eliminated</td>
-            <td>5,000</td>
-            <td>100,000</td>
-            <td>500,000</td>
-          </tr>
-          <tr>
-            <td>Farmer Satisfaction</td>
+            <td><strong>Farmer Satisfaction</strong></td>
             <td>80%</td>
             <td>85%</td>
             <td>90%</td>
@@ -1707,109 +1507,92 @@ setInterval(updatePrices, 5000);
       </table>
     </div>
   </div>
-
-  <div class="footer">Slide 14 of 15</div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 14 of 15</div>
+  </div>
 </div>
 
 <!-- SLIDE 15: CONCLUSION -->
 <div class="slide">
-  <div class="slide-header">
-    <h2 class="slide-title">Conclusion</h2>
-    <p class="slide-subtitle">Transforming Indian Agriculture Through Technology</p>
+  <div class="header-bar">
+    <span class="header-logo">🌾</span>
+    <span class="header-title">RTCP PLATFORM</span>
   </div>
   
-  <div class="content-section">
+  <div class="content-area">
+    <div class="slide-header">
+      <h2 class="slide-title">Conclusion</h2>
+      <p class="slide-subtitle">Transforming Indian Agriculture Through Technology</p>
+    </div>
+    
     <h3 class="section-title">🎯 Key Takeaways</h3>
     <div class="two-column">
       <div>
         <div class="feature-card">
-          <div class="feature-title">Problem Identified</div>
+          <div class="feature-title"><span class="feature-icon">❌</span>Problem Identified</div>
           <div class="feature-desc">
-            • 146M farmers, 85-90% small/marginal<br>
-            • -14.5% Producer Support Estimate<br>
-            • 30-40% income lost to middlemen<br>
-            • 1.4% agricultural GVA growth<br>
-            • Massive information asymmetry
+            146M farmers, 85-90% small/marginal • -14.5% Producer Support • 30-40% income lost to middlemen • 1.4% agricultural GVA growth • Massive information asymmetry
           </div>
         </div>
         
         <div class="feature-card">
-          <div class="feature-title">Solution Delivered</div>
+          <div class="feature-title"><span class="feature-icon">✅</span>Solution Delivered</div>
           <div class="feature-desc">
-            • Real-time price updates (5 sec)<br>
-            • Price range transparency<br>
-            • Direct trader connections<br>
-            • AI-powered assistance<br>
-            • Government subsidy integration<br>
-            • Market trend analysis
+            Real-time prices (5 sec) • Price transparency • Direct traders • AI assistance • Subsidy integration • Market trends
           </div>
         </div>
       </div>
       <div>
         <div class="feature-card">
-          <div class="feature-title">Technology Future</div>
+          <div class="feature-title"><span class="feature-icon">🚀</span>Technology Future</div>
           <div class="feature-desc">
-            • AI/ML price prediction (95% accuracy)<br>
-            • IoT sensor networks<br>
-            • Satellite imagery analysis<br>
-            • Blockchain smart contracts<br>
-            • Complete supply chain visibility<br>
-            • $59B market by 2030
+            AI/ML prediction (95% accuracy) • IoT sensors • Satellite imagery • Blockchain contracts • Supply chain visibility • $59B market by 2030
           </div>
         </div>
         
         <div class="feature-card">
-          <div class="feature-title">Expected Impact</div>
+          <div class="feature-title"><span class="feature-icon">📈</span>Expected Impact</div>
           <div class="feature-desc">
-            • 15-20% farmer income increase<br>
-            • ₹18,000 Cr annual savings<br>
-            • 3.5 hours saved per transaction<br>
-            • 10M farmers by 2030<br>
-            • ₹50,000 Cr trade value<br>
-            • 0.5% agricultural GDP growth
+            15-20% income increase • ₹18,000 Cr annual savings • 3.5 hours saved • 10M farmers by 2030 • ₹50,000 Cr trade value
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
+    
     <h3 class="section-title">🌾 Our Vision</h3>
     <div class="highlight-box">
-      <p class="quote" style="font-size: 22px;">
-        "RTCP is not just a platform—it's a movement towards farmer empowerment, market transparency, and agricultural prosperity. By 2030, we envision a future where every Indian farmer has access to fair prices, real-time market intelligence, and direct connections with buyers, powered by AI, IoT, and blockchain technology. Together, we can transform Indian agriculture and ensure that farmers receive the dignity, respect, and income they deserve."
+      <p class="quote" style="font-size: 20px;">
+        "RTCP is not just a platform—it's a movement towards farmer empowerment, market transparency, and agricultural prosperity. By 2030, we envision a future where every Indian farmer has access to fair prices, real-time market intelligence, and direct connections with buyers, powered by AI, IoT, and blockchain technology."
       </p>
     </div>
-  </div>
-
-  <div class="content-section">
+    
     <h3 class="section-title">📚 Research Sources</h3>
-    <div style="font-size: 14px; line-height: 1.8; color: #555;">
+    <div style="font-size: 14px; line-height: 1.7; color: #555; background: #f8f9fa; padding: 20px; border-radius: 10px;">
       <strong>Government & Policy:</strong> OECD Agricultural Policy Report 2025, NABARD Annual Report 2024, Economic Survey 2024, Digital Agriculture Mission 2024-2029, NITI Aayog Reports<br><br>
-      
-      <strong>Market Research:</strong> Global Agriculture Market Report 2025, Grand View Research IoT Analysis, Knowledge Sourcing AI Crop Monitoring, McKinsey Global Farmer Insights 2024, Statista Agricultural Technology Statistics<br><br>
-      
-      <strong>Technology:</strong> StartUs Insights AI in Agriculture, IntelliArts Precision Agriculture Tools, Coherent Market Insights IoT, World Economic Forum Future of Farming 2025, Chloropy Agricultural Apps Analysis
+      <strong>Market Research:</strong> Global Agriculture Market Report 2025, Grand View Research, Knowledge Sourcing, McKinsey Global Farmer Insights 2024, Statista<br><br>
+      <strong>Technology:</strong> StartUs Insights, IntelliArts, World Economic Forum Future of Farming 2025, Chloropy Agricultural Apps Analysis
+    </div>
+    
+    <div style="text-align: center; margin-top: 25px; padding: 25px; background: linear-gradient(135deg, #FFD700, #FFA500); border-radius: 15px;">
+      <p style="font-size: 22px; font-weight: 700; color: #000; margin-bottom: 12px;">Experience RTCP Platform Live</p>
+      <p style="font-size: 18px; color: #1a1a1a; font-weight: 600;">kapasiraj84-beep.github.io/rtcp-crop-price-app</p>
     </div>
   </div>
-
-  <div class="content-section">
-    <h3 class="section-title">🚀 Call to Action</h3>
-    <div style="text-align: center; padding: 30px; background: linear-gradient(135deg, #FFD700, #FFA500); border-radius: 15px;">
-      <p style="font-size: 24px; font-weight: 700; color: #000; margin-bottom: 15px;">Experience RTCP Platform Live</p>
-      <p style="font-size: 18px; color: #333; margin-bottom: 20px;">Visit: <strong>kapasiraj84-beep.github.io/rtcp-crop-price-app</strong></p>
-      <p style="font-size: 16px; color: #333;">Join us in empowering 146 million Indian farmers</p>
-    </div>
+  
+  <div class="footer-bar">
+    <div class="footer-left">RTCP Platform Research</div>
+    <div class="footer-right">Slide 15 of 15</div>
   </div>
-
-  <div class="footer">Slide 15 of 15</div>
 </div>
 
 <script>
   window.onload = function() {
-    console.log('RTCP Deep Research Presentation - 15 Slides');
+    console.log('RTCP Professional Presentation - 15 Slides');
     console.log('To save as PDF: Press Ctrl+P (Windows) or Cmd+P (Mac)');
-    console.log('Select "Save as PDF" and ensure landscape orientation');
+    console.log('Select "Save as PDF" and choose landscape orientation');
+    console.log('Professional design with no code/algorithms');
   };
 </script>
 

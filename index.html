@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RTCP Platform - Professional Presentation</title>
+  <title>RTCP Platform - Premium Presentation</title>
   <style>
     @page {
       size: A4 landscape;
@@ -15,326 +15,325 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: #1a1a1a;
-      padding: 15px;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: #0a0a0a;
+      padding: 20px;
     }
     
     .slide {
       width: 297mm;
       height: 210mm;
-      background: white;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
       position: relative;
-      margin: 15px auto;
-      box-shadow: 0 10px 50px rgba(0,0,0,0.7);
-      border: 4px solid #2c5f2d;
+      margin: 20px auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      border-radius: 8px;
       page-break-after: always;
       overflow: hidden;
     }
     
     .header {
-      background: linear-gradient(135deg, #2c5f2d 0%, #1a3a1b 100%);
-      height: 55px;
+      background: linear-gradient(135deg, #1a472a 0%, #2d5f3f 100%);
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 35px;
-      border-bottom: 4px solid #97bc62;
+      padding: 0 50px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     
     .header-left {
       display: flex;
       align-items: center;
+      gap: 20px;
     }
     
-    .header-logo {
-      width: 40px;
-      height: 40px;
-      margin-right: 15px;
+    .logo {
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #1a472a;
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .brand-name {
+      color: white;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    
+    .slide-num {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .content {
+      padding: 40px 50px;
+      height: calc(210mm - 70px);
+    }
+    
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      color: #1a472a;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+    
+    .image-frame {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 25px 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border: 2px solid #e0e0e0;
+    }
+    
+    .image-icon {
+      width: 80px;
+      height: 80px;
       background: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
-      color: #2c5f2d;
-      font-size: 20px;
+      font-size: 40px;
+      color: #1a472a;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     
-    .header-title {
-      color: #97bc62;
-      font-size: 22px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    
-    .slide-number {
-      color: #1a3a1b;
+    .image-desc {
       font-size: 16px;
-      font-weight: bold;
-      background: #97bc62;
-      padding: 6px 14px;
-      border-radius: 18px;
-    }
-    
-    .content {
-      padding: 18px 35px;
-      height: calc(210mm - 55px);
-      overflow: hidden;
-    }
-    
-    .slide-title {
-      font-size: 38px;
-      font-weight: bold;
-      color: #1a3a1b;
-      margin-bottom: 10px;
+      color: #555;
+      font-weight: 500;
       text-align: center;
-      padding: 14px;
-      background: linear-gradient(135deg, #97bc62 0%, #7da54e 100%);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(151,188,98,0.4);
+      padding: 0 30px;
     }
     
-    .slide-subtitle {
-      font-size: 18px;
-      color: #666;
-      text-align: center;
-      margin-bottom: 14px;
-      font-style: italic;
-    }
-    
-    .image-container {
-      width: 100%;
-      height: 180px;
-      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-      border: 4px solid #2c5f2d;
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 14px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      position: relative;
-    }
-    
-    .image-icon {
-      font-size: 60px;
-      color: #2c5f2d;
-      margin-bottom: 10px;
-    }
-    
-    .image-label {
-      font-size: 18px;
-      font-weight: bold;
-      color: #1a3a1b;
-      text-align: center;
-      padding: 0 20px;
-    }
-    
-    .simple-box {
+    .card {
       background: white;
-      border: 4px solid #2c5f2d;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 12px 0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      padding: 30px;
+      margin: 20px 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border: 1px solid #e0e0e0;
     }
     
-    .simple-title {
+    .card-title {
       font-size: 24px;
-      font-weight: bold;
-      color: #2c5f2d;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 3px solid #97bc62;
+      font-weight: 700;
+      color: #1a472a;
+      margin-bottom: 15px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #4caf50;
     }
     
-    .simple-content {
-      font-size: 19px;
-      line-height: 1.7;
+    .card-text {
+      font-size: 18px;
+      line-height: 1.8;
       color: #333;
     }
     
-    .two-col {
+    .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 14px 0;
+      gap: 25px;
+      margin: 25px 0;
     }
     
-    .number-card {
-      background: linear-gradient(135deg, #97bc62 0%, #7da54e 100%);
-      border: 4px solid #2c5f2d;
-      border-radius: 15px;
-      padding: 25px;
+    .stat-box {
+      background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+      border-radius: 16px;
+      padding: 35px;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(44,95,45,0.3);
+      box-shadow: 0 8px 24px rgba(76,175,80,0.3);
     }
     
-    .number-big {
-      font-size: 60px;
-      font-weight: bold;
+    .stat-num {
+      font-size: 56px;
+      font-weight: 900;
       color: white;
       margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     
-    .number-label {
+    .stat-label {
       font-size: 18px;
-      font-weight: bold;
-      color: #1a3a1b;
+      font-weight: 600;
+      color: rgba(255,255,255,0.95);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     
-    .comparison-box {
+    .compare-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 14px 0;
+      gap: 25px;
+      margin: 25px 0;
     }
     
-    .bad-side {
-      background: linear-gradient(135deg, #ffcccc 0%, #ff9999 100%);
-      border: 5px solid #cc0000;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 6px 20px rgba(204,0,0,0.3);
+    .compare-bad {
+      background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+      border-radius: 16px;
+      padding: 30px;
+      border: 3px solid #ef5350;
+      box-shadow: 0 8px 24px rgba(239,83,80,0.2);
     }
     
-    .good-side {
-      background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
-      border: 5px solid #2c5f2d;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 6px 20px rgba(44,95,45,0.3);
+    .compare-good {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-radius: 16px;
+      padding: 30px;
+      border: 3px solid #4caf50;
+      box-shadow: 0 8px 24px rgba(76,175,80,0.2);
     }
     
-    .side-title {
+    .compare-title {
       font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 12px;
+      font-weight: 700;
+      margin-bottom: 15px;
       text-align: center;
-      padding-bottom: 10px;
-      border-bottom: 4px solid;
+      padding-bottom: 12px;
+      border-bottom: 3px solid;
     }
     
-    .side-content {
+    .compare-text {
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
     
-    .highlight-box {
-      background: linear-gradient(135deg, #97bc62 0%, #7da54e 100%);
-      border: 5px solid #2c5f2d;
-      border-radius: 15px;
-      padding: 18px 25px;
-      margin: 14px 0;
+    .highlight {
+      background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+      border-radius: 16px;
+      padding: 25px 35px;
+      margin: 25px 0;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(151,188,98,0.4);
+      box-shadow: 0 8px 24px rgba(76,175,80,0.3);
     }
     
     .highlight-text {
-      font-size: 22px;
-      font-weight: bold;
+      font-size: 24px;
+      font-weight: 700;
       color: white;
       line-height: 1.6;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
     
-    .step-box {
+    .step {
       display: flex;
       align-items: center;
       background: white;
-      border: 4px solid #2c5f2d;
-      border-radius: 15px;
-      padding: 18px;
-      margin: 12px 0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      padding: 25px;
+      margin: 18px 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border: 1px solid #e0e0e0;
     }
     
-    .step-number {
-      background: linear-gradient(135deg, #97bc62 0%, #7da54e 100%);
+    .step-num {
+      background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
       color: white;
-      font-size: 40px;
-      font-weight: bold;
+      font-size: 36px;
+      font-weight: 900;
       width: 80px;
       height: 80px;
       line-height: 80px;
       text-align: center;
       border-radius: 50%;
-      margin-right: 20px;
+      margin-right: 25px;
       flex-shrink: 0;
-      box-shadow: 0 4px 15px rgba(151,188,98,0.4);
+      box-shadow: 0 4px 12px rgba(76,175,80,0.3);
     }
     
-    .step-text {
+    .step-content {
       flex: 1;
     }
     
     .step-title {
       font-size: 22px;
-      font-weight: bold;
-      color: #1a3a1b;
+      font-weight: 700;
+      color: #1a472a;
       margin-bottom: 8px;
     }
     
     .step-desc {
-      font-size: 18px;
-      color: #333;
+      font-size: 17px;
+      color: #555;
       line-height: 1.6;
     }
     
     .title-slide {
-      background: linear-gradient(135deg, #1a3a1b 0%, #2c5f2d 50%, #1a3a1b 100%);
+      background: linear-gradient(135deg, #1a472a 0%, #2d5f3f 50%, #1a472a 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 0;
     }
     
     .title-logo {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
       background: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      margin-bottom: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
     
     .title-logo-text {
-      font-size: 70px;
-      font-weight: bold;
-      color: #2c5f2d;
+      font-size: 90px;
+      font-weight: 900;
+      color: #1a472a;
     }
     
-    .title-slide .main-title {
-      font-size: 80px;
-      font-weight: bold;
-      color: #97bc62;
-      text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
-      margin-bottom: 20px;
-      border: 6px solid #97bc62;
-      padding: 25px 50px;
-      border-radius: 20px;
-      background: rgba(151,188,98,0.1);
-    }
-    
-    .title-slide .subtitle {
-      font-size: 32px;
+    .main-title {
+      font-size: 90px;
+      font-weight: 900;
       color: white;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    .main-subtitle {
+      font-size: 36px;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 20px;
       font-weight: 600;
     }
     
-    .title-slide .description {
-      font-size: 24px;
-      color: #c8e6c9;
-      margin-top: 25px;
+    .main-desc {
+      font-size: 26px;
+      color: rgba(255,255,255,0.8);
+      margin-top: 30px;
+      font-weight: 400;
     }
     
     @media print {
@@ -345,6 +344,7 @@
       .slide {
         margin: 0;
         box-shadow: none;
+        border-radius: 0;
       }
     }
   </style>
@@ -357,44 +357,44 @@
     <div class="title-logo-text">R</div>
   </div>
   <h1 class="main-title">RTCP</h1>
-  <p class="subtitle">Real-Time Crop Price Platform</p>
-  <p class="description">Helping Indian Farmers Get Fair Prices</p>
+  <p class="main-subtitle">Real-Time Crop Price Platform</p>
+  <p class="main-desc">Empowering Indian Farmers with Fair Market Prices</p>
 </div>
 
-<!-- SLIDE 2: THE PROBLEM -->
+<!-- SLIDE 2: PROBLEM -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">2/16</div>
+    <div class="slide-num">2 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">The Problem</h2>
-    <p class="slide-subtitle">Why Farmers Lose Money</p>
+    <h2 class="title">The Problem</h2>
+    <p class="subtitle">Why Farmers Are Losing Money</p>
     
-    <div class="image-container" style="height: 150px;">
+    <div class="image-frame" style="height: 160px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Indian Farmer Looking Worried About Crop Prices</div>
+      <div class="image-desc">Indian Farmer Concerned About Crop Prices</div>
     </div>
     
-    <div class="two-col">
-      <div class="number-card">
-        <div class="number-big">146M</div>
-        <div class="number-label">Total Farmers in India</div>
+    <div class="grid-2">
+      <div class="stat-box">
+        <div class="stat-num">146M</div>
+        <div class="stat-label">Total Farmers</div>
       </div>
-      <div class="number-card">
-        <div class="number-big">30-40%</div>
-        <div class="number-label">Money Lost to Middlemen</div>
+      <div class="stat-box">
+        <div class="stat-num">30-40%</div>
+        <div class="stat-label">Income Lost</div>
       </div>
     </div>
     
-    <div class="simple-box">
-      <div class="simple-title">What's Happening?</div>
-      <div class="simple-content">
-        When farmers sell crops, middlemen take 30-40% of the money. Farmers don't know the real market price, so they get cheated!
+    <div class="card">
+      <div class="card-title">The Core Issue</div>
+      <div class="card-text">
+        Farmers lose 30-40% of their income to middlemen because they don't have access to real market prices.
       </div>
     </div>
   </div>
@@ -404,42 +404,42 @@
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">3/16</div>
+    <div class="slide-num">3 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Three Big Problems</h2>
-    <p class="slide-subtitle">Why This Happens</p>
+    <h2 class="title">Three Major Problems</h2>
+    <p class="subtitle">Root Causes of Farmer Exploitation</p>
     
-    <div class="step-box">
-      <div class="step-number">1</div>
-      <div class="step-text">
-        <div class="step-title">Middlemen Take Too Much Money</div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">Middlemen Exploitation</div>
         <div class="step-desc">
-          When market price is ₹2,000, middleman pays farmer only ₹1,400 and keeps ₹600 for himself!
+          When market price is ₹2,000, middlemen pay farmers only ₹1,400 and keep ₹600 for themselves.
         </div>
       </div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">2</div>
-      <div class="step-text">
-        <div class="step-title">Farmers Don't Know Real Prices</div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">No Price Information</div>
         <div class="step-desc">
-          Farmers have no way to check real market prices. They must trust middlemen who can lie.
+          Farmers have no way to check real market prices and must trust middlemen who manipulate prices.
         </div>
       </div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">3</div>
-      <div class="step-text">
-        <div class="step-title">Must Sell Immediately</div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Forced Immediate Sales</div>
         <div class="step-desc">
-          No storage means farmers must sell right after harvest when prices are lowest.
+          Lack of storage facilities forces farmers to sell immediately after harvest when prices are lowest.
         </div>
       </div>
     </div>
@@ -450,87 +450,85 @@
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">4/16</div>
+    <div class="slide-num">4 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Real Example: Ramesh's Story</h2>
-    <p class="slide-subtitle">How Much Money Farmers Actually Lose</p>
+    <h2 class="title">Case Study: Ramesh's Story</h2>
+    <p class="subtitle">Real Financial Impact on Farmers</p>
     
-    <div class="simple-box">
-      <div class="simple-title">Meet Ramesh - A Wheat Farmer</div>
-      <div class="simple-content">
+    <div class="card">
+      <div class="card-title">Background</div>
+      <div class="card-text">
         Ramesh grows 100 bags of wheat. Market price is ₹2,000 per bag.<br>
-        <strong>He should get: ₹2,00,000</strong>
+        <strong>Expected income: ₹2,00,000</strong>
       </div>
     </div>
     
-    <div class="comparison-box">
-      <div class="bad-side">
-        <div class="side-title" style="border-color: #cc0000;">WITHOUT RTCP</div>
-        <div class="side-content">
-          <strong>Middleman comes</strong><br>
-          Says: "I'll pay ₹1,400 per bag"<br>
-          Ramesh has no choice<br><br>
-          <strong>Ramesh gets: ₹1,40,000</strong><br>
-          <strong>Middleman keeps: ₹60,000</strong>
+    <div class="compare-grid">
+      <div class="compare-bad">
+        <div class="compare-title" style="border-color: #ef5350; color: #c62828;">Without RTCP</div>
+        <div class="compare-text">
+          <strong>Middleman offers:</strong> ₹1,400/bag<br>
+          <strong>Total received:</strong> ₹1,40,000<br>
+          <strong>Middleman profit:</strong> ₹60,000<br>
+          <strong>Payment delay:</strong> 10 days
         </div>
       </div>
       
-      <div class="good-side">
-        <div class="side-title" style="border-color: #2c5f2d;">WITH RTCP APP</div>
-        <div class="side-content">
-          <strong>Ramesh checks app</strong><br>
-          Sees real price: ₹2,000<br>
-          Calls verified trader<br><br>
-          <strong>Ramesh gets: ₹1,95,000</strong><br>
-          <strong>Extra money: ₹55,000!</strong>
+      <div class="compare-good">
+        <div class="compare-title" style="border-color: #4caf50; color: #2e7d32;">With RTCP</div>
+        <div class="compare-text">
+          <strong>Verified trader offers:</strong> ₹1,950/bag<br>
+          <strong>Total received:</strong> ₹1,95,000<br>
+          <strong>Extra earned:</strong> ₹55,000<br>
+          <strong>Payment:</strong> 24 hours
         </div>
       </div>
     </div>
     
-    <div class="highlight-box">
+    <div class="highlight">
       <div class="highlight-text">Ramesh earns ₹55,000 MORE with RTCP!</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 5: OUR SOLUTION -->
+<!-- SLIDE 5: SOLUTION -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">5/16</div>
+    <div class="slide-num">5 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Our Solution: RTCP App</h2>
-    <p class="slide-subtitle">A Simple Mobile Website to Help Farmers</p>
+    <h2 class="title">Our Solution: RTCP Platform</h2>
+    <p class="subtitle">Comprehensive Digital Agriculture Solution</p>
     
-    <div class="image-container" style="height: 160px;">
+    <div class="image-frame" style="height: 180px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: RTCP Mobile App Interface Showing Live Crop Prices</div>
+      <div class="image-desc">RTCP Mobile Platform Interface</div>
     </div>
     
-    <div class="simple-box">
-      <div class="simple-title">What is RTCP?</div>
-      <div class="simple-content">
-        RTCP is a mobile website that farmers can open on their phone. It shows:<br><br>
-        • Real market prices (updates every 5 seconds)<br>
-        • When is the best time to sell<br>
-        • Honest traders to contact<br>
-        • Government free money schemes<br>
-        • AI helper that answers questions
+    <div class="card">
+      <div class="card-title">What is RTCP?</div>
+      <div class="card-text">
+        A mobile-first web platform providing farmers with:<br><br>
+        • Real-time market prices (updates every 5 seconds)<br>
+        • Market trend analysis and optimal selling time<br>
+        • Verified trader network with ratings<br>
+        • Government subsidy information and tracking<br>
+        • AI-powered assistant in 6 languages
       </div>
     </div>
     
-    <div class="highlight-box">
-      <div class="highlight-text">Works on any phone • Free for farmers • Very easy to use</div>
+    <div class="highlight">
+      <div class="highlight-text">Free for farmers • Works on any phone • Easy to use</div>
     </div>
   </div>
 </div>
@@ -539,239 +537,223 @@
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">6/16</div>
+    <div class="slide-num">6 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">How to Use RTCP</h2>
-    <p class="slide-subtitle">Just 4 Easy Steps</p>
+    <h2 class="title">How RTCP Works</h2>
+    <p class="subtitle">Simple 4-Step Process</p>
     
-    <div class="step-box">
-      <div class="step-number">1</div>
-      <div class="step-text">
-        <div class="step-title">Open Website on Phone</div>
-        <div class="step-desc">
-          Open browser and type the website address. No app download needed!
-        </div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">Access Platform</div>
+        <div class="step-desc">Open website on any smartphone browser. No app download required.</div>
       </div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">2</div>
-      <div class="step-text">
-        <div class="step-title">See Real Price</div>
-        <div class="step-desc">
-          See current wheat price: ₹2,150. Price updates every 5 seconds!
-        </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">View Real Prices</div>
+        <div class="step-desc">See current market prices updating every 5 seconds with trend indicators.</div>
       </div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">3</div>
-      <div class="step-text">
-        <div class="step-title">Call Honest Trader</div>
-        <div class="step-desc">
-          Find verified trader. Click to call or WhatsApp. No middleman!
-        </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Contact Traders</div>
+        <div class="step-desc">Browse verified traders with ratings and contact directly via call or WhatsApp.</div>
       </div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">4</div>
-      <div class="step-text">
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
         <div class="step-title">Get Fair Price</div>
-        <div class="step-desc">
-          Sell at ₹2,120 (not ₹1,400). Get money in 24 hours!
-        </div>
+        <div class="step-desc">Sell at market rate (₹2,120 vs ₹1,400) with payment in 24 hours.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 7: FEATURE 1 - LIVE PRICES -->
+<!-- SLIDE 7: LIVE PRICES -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">7/16</div>
+    <div class="slide-num">7 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Feature 1: Live Prices</h2>
-    <p class="slide-subtitle">See Real Market Prices Anytime</p>
+    <h2 class="title">Feature 1: Live Prices</h2>
+    <p class="subtitle">Real-Time Market Intelligence</p>
     
-    <div class="image-container" style="height: 140px;">
+    <div class="image-frame" style="height: 150px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Live Price Dashboard with Real-Time Updates</div>
+      <div class="image-desc">Live Price Dashboard with Real-Time Updates</div>
     </div>
     
-    <div class="two-col">
-      <div class="simple-box">
-        <div class="simple-title">Wheat</div>
-        <div class="simple-content">
-          <strong>Today's Price:</strong><br>
-          ₹2,150 per bag<br><br>
-          <span style="color: #27ae60; font-size: 24px; font-weight: bold;">Price Going UP</span>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Wheat</div>
+        <div class="card-text">
+          <strong>Current Price:</strong> ₹2,150/bag<br>
+          <strong>Status:</strong> <span style="color: #4caf50; font-weight: 700;">Rising ↑</span>
         </div>
       </div>
       
-      <div class="simple-box">
-        <div class="simple-title">Rice</div>
-        <div class="simple-content">
-          <strong>Today's Price:</strong><br>
-          ₹3,200 per bag<br><br>
-          <span style="color: #27ae60; font-size: 24px; font-weight: bold;">Price Going UP</span>
+      <div class="card">
+        <div class="card-title">Rice</div>
+        <div class="card-text">
+          <strong>Current Price:</strong> ₹3,200/bag<br>
+          <strong>Status:</strong> <span style="color: #4caf50; font-weight: 700;">Rising ↑</span>
         </div>
       </div>
     </div>
     
-    <div class="two-col">
-      <div class="simple-box">
-        <div class="simple-title">Cotton</div>
-        <div class="simple-content">
-          <strong>Today's Price:</strong><br>
-          ₹6,850 per bag<br><br>
-          <span style="color: #e74c3c; font-size: 24px; font-weight: bold;">Price Going DOWN</span>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Cotton</div>
+        <div class="card-text">
+          <strong>Current Price:</strong> ₹6,850/bag<br>
+          <strong>Status:</strong> <span style="color: #f44336; font-weight: 700;">Falling ↓</span>
         </div>
       </div>
       
-      <div class="simple-box">
-        <div class="simple-title">Maize</div>
-        <div class="simple-content">
-          <strong>Today's Price:</strong><br>
-          ₹1,950 per bag<br><br>
-          <span style="color: #95a5a6; font-size: 24px; font-weight: bold;">Price Stable</span>
+      <div class="card">
+        <div class="card-title">Maize</div>
+        <div class="card-text">
+          <strong>Current Price:</strong> ₹1,950/bag<br>
+          <strong>Status:</strong> <span style="color: #9e9e9e; font-weight: 700;">Stable →</span>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 8: FEATURE 2 - BEST TIME TO SELL -->
+<!-- SLIDE 8: MARKET TRENDS -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">8/16</div>
+    <div class="slide-num">8 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Feature 2: Best Time to Sell</h2>
-    <p class="slide-subtitle">When Should You Sell Your Crops?</p>
+    <h2 class="title">Feature 2: Market Trends</h2>
+    <p class="subtitle">Optimal Selling Time Analysis</p>
     
-    <div class="image-container" style="height: 130px;">
+    <div class="image-frame" style="height: 140px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Annual Price Trend Chart Showing Best Selling Months</div>
+      <div class="image-desc">Annual Price Trend Chart</div>
     </div>
     
-    <div class="simple-box" style="background: #ffcccc; border-color: #cc0000;">
-      <div class="simple-title" style="color: #cc0000;">April (Harvest Time) - DON'T SELL</div>
-      <div class="simple-content">
-        <strong>Price:</strong> ₹1,900 per bag (LOWEST)<br>
-        <strong>Why?</strong> Everyone selling together, too much supply<br>
-        <strong>What to do:</strong> Wait if you can!
+    <div class="card" style="background: #ffebee; border-color: #ef5350;">
+      <div class="card-title" style="color: #c62828;">April (Harvest) - Don't Sell</div>
+      <div class="card-text">
+        <strong>Price:</strong> ₹1,900/bag (Lowest)<br>
+        <strong>Reason:</strong> Oversupply drives prices down 10-15%
       </div>
     </div>
     
-    <div class="simple-box" style="background: #fff3cd; border-color: #f39c12;">
-      <div class="simple-title" style="color: #f39c12;">June-August - WAIT MORE</div>
-      <div class="simple-content">
-        <strong>Price:</strong> ₹2,000-2,100 per bag (BETTER)<br>
-        <strong>Why?</strong> Supply reducing, prices going up<br>
-        <strong>What to do:</strong> Still wait for best price!
+    <div class="card" style="background: #fff3e0; border-color: #ff9800;">
+      <div class="card-title" style="color: #e65100;">June-August - Wait</div>
+      <div class="card-text">
+        <strong>Price:</strong> ₹2,000-2,100/bag (Better)<br>
+        <strong>Reason:</strong> Supply reducing, prices recovering
       </div>
     </div>
     
-    <div class="simple-box" style="background: #ccffcc; border-color: #27ae60;">
-      <div class="simple-title" style="color: #27ae60;">October - BEST TIME TO SELL!</div>
-      <div class="simple-content">
-        <strong>Price:</strong> ₹2,200 per bag (HIGHEST)<br>
-        <strong>Why?</strong> Very less supply, everyone wants to buy<br>
-        <strong>What to do:</strong> SELL NOW and earn maximum!
+    <div class="card" style="background: #e8f5e9; border-color: #4caf50;">
+      <div class="card-title" style="color: #2e7d32;">October - Best Time!</div>
+      <div class="card-text">
+        <strong>Price:</strong> ₹2,200/bag (Highest)<br>
+        <strong>Reason:</strong> Low supply, high demand (+15-20%)
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 9: HOW MUCH MORE MONEY -->
+<!-- SLIDE 9: PROFIT CALCULATION -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">9/16</div>
+    <div class="slide-num">9 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">How Much More Money?</h2>
-    <p class="slide-subtitle">By Waiting for the Right Time</p>
+    <h2 class="title">Timing Impact on Income</h2>
+    <p class="subtitle">Financial Benefit of Optimal Selling</p>
     
-    <div class="simple-box">
-      <div class="simple-title">Example: 100 Bags of Wheat</div>
-      <div class="simple-content">
-        <strong>Sell in April:</strong> ₹1,900 per bag = ₹1,90,000<br>
-        <strong>Sell in October:</strong> ₹2,200 per bag = ₹2,20,000<br><br>
-        <strong style="font-size: 24px; color: #27ae60;">Extra money: ₹30,000!</strong>
+    <div class="card">
+      <div class="card-title">Example: 100 Bags of Wheat</div>
+      <div class="card-text">
+        <strong>Sell in April:</strong> ₹1,900/bag = ₹1,90,000<br>
+        <strong>Sell in October:</strong> ₹2,200/bag = ₹2,20,000<br><br>
+        <strong style="font-size: 24px; color: #4caf50;">Extra Income: ₹30,000 (15.8% increase)</strong>
       </div>
     </div>
     
-    <div class="image-container" style="height: 160px;">
+    <div class="image-frame" style="height: 180px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Bar Chart Comparing Income by Selling Month</div>
+      <div class="image-desc">Income Comparison by Selling Month</div>
     </div>
     
-    <div class="highlight-box">
-      <div class="highlight-text">By waiting 6 months, earn ₹30,000 MORE!</div>
+    <div class="highlight">
+      <div class="highlight-text">RTCP recommends optimal selling time based on 5-year data!</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 10: FEATURE 3 - HONEST TRADERS -->
+<!-- SLIDE 10: VERIFIED TRADERS -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">10/16</div>
+    <div class="slide-num">10 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Feature 3: Honest Traders</h2>
-    <p class="slide-subtitle">Find Trusted Buyers</p>
+    <h2 class="title">Feature 3: Verified Traders</h2>
+    <p class="subtitle">Trusted Buyer Network</p>
     
-    <div class="image-container" style="height: 130px;">
+    <div class="image-frame" style="height: 140px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Verified Trader Profile with Rating Stars</div>
+      <div class="image-desc">Verified Trader Profile with Ratings</div>
     </div>
     
-    <div class="simple-box">
-      <div class="simple-title">How We Check Traders Are Honest</div>
-      <div class="simple-content">
-        • Check their business license<br>
-        • Check they've been working for 2+ years<br>
-        • Read reviews from other farmers<br>
-        • Check they pay money fast (24 hours)<br>
-        • Give them rating like Uber (must be 4+ stars)
+    <div class="card">
+      <div class="card-title">Verification Process</div>
+      <div class="card-text">
+        • APMC business license verification<br>
+        • Minimum 2 years trading history<br>
+        • Farmer reviews and ratings (4.0+ required)<br>
+        • Payment speed tracking (24-48 hour target)<br>
+        • Continuous performance monitoring
       </div>
     </div>
     
-    <div class="simple-box">
-      <div class="simple-title">Example: Rajesh Singh (Verified Trader)</div>
-      <div class="simple-content">
-        <strong>Rating:</strong> 4.9/5.0 Stars (Excellent!)<br>
-        <strong>Experience:</strong> 2,847 farmers bought from him<br>
-        <strong>Payment:</strong> Pays money in 24 hours<br>
-        <strong>Current Price:</strong> Wheat ₹2,120 per bag<br>
-        <strong>Contact:</strong> Can call or WhatsApp directly
+    <div class="card">
+      <div class="card-title">Example: Rajesh Singh (Premium Verified)</div>
+      <div class="card-text">
+        <strong>Rating:</strong> 4.9/5.0 ⭐⭐⭐⭐⭐<br>
+        <strong>Deals:</strong> 2,847 successful transactions<br>
+        <strong>Payment:</strong> 24 hours average<br>
+        <strong>Current Price:</strong> Wheat ₹2,120/bag
       </div>
     </div>
   </div>
@@ -781,226 +763,220 @@
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">11/16</div>
+    <div class="slide-num">11 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Before vs After RTCP</h2>
-    <p class="slide-subtitle">See the Difference!</p>
+    <h2 class="title">Impact Comparison</h2>
+    <p class="subtitle">Before vs After RTCP</p>
     
-    <div class="comparison-box">
-      <div class="bad-side">
-        <div class="side-title" style="border-color: #cc0000;">BEFORE RTCP</div>
-        <div class="side-content">
-          <strong>How:</strong> Sell to middleman<br>
-          <strong>Price:</strong> ₹1,850 per bag<br>
-          <strong>100 bags:</strong> ₹1,85,000<br>
-          <strong>Payment:</strong> 10 days wait<br>
-          <strong>Feeling:</strong> Sad, unsure
+    <div class="compare-grid">
+      <div class="compare-bad">
+        <div class="compare-title" style="border-color: #ef5350; color: #c62828;">Before RTCP</div>
+        <div class="compare-text">
+          <strong>Method:</strong> Middleman<br>
+          <strong>Price:</strong> ₹1,850/bag<br>
+          <strong>Income:</strong> ₹1,85,000<br>
+          <strong>Payment:</strong> 10 days<br>
+          <strong>Trust:</strong> Unknown
         </div>
       </div>
       
-      <div class="good-side">
-        <div class="side-title" style="border-color: #2c5f2d;">AFTER RTCP</div>
-        <div class="side-content">
-          <strong>How:</strong> Use RTCP app<br>
-          <strong>Price:</strong> ₹2,120 per bag<br>
-          <strong>100 bags:</strong> ₹2,12,000<br>
-          <strong>Payment:</strong> 24 hours!<br>
-          <strong>Feeling:</strong> Happy, confident
+      <div class="compare-good">
+        <div class="compare-title" style="border-color: #4caf50; color: #2e7d32;">After RTCP</div>
+        <div class="compare-text">
+          <strong>Method:</strong> Verified Trader<br>
+          <strong>Price:</strong> ₹2,120/bag<br>
+          <strong>Income:</strong> ₹2,12,000<br>
+          <strong>Payment:</strong> 24 hours<br>
+          <strong>Trust:</strong> Verified 4.9★
         </div>
       </div>
     </div>
     
-    <div class="image-container" style="height: 140px;">
+    <div class="image-frame" style="height: 150px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Happy Farmer Using RTCP App on Mobile Phone</div>
+      <div class="image-desc">Happy Farmer Using RTCP Platform</div>
     </div>
     
-    <div class="highlight-box">
-      <div class="highlight-text">Extra money: ₹27,000 per season • ₹54,000 per year!</div>
+    <div class="highlight">
+      <div class="highlight-text">Extra Income: ₹27,000/season • ₹54,000/year • ₹2,70,000 in 5 years</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 12: GOVERNMENT FREE MONEY -->
+<!-- SLIDE 12: GOVERNMENT SUBSIDIES -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">12/16</div>
+    <div class="slide-num">12 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Feature 4: Government Free Money</h2>
-    <p class="slide-subtitle">Get Money from Government Schemes</p>
+    <h2 class="title">Feature 4: Government Subsidies</h2>
+    <p class="subtitle">Access to Financial Support Schemes</p>
     
-    <div class="image-container" style="height: 120px;">
+    <div class="image-frame" style="height: 130px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Government Subsidy Schemes for Farmers</div>
+      <div class="image-desc">Government Subsidy Programs</div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">1</div>
-      <div class="step-text">
-        <div class="step-title">PM-KISAN: ₹6,000 Every Year</div>
-        <div class="step-desc">
-          Government gives ₹2,000 three times a year. Total ₹6,000 FREE! RTCP helps you check and apply.
-        </div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">PM-KISAN: ₹6,000/Year</div>
+        <div class="step-desc">Direct benefit transfer of ₹2,000 three times annually. RTCP provides status tracking and application assistance.</div>
       </div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">2</div>
-      <div class="step-text">
-        <div class="step-title">Solar Pump: ₹60,000 Help</div>
-        <div class="step-desc">
-          Government pays ₹60,000. You pay ₹40,000. Save ₹18,000 every year on electricity!
-        </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">Solar Pump: ₹60,000 Subsidy</div>
+        <div class="step-desc">60% government subsidy on solar pumps. Save ₹18,000/year on electricity costs.</div>
       </div>
     </div>
     
-    <div class="step-box">
-      <div class="step-number">3</div>
-      <div class="step-text">
-        <div class="step-title">Drip Irrigation: ₹45,000 Help</div>
-        <div class="step-desc">
-          Government pays ₹45,000. You pay ₹35,000. Save ₹27,000 every year on water!
-        </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Drip Irrigation: ₹45,000 Subsidy</div>
+        <div class="step-desc">55% government subsidy on drip systems. Save ₹27,000/year on water and increase yield by 20-30%.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 13: TOTAL FREE MONEY -->
+<!-- SLIDE 13: SUBSIDY TOTAL -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">13/16</div>
+    <div class="slide-num">13 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Total Government Money</h2>
-    <p class="slide-subtitle">How Much in 5 Years?</p>
+    <h2 class="title">Total Subsidy Benefits</h2>
+    <p class="subtitle">5-Year Financial Impact</p>
     
-    <div class="two-col">
-      <div class="number-card">
-        <div class="number-big">₹30,000</div>
-        <div class="number-label">PM-KISAN (5 years)</div>
+    <div class="grid-2">
+      <div class="stat-box">
+        <div class="stat-num">₹30K</div>
+        <div class="stat-label">PM-KISAN (5 years)</div>
       </div>
-      <div class="number-card">
-        <div class="number-big">₹1,50,000</div>
-        <div class="number-label">Solar Pump (5 years)</div>
+      <div class="stat-box">
+        <div class="stat-num">₹1.5L</div>
+        <div class="stat-label">Solar Pump (5 years)</div>
       </div>
     </div>
     
-    <div class="number-card">
-      <div class="number-big">₹1,80,000</div>
-      <div class="number-label">Drip Irrigation (5 years)</div>
+    <div class="stat-box">
+      <div class="stat-num">₹1.8L</div>
+      <div class="stat-label">Drip Irrigation (5 years)</div>
     </div>
     
-    <div class="image-container" style="height: 140px;">
+    <div class="image-frame" style="height: 150px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Pie Chart Showing Total Subsidy Benefits</div>
+      <div class="image-desc">Subsidy Benefits Breakdown Chart</div>
     </div>
     
-    <div class="highlight-box">
-      <div class="highlight-text">Total: ₹3,60,000 in 5 years from government!</div>
+    <div class="highlight">
+      <div class="highlight-text">Total Government Benefits: ₹3,60,000 in 5 years!</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 14: AI HELPER -->
+<!-- SLIDE 14: AI ASSISTANT -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">14/16</div>
+    <div class="slide-num">14 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Feature 5: AI Helper</h2>
-    <p class="slide-subtitle">Ask Questions Anytime</p>
+    <h2 class="title">Feature 5: AI Assistant</h2>
+    <p class="subtitle">24/7 Intelligent Support</p>
     
-    <div class="image-container" style="height: 120px;">
+    <div class="image-frame" style="height: 130px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: AI Chatbot Interface with Conversation Examples</div>
+      <div class="image-desc">AI Chatbot Interface</div>
     </div>
     
-    <div class="simple-box" style="background: #e3f2fd;">
-      <div class="simple-title">Example 1</div>
-      <div class="simple-content">
-        <strong>You ask:</strong> "What is wheat price today?"<br>
-        <strong>AI answers:</strong> "Today wheat price is ₹2,150. Price is going up!"
+    <div class="card" style="background: #e3f2fd;">
+      <div class="card-title">Example 1: Price Inquiry</div>
+      <div class="card-text">
+        <strong>Farmer:</strong> "What is wheat price today?"<br>
+        <strong>AI:</strong> "Current wheat price is ₹2,150. Price is rising by 2.3%."
       </div>
     </div>
     
-    <div class="simple-box" style="background: #e3f2fd;">
-      <div class="simple-title">Example 2</div>
-      <div class="simple-content">
-        <strong>You ask:</strong> "Should I sell now?"<br>
-        <strong>AI answers:</strong> "Price is near maximum. Good time to sell!"
+    <div class="card" style="background: #e3f2fd;">
+      <div class="card-title">Example 2: Selling Advice</div>
+      <div class="card-text">
+        <strong>Farmer:</strong> "Should I sell now?"<br>
+        <strong>AI:</strong> "Price is near maximum. Good time to sell!"
       </div>
     </div>
     
-    <div class="simple-box" style="background: #e3f2fd;">
-      <div class="simple-title">Example 3</div>
-      <div class="simple-content">
-        <strong>You ask:</strong> "How to get PM-KISAN money?"<br>
-        <strong>AI answers:</strong> "I'll guide you step-by-step. First you need..."
+    <div class="card" style="background: #e3f2fd;">
+      <div class="card-title">Example 3: Subsidy Help</div>
+      <div class="card-text">
+        <strong>Farmer:</strong> "How to apply for PM-KISAN?"<br>
+        <strong>AI:</strong> "I'll guide you step-by-step. First, you need..."
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 15: TOTAL BENEFIT -->
+<!-- SLIDE 15: TOTAL IMPACT -->
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">15/16</div>
+    <div class="slide-num">15 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Total Benefit</h2>
-    <p class="slide-subtitle">How Much Extra Money?</p>
+    <h2 class="title">Total Financial Impact</h2>
+    <p class="subtitle">Comprehensive Benefit Analysis</p>
     
-    <div class="simple-box">
-      <div class="simple-title">From Better Prices (RTCP Trading)</div>
-      <div class="simple-content">
-        <strong>Per season:</strong> ₹27,000 extra<br>
-        <strong>Per year:</strong> ₹54,000 extra<br>
-        <strong>5 years:</strong> ₹2,70,000 extra
+    <div class="card">
+      <div class="card-title">Better Crop Prices (RTCP Trading)</div>
+      <div class="card-text">
+        <strong>Per Season:</strong> ₹27,000 extra<br>
+        <strong>Per Year:</strong> ₹54,000 extra<br>
+        <strong>5 Years:</strong> ₹2,70,000 total
       </div>
     </div>
     
-    <div class="simple-box">
-      <div class="simple-title">From Government Schemes</div>
-      <div class="simple-content">
-        <strong>Per year:</strong> ₹51,000 savings<br>
-        <strong>5 years:</strong> ₹3,60,000 total
+    <div class="card">
+      <div class="card-title">Government Subsidies</div>
+      <div class="card-text">
+        <strong>Per Year:</strong> ₹51,000 savings<br>
+        <strong>5 Years:</strong> ₹3,60,000 total
       </div>
     </div>
     
-    <div class="image-container" style="height: 140px;">
+    <div class="image-frame" style="height: 150px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Total Benefit Calculation Chart</div>
+      <div class="image-desc">Total Benefit Calculation</div>
     </div>
     
-    <div class="highlight-box">
-      <div class="highlight-text">Total: ₹6,30,000 in 5 years! Life-changing money!</div>
+    <div class="highlight">
+      <div class="highlight-text">Total 5-Year Benefit: ₹6,30,000 • Life-Changing Impact!</div>
     </div>
   </div>
 </div>
@@ -1009,43 +985,43 @@
 <div class="slide">
   <div class="header">
     <div class="header-left">
-      <div class="header-logo">R</div>
-      <span class="header-title">RTCP Platform</span>
+      <div class="logo">R</div>
+      <span class="brand-name">RTCP</span>
     </div>
-    <div class="slide-number">16/16</div>
+    <div class="slide-num">16 / 16</div>
   </div>
   
   <div class="content">
-    <h2 class="slide-title">Summary</h2>
-    <p class="slide-subtitle">What We Learned</p>
+    <h2 class="title">Summary</h2>
+    <p class="subtitle">Key Takeaways</p>
     
-    <div class="simple-box" style="background: #ffcccc;">
-      <div class="simple-title">Problem</div>
-      <div class="simple-content">
-        Farmers lose ₹60,000 to middlemen because they don't know real prices
+    <div class="card" style="background: #ffebee;">
+      <div class="card-title" style="color: #c62828;">Problem</div>
+      <div class="card-text">
+        146M farmers lose 30-40% income to middlemen due to information asymmetry
       </div>
     </div>
     
-    <div class="simple-box" style="background: #ccffcc;">
-      <div class="simple-title">Solution</div>
-      <div class="simple-content">
-        RTCP shows real prices + connects honest traders + helps get government money
+    <div class="card" style="background: #e8f5e9;">
+      <div class="card-title" style="color: #2e7d32;">Solution</div>
+      <div class="card-text">
+        RTCP provides real-time prices, verified traders, market trends, subsidies, and AI assistance
       </div>
     </div>
     
-    <div class="simple-box" style="background: #e3f2fd;">
-      <div class="simple-title">Result</div>
-      <div class="simple-content">
-        Farmers earn ₹6,30,000 extra in 5 years! Life-changing money!
+    <div class="card" style="background: #e3f2fd;">
+      <div class="card-title" style="color: #1565c0;">Impact</div>
+      <div class="card-text">
+        Farmers earn ₹6,30,000 extra in 5 years through better prices and government benefits
       </div>
     </div>
     
-    <div class="image-container" style="height: 130px;">
+    <div class="image-frame" style="height: 130px;">
       <div class="image-icon">📷</div>
-      <div class="image-label">Image: Happy Farmers Celebrating Success with RTCP</div>
+      <div class="image-desc">Successful Farmers with RTCP</div>
     </div>
     
-    <div class="highlight-box">
+    <div class="highlight">
       <div class="highlight-text">Try RTCP: kapasiraj84-beep.github.io/rtcp-crop-price-app</div>
     </div>
   </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RTCP Platform - Complete Presentation</title>
+  <title>RTCP Platform - Complete 22 Slides</title>
   <style>
     @page {
       size: A4 landscape;
@@ -30,6 +30,7 @@
       border-radius: 8px;
       page-break-after: always;
       overflow: hidden;
+      display: block;
     }
     
     .header {
@@ -80,193 +81,193 @@
     }
     
     .content {
-      padding: 30px 45px;
+      padding: 28px 40px;
       height: calc(210mm - 65px);
       overflow: hidden;
     }
     
     .title {
-      font-size: 42px;
+      font-size: 40px;
       font-weight: 800;
       color: #1a472a;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-align: center;
     }
     
     .subtitle {
-      font-size: 18px;
+      font-size: 17px;
       color: #666;
       text-align: center;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       font-weight: 400;
     }
     
     .image-frame {
       width: 100%;
-      height: 180px;
+      height: 160px;
       background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-      border-radius: 16px;
+      border-radius: 14px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 20px 0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      margin: 16px 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
       border: 2px solid #e0e0e0;
     }
     
     .image-icon {
-      width: 70px;
-      height: 70px;
+      width: 65px;
+      height: 65px;
       background: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
+      font-size: 32px;
       color: #1a472a;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     
     .image-desc {
-      font-size: 15px;
+      font-size: 14px;
       color: #555;
       font-weight: 500;
       text-align: center;
-      padding: 0 25px;
+      padding: 0 20px;
     }
     
     .card {
       background: white;
-      border-radius: 14px;
-      padding: 22px;
-      margin: 16px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 18px;
+      margin: 12px 0;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
       border: 1px solid #e0e0e0;
     }
     
     .card-title {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       color: #1a472a;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
       border-bottom: 3px solid #4caf50;
     }
     
     .card-text {
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.6;
       color: #333;
     }
     
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 18px 0;
+      gap: 16px;
+      margin: 14px 0;
     }
     
     .stat-box {
       background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-      border-radius: 14px;
-      padding: 28px;
+      border-radius: 12px;
+      padding: 24px;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(76,175,80,0.3);
+      box-shadow: 0 5px 18px rgba(76,175,80,0.3);
     }
     
     .stat-num {
-      font-size: 50px;
+      font-size: 46px;
       font-weight: 900;
       color: white;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     
     .stat-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: rgba(255,255,255,0.95);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
     
     .compare-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 18px 0;
+      gap: 16px;
+      margin: 14px 0;
     }
     
     .compare-bad {
       background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
-      border-radius: 14px;
-      padding: 24px;
+      border-radius: 12px;
+      padding: 20px;
       border: 3px solid #ef5350;
-      box-shadow: 0 6px 20px rgba(239,83,80,0.2);
+      box-shadow: 0 5px 18px rgba(239,83,80,0.2);
     }
     
     .compare-good {
       background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-      border-radius: 14px;
-      padding: 24px;
+      border-radius: 12px;
+      padding: 20px;
       border: 3px solid #4caf50;
-      box-shadow: 0 6px 20px rgba(76,175,80,0.2);
+      box-shadow: 0 5px 18px rgba(76,175,80,0.2);
     }
     
     .compare-title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-align: center;
-      padding-bottom: 10px;
+      padding-bottom: 8px;
       border-bottom: 3px solid;
     }
     
     .compare-text {
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.6;
     }
     
     .highlight {
       background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-      border-radius: 14px;
-      padding: 20px 30px;
-      margin: 18px 0;
+      border-radius: 12px;
+      padding: 16px 26px;
+      margin: 14px 0;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(76,175,80,0.3);
+      box-shadow: 0 5px 18px rgba(76,175,80,0.3);
     }
     
     .highlight-text {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       color: white;
-      line-height: 1.5;
+      line-height: 1.4;
     }
     
     .step {
       display: flex;
       align-items: center;
       background: white;
-      border-radius: 14px;
-      padding: 20px;
-      margin: 14px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 11px 0;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
       border: 1px solid #e0e0e0;
     }
     
     .step-num {
       background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
       color: white;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 900;
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
+      width: 62px;
+      height: 62px;
+      line-height: 62px;
       text-align: center;
       border-radius: 50%;
-      margin-right: 20px;
+      margin-right: 16px;
       flex-shrink: 0;
       box-shadow: 0 4px 12px rgba(76,175,80,0.3);
     }
@@ -276,47 +277,47 @@
     }
     
     .step-title {
-      font-size: 19px;
+      font-size: 17px;
       font-weight: 700;
       color: #1a472a;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
     
     .step-desc {
-      font-size: 15px;
+      font-size: 14px;
       color: #555;
-      line-height: 1.6;
+      line-height: 1.5;
     }
     
     .grant-total {
       background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-      border-radius: 16px;
-      padding: 20px;
+      border-radius: 14px;
+      padding: 18px;
       text-align: center;
-      margin: 20px 0;
-      box-shadow: 0 8px 24px rgba(76,175,80,0.3);
+      margin: 16px 0;
+      box-shadow: 0 6px 20px rgba(76,175,80,0.3);
     }
     
     .grant-amount {
-      font-size: 56px;
+      font-size: 50px;
       font-weight: 900;
       color: white;
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     
     .grant-label {
-      font-size: 18px;
+      font-size: 16px;
       color: rgba(255,255,255,0.95);
-      margin-top: 8px;
+      margin-top: 6px;
       font-weight: 600;
     }
     
     .allocation-item {
       background: white;
-      border-radius: 14px;
-      padding: 16px 20px;
-      margin: 10px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 13px 16px;
+      margin: 8px 0;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
       border-left: 5px solid;
     }
     
@@ -324,55 +325,55 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     
     .allocation-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       color: #1a472a;
       flex: 1;
     }
     
     .allocation-amount {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 900;
-      margin-left: 12px;
+      margin-left: 10px;
     }
     
     .allocation-percent {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       color: #666;
-      margin-left: 8px;
+      margin-left: 6px;
     }
     
     .allocation-desc {
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: 13px;
+      line-height: 1.4;
       color: #555;
-      margin-top: 6px;
+      margin-top: 5px;
     }
     
     .milestone-box {
       background: white;
-      border-radius: 14px;
-      padding: 16px;
-      margin: 10px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 13px;
+      margin: 8px 0;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
       border-left: 5px solid #2196f3;
     }
     
     .milestone-header {
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 700;
       color: #1a472a;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     
     .milestone-list {
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.5;
       color: #555;
     }
     
@@ -386,42 +387,42 @@
     }
     
     .title-logo {
-      width: 170px;
-      height: 170px;
+      width: 160px;
+      height: 160px;
       background: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 35px;
+      margin-bottom: 32px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
     
     .title-logo-text {
-      font-size: 85px;
+      font-size: 80px;
       font-weight: 900;
       color: #1a472a;
     }
     
     .main-title {
-      font-size: 85px;
+      font-size: 80px;
       font-weight: 900;
       color: white;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       text-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     
     .main-subtitle {
-      font-size: 34px;
+      font-size: 32px;
       color: rgba(255,255,255,0.95);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       font-weight: 600;
     }
     
     .main-desc {
-      font-size: 24px;
+      font-size: 22px;
       color: rgba(255,255,255,0.8);
-      margin-top: 28px;
+      margin-top: 24px;
       font-weight: 400;
     }
     
@@ -464,7 +465,7 @@
     <h2 class="title">The Problem</h2>
     <p class="subtitle">Why Farmers Are Losing Money</p>
     
-    <div class="image-frame" style="height: 150px;">
+    <div class="image-frame" style="height: 140px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Indian Farmer Concerned About Crop Prices</div>
     </div>
@@ -599,7 +600,7 @@
     <h2 class="title">Our Solution: RTCP Platform</h2>
     <p class="subtitle">Comprehensive Digital Agriculture Solution</p>
     
-    <div class="image-frame" style="height: 160px;">
+    <div class="image-frame" style="height: 150px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">RTCP Mobile Platform Interface</div>
     </div>
@@ -684,7 +685,7 @@
     <h2 class="title">Feature 1: Live Prices</h2>
     <p class="subtitle">Real-Time Market Intelligence</p>
     
-    <div class="image-frame" style="height: 140px;">
+    <div class="image-frame" style="height: 130px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Live Price Dashboard with Real-Time Updates</div>
     </div>
@@ -741,7 +742,7 @@
     <h2 class="title">Feature 2: Market Trends</h2>
     <p class="subtitle">Optimal Selling Time Analysis</p>
     
-    <div class="image-frame" style="height: 130px;">
+    <div class="image-frame" style="height: 120px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Annual Price Trend Chart</div>
     </div>
@@ -791,11 +792,11 @@
       <div class="card-text">
         <strong>Sell in April:</strong> ₹1,900/bag = ₹1,90,000<br>
         <strong>Sell in October:</strong> ₹2,200/bag = ₹2,20,000<br><br>
-        <strong style="font-size: 22px; color: #4caf50;">Extra Income: ₹30,000 (15.8% increase)</strong>
+        <strong style="font-size: 20px; color: #4caf50;">Extra Income: ₹30,000 (15.8% increase)</strong>
       </div>
     </div>
     
-    <div class="image-frame" style="height: 170px;">
+    <div class="image-frame" style="height: 160px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Income Comparison by Selling Month</div>
     </div>
@@ -820,7 +821,7 @@
     <h2 class="title">Feature 3: Verified Traders</h2>
     <p class="subtitle">Trusted Buyer Network</p>
     
-    <div class="image-frame" style="height: 130px;">
+    <div class="image-frame" style="height: 120px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Verified Trader Profile with Ratings</div>
     </div>
@@ -886,7 +887,7 @@
       </div>
     </div>
     
-    <div class="image-frame" style="height: 140px;">
+    <div class="image-frame" style="height: 130px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Happy Farmer Using RTCP Platform</div>
     </div>
@@ -911,7 +912,7 @@
     <h2 class="title">Feature 4: Government Subsidies</h2>
     <p class="subtitle">Access to Financial Support Schemes</p>
     
-    <div class="image-frame" style="height: 120px;">
+    <div class="image-frame" style="height: 110px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Government Subsidy Programs</div>
     </div>
@@ -972,7 +973,7 @@
       <div class="stat-label">Drip Irrigation (5 years)</div>
     </div>
     
-    <div class="image-frame" style="height: 140px;">
+    <div class="image-frame" style="height: 130px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Subsidy Benefits Breakdown Chart</div>
     </div>
@@ -997,7 +998,7 @@
     <h2 class="title">Feature 5: AI Assistant</h2>
     <p class="subtitle">24/7 Intelligent Support</p>
     
-    <div class="image-frame" style="height: 120px;">
+    <div class="image-frame" style="height: 110px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">AI Chatbot Interface</div>
     </div>
@@ -1059,7 +1060,7 @@
       </div>
     </div>
     
-    <div class="image-frame" style="height: 140px;">
+    <div class="image-frame" style="height: 130px;">
       <div class="image-icon">📷</div>
       <div class="image-desc">Total Benefit Calculation</div>
     </div>
@@ -1183,27 +1184,15 @@
     <div class="card">
       <div class="card-title">Detailed Cost Breakdown</div>
       <div class="card-text">
-        <strong>Provisional Patent Filing (₹8,000):</strong><br>
-        • Government e-filing fees for startup: ₹1,600<br>
-        • Attorney drafting & filing: ₹6,000-7,000<br><br>
-        
-        <strong>Complete Patent Application (₹15,000):</strong><br>
-        • Detailed specification drafting: ₹10,000<br>
-        • Government fees: ₹4,000<br>
-        • Claims preparation: ₹1,000<br><br>
-        
-        <strong>Patent Attorney Consultation (₹8,000):</strong><br>
-        • Prior art search: ₹3,000<br>
-        • Legal advice: ₹3,000<br>
-        • Documentation review: ₹2,000<br><br>
-        
-        <strong>Request for Examination (₹4,000):</strong><br>
-        • Government Form 18 filing + Attorney assistance
+        <strong>Provisional Patent (₹8,000):</strong> Gov fees ₹1,600 + Attorney ₹6,000<br>
+        <strong>Complete Patent (₹15,000):</strong> Drafting ₹10,000 + Gov ₹4,000 + Claims ₹1,000<br>
+        <strong>Attorney Consultation (₹8,000):</strong> Prior art ₹3,000 + Legal ₹3,000 + Review ₹2,000<br>
+        <strong>Examination Request (₹4,000):</strong> Form 18 + Attorney assistance
       </div>
     </div>
     
     <div class="highlight">
-      <div class="highlight-text">Patents protect our innovation and increase company valuation for future funding!</div>
+      <div class="highlight-text">Patents protect our innovation and increase company valuation!</div>
     </div>
   </div>
 </div>
@@ -1225,41 +1214,25 @@
     <div class="card">
       <div class="card-title">A. Digital Marketing - ₹35,000</div>
       <div class="card-text">
-        <strong>WhatsApp Campaigns (₹15,000):</strong><br>
-        • 130,000 messages × ₹0.115 each = ₹15,000<br>
-        • Target: 50,000 farmers in WhatsApp groups<br><br>
-        
-        <strong>Facebook & Instagram Ads (₹12,000):</strong><br>
-        • ₹1,000/day × 12 days of targeted rural ads<br>
-        • Reach: 100,000+ impressions<br><br>
-        
-        <strong>YouTube Video Tutorials (₹8,000):</strong><br>
-        • 5 tutorial videos in Hindi/Punjabi<br>
-        • ₹1,600 per video production
+        <strong>WhatsApp (₹15,000):</strong> 130,000 messages × ₹0.115 = ₹15,000<br>
+        <strong>Facebook/Instagram (₹12,000):</strong> ₹1,000/day × 12 days<br>
+        <strong>YouTube Videos (₹8,000):</strong> 5 videos × ₹1,600 each
       </div>
     </div>
     
     <div class="card">
       <div class="card-title">B. Ground Activities - ₹28,000</div>
       <div class="card-text">
-        <strong>Village Demonstrations (₹18,000):</strong><br>
-        • 30 villages × ₹600 per demo<br>
-        • Includes: Projector rental, refreshments, materials<br><br>
-        
-        <strong>Printed Materials (₹7,000):</strong><br>
-        • 10,000 pamphlets: ₹3,500<br>
-        • 500 posters: ₹3,500<br><br>
-        
-        <strong>Mandi Presence (₹3,000):</strong><br>
-        • Banners and stalls at 6 major mandis
+        <strong>Village Demos (₹18,000):</strong> 30 villages × ₹600 each<br>
+        <strong>Printed Materials (₹7,000):</strong> 10,000 pamphlets + 500 posters<br>
+        <strong>Mandi Presence (₹3,000):</strong> 6 major mandis
       </div>
     </div>
     
     <div class="card">
       <div class="card-title">C. Influencer Marketing - ₹12,000</div>
       <div class="card-text">
-        • 6 progressive farmers as brand ambassadors<br>
-        • ₹2,000 each for testimonial videos and local promotion
+        6 progressive farmers × ₹2,000 each for testimonials
       </div>
     </div>
   </div>
@@ -1282,30 +1255,21 @@
     <div class="card">
       <div class="card-title">Full-Stack Developer - ₹84,000 (33.6%)</div>
       <div class="card-text">
-        <strong>Salary:</strong> ₹7,000/month × 12 months = ₹84,000<br><br>
-        
-        <strong>Profile:</strong> Junior full-stack developer with 1-2 years experience<br>
-        <strong>Skills:</strong> HTML, CSS, JavaScript, Node.js, Database management<br><br>
-        
-        <strong>Key Responsibilities:</strong><br>
-        • Platform maintenance and bug fixes<br>
-        • Feature development based on user feedback<br>
-        • API integrations (market data, SMS, WhatsApp)<br>
-        • Database management and optimization<br>
-        • Security updates and monitoring<br>
-        • Analytics implementation and reporting<br><br>
-        
-        <strong>Why ₹7,000/month?</strong> Competitive for freshers in tier-2/3 cities with equity potential and remote work flexibility
+        <strong>Salary:</strong> ₹7,000/month × 12 months = ₹84,000<br>
+        <strong>Profile:</strong> Junior developer, 1-2 years experience<br>
+        <strong>Skills:</strong> HTML, CSS, JavaScript, Node.js, Database<br><br>
+        <strong>Responsibilities:</strong> Maintenance, features, APIs, database, security, analytics<br><br>
+        <strong>Why ₹7K/month?</strong> Competitive for freshers in tier-2/3 cities with equity + remote work
       </div>
     </div>
     
     <div class="card">
       <div class="card-title">Cloud Infrastructure - ₹36,000 (14.4%)</div>
       <div class="card-text">
-        <strong>Cloud Hosting (₹18,000):</strong> AWS/Google Cloud ₹1,500/month<br>
-        <strong>API Subscriptions (₹12,000):</strong> Market data ₹5K, SMS ₹4K, WhatsApp ₹3K<br>
-        <strong>Domain & Security (₹3,000):</strong> Domain ₹1K, SSL ₹1.5K, Tools ₹500<br>
-        <strong>Development Tools (₹3,000):</strong> GitHub Pro, Analytics, Monitoring
+        <strong>Hosting (₹18,000):</strong> AWS/Google Cloud ₹1,500/month<br>
+        <strong>APIs (₹12,000):</strong> Market data ₹5K, SMS ₹4K, WhatsApp ₹3K<br>
+        <strong>Domain & Security (₹3,000):</strong> Domain + SSL + Tools<br>
+        <strong>Dev Tools (₹3,000):</strong> GitHub Pro, Analytics, Monitoring
       </div>
     </div>
   </div>
@@ -1328,44 +1292,44 @@
     <div class="milestone-box">
       <div class="milestone-header">Month 1-3: Foundation & Protection</div>
       <div class="milestone-list">
-        • File provisional patent application (Month 1)<br>
-        • Hire and onboard full-stack developer (Month 1)<br>
-        • Set up cloud infrastructure and APIs (Month 2)<br>
-        • Launch initial awareness campaign in 2 districts (Month 3)<br>
-        <strong>Target:</strong> 2,000 farmers registered, patent filed
+        • File provisional patent (Month 1)<br>
+        • Hire developer (Month 1)<br>
+        • Setup infrastructure (Month 2)<br>
+        • Launch campaign in 2 districts (Month 3)<br>
+        <strong>Target:</strong> 2,000 farmers, patent filed
       </div>
     </div>
     
     <div class="milestone-box">
       <div class="milestone-header">Month 4-6: Scale & Engagement</div>
       <div class="milestone-list">
-        • Expand marketing to 5 more districts (Month 4-5)<br>
-        • Complete patent application filing (Month 4)<br>
-        • Add 3 new crop types based on feedback (Month 5)<br>
-        • Conduct 20 village demonstrations (Month 4-6)<br>
-        <strong>Target:</strong> 8,000 farmers registered, 500 active daily users
+        • Expand to 5 more districts (Month 4-5)<br>
+        • Complete patent application (Month 4)<br>
+        • Add 3 new crops (Month 5)<br>
+        • 20 village demos (Month 4-6)<br>
+        <strong>Target:</strong> 8,000 farmers, 500 daily active
       </div>
     </div>
     
     <div class="milestone-box">
       <div class="milestone-header">Month 7-9: Optimization & Growth</div>
       <div class="milestone-list">
-        • Launch influencer marketing campaign (Month 7)<br>
-        • Implement advanced analytics (Month 8)<br>
-        • Onboard 20 verified traders (Month 7-9)<br>
-        • Optimize platform based on user data (Month 9)<br>
-        <strong>Target:</strong> 12,000 farmers registered, 1,500 daily active users
+        • Launch influencer campaign (Month 7)<br>
+        • Advanced analytics (Month 8)<br>
+        • 20 verified traders (Month 7-9)<br>
+        • Platform optimization (Month 9)<br>
+        <strong>Target:</strong> 12,000 farmers, 1,500 daily active
       </div>
     </div>
     
     <div class="milestone-box">
       <div class="milestone-header">Month 10-12: Consolidation & Proof</div>
       <div class="milestone-list">
-        • Complete remaining village demos (Month 10-11)<br>
-        • Generate impact report with testimonials (Month 11)<br>
-        • Prepare for Series A funding (Month 12)<br>
-        • Patent examination response (Month 12)<br>
-        <strong>Target:</strong> 15,000+ farmers, 2,000+ daily active, ₹50L+ GMV
+        • Complete demos (Month 10-11)<br>
+        • Impact report (Month 11)<br>
+        • Series A prep (Month 12)<br>
+        • Patent examination (Month 12)<br>
+        <strong>Target:</strong> 15,000+ farmers, 2,000+ daily, ₹50L+ GMV
       </div>
     </div>
   </div>
@@ -1413,13 +1377,13 @@
         • 15,000 farmers earning ₹27,000 extra per season<br>
         • Total farmer benefit: ₹40.5 crore annually<br>
         • 20 verified traders with transparent pricing<br>
-        • Patent secured for long-term competitive advantage<br>
-        • Platform ready for Series A funding round
+        • Patent secured for competitive advantage<br>
+        • Platform ready for Series A funding
       </div>
     </div>
     
     <div class="highlight">
-      <div class="highlight-text">₹2,50,000 investment → ₹40.5 crore farmer benefit → 162x social return!</div>
+      <div class="highlight-text">₹2.5L investment → ₹40.5 crore farmer benefit → 162x social return!</div>
     </div>
   </div>
 </div>
@@ -1441,35 +1405,35 @@
     <div class="card" style="background: #ffebee;">
       <div class="card-title" style="color: #c62828;">Problem</div>
       <div class="card-text">
-        146M farmers lose 30-40% income to middlemen due to information asymmetry
+        146M farmers lose 30-40% income to middlemen
       </div>
     </div>
     
     <div class="card" style="background: #e8f5e9;">
       <div class="card-title" style="color: #2e7d32;">Solution</div>
       <div class="card-text">
-        RTCP provides real-time prices, verified traders, market trends, subsidies, and AI assistance
+        RTCP: Real-time prices, verified traders, trends, subsidies, AI
       </div>
     </div>
     
     <div class="card" style="background: #e3f2fd;">
       <div class="card-title" style="color: #1565c0;">Farmer Impact</div>
       <div class="card-text">
-        Farmers earn ₹6,30,000 extra in 5 years through better prices and government benefits
+        ₹6,30,000 extra in 5 years per farmer
       </div>
     </div>
     
     <div class="card" style="background: #fff3e0;">
       <div class="card-title" style="color: #e65100;">Grant Utilization</div>
       <div class="card-text">
-        ₹2,50,000 allocated: Patent (₹35K), Marketing (₹75K), Developer (₹84K), Infrastructure (₹36K), Contingency (₹20K)
+        ₹2,50,000: Patent ₹35K • Marketing ₹75K • Developer ₹84K • Infrastructure ₹36K • Contingency ₹20K
       </div>
     </div>
     
     <div class="card" style="background: #f3e5f5;">
       <div class="card-title" style="color: #6a1b9a;">12-Month Goal</div>
       <div class="card-text">
-        15,000+ farmers • ₹50L+ GMV • Patent secured • Platform scaled 7.5x • Ready for Series A
+        15,000+ farmers • ₹50L+ GMV • Patent secured • 7.5x growth • Series A ready
       </div>
     </div>
     

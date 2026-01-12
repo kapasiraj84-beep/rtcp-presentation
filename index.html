@@ -3,438 +3,446 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RTCP Platform - Complete 22 Slides</title>
+  <title>RTCP - Professional Pitch Deck</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    
     @page {
       size: A4 landscape;
       margin: 0;
     }
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      background: #0a0a0a;
-      padding: 20px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #000000;
+      padding: 0;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
     
     .slide {
-      width: 297mm;
-      height: 210mm;
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      width: 1280px;
+      height: 720px;
+      background: #ffffff;
       position: relative;
-      margin: 20px auto;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      border-radius: 8px;
+      margin: 30px auto;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.5);
       page-break-after: always;
       overflow: hidden;
-      display: block;
     }
     
-    .header {
-      background: linear-gradient(135deg, #1a472a 0%, #2d5f3f 100%);
-      height: 65px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 45px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-    
-    .logo {
-      width: 48px;
-      height: 48px;
-      background: white;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      color: #1a472a;
-      font-size: 26px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    
-    .brand-name {
-      color: white;
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    
-    .slide-num {
-      color: white;
-      font-size: 15px;
-      font-weight: 600;
-      background: rgba(255,255,255,0.2);
-      padding: 7px 18px;
-      border-radius: 18px;
-      backdrop-filter: blur(10px);
-    }
-    
-    .content {
-      padding: 28px 40px;
-      height: calc(210mm - 65px);
-      overflow: hidden;
-    }
-    
-    .title {
-      font-size: 40px;
-      font-weight: 800;
-      color: #1a472a;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    
-    .subtitle {
-      font-size: 17px;
-      color: #666;
-      text-align: center;
-      margin-bottom: 18px;
-      font-weight: 400;
-    }
-    
-    .image-frame {
-      width: 100%;
-      height: 160px;
-      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-      border-radius: 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 16px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      border: 2px solid #e0e0e0;
-    }
-    
-    .image-icon {
-      width: 65px;
-      height: 65px;
-      background: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: #1a472a;
-      margin-bottom: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    
-    .image-desc {
-      font-size: 14px;
-      color: #555;
-      font-weight: 500;
-      text-align: center;
-      padding: 0 20px;
-    }
-    
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 18px;
-      margin: 12px 0;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      border: 1px solid #e0e0e0;
-    }
-    
-    .card-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #1a472a;
-      margin-bottom: 10px;
-      padding-bottom: 8px;
-      border-bottom: 3px solid #4caf50;
-    }
-    
-    .card-text {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #333;
-    }
-    
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 14px 0;
-    }
-    
-    .stat-box {
-      background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-      border-radius: 12px;
-      padding: 24px;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(76,175,80,0.3);
-    }
-    
-    .stat-num {
-      font-size: 46px;
-      font-weight: 900;
-      color: white;
-      margin-bottom: 6px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    .stat-label {
-      font-size: 15px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.95);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    .compare-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 14px 0;
-    }
-    
-    .compare-bad {
-      background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
-      border-radius: 12px;
-      padding: 20px;
-      border: 3px solid #ef5350;
-      box-shadow: 0 5px 18px rgba(239,83,80,0.2);
-    }
-    
-    .compare-good {
-      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-      border-radius: 12px;
-      padding: 20px;
-      border: 3px solid #4caf50;
-      box-shadow: 0 5px 18px rgba(76,175,80,0.2);
-    }
-    
-    .compare-title {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      text-align: center;
-      padding-bottom: 8px;
-      border-bottom: 3px solid;
-    }
-    
-    .compare-text {
-      font-size: 15px;
-      line-height: 1.6;
-    }
-    
-    .highlight {
-      background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-      border-radius: 12px;
-      padding: 16px 26px;
-      margin: 14px 0;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(76,175,80,0.3);
-    }
-    
-    .highlight-text {
-      font-size: 18px;
-      font-weight: 700;
-      color: white;
-      line-height: 1.4;
-    }
-    
-    .step {
-      display: flex;
-      align-items: center;
-      background: white;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 11px 0;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      border: 1px solid #e0e0e0;
-    }
-    
-    .step-num {
-      background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-      color: white;
-      font-size: 28px;
-      font-weight: 900;
-      width: 62px;
-      height: 62px;
-      line-height: 62px;
-      text-align: center;
-      border-radius: 50%;
-      margin-right: 16px;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(76,175,80,0.3);
-    }
-    
-    .step-content {
-      flex: 1;
-    }
-    
-    .step-title {
-      font-size: 17px;
-      font-weight: 700;
-      color: #1a472a;
-      margin-bottom: 5px;
-    }
-    
-    .step-desc {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.5;
-    }
-    
-    .grant-total {
-      background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-      border-radius: 14px;
-      padding: 18px;
-      text-align: center;
-      margin: 16px 0;
-      box-shadow: 0 6px 20px rgba(76,175,80,0.3);
-    }
-    
-    .grant-amount {
-      font-size: 50px;
-      font-weight: 900;
-      color: white;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    .grant-label {
-      font-size: 16px;
-      color: rgba(255,255,255,0.95);
-      margin-top: 6px;
-      font-weight: 600;
-    }
-    
-    .allocation-item {
-      background: white;
-      border-radius: 12px;
-      padding: 13px 16px;
-      margin: 8px 0;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      border-left: 5px solid;
-    }
-    
-    .allocation-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
-    }
-    
-    .allocation-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #1a472a;
-      flex: 1;
-    }
-    
-    .allocation-amount {
-      font-size: 22px;
-      font-weight: 900;
-      margin-left: 10px;
-    }
-    
-    .allocation-percent {
-      font-size: 13px;
-      font-weight: 600;
-      color: #666;
-      margin-left: 6px;
-    }
-    
-    .allocation-desc {
-      font-size: 13px;
-      line-height: 1.4;
-      color: #555;
-      margin-top: 5px;
-    }
-    
-    .milestone-box {
-      background: white;
-      border-radius: 12px;
-      padding: 13px;
-      margin: 8px 0;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      border-left: 5px solid #2196f3;
-    }
-    
-    .milestone-header {
-      font-size: 15px;
-      font-weight: 700;
-      color: #1a472a;
-      margin-bottom: 6px;
-    }
-    
-    .milestone-list {
-      font-size: 13px;
-      line-height: 1.5;
-      color: #555;
-    }
-    
+    /* TITLE SLIDE */
     .title-slide {
-      background: linear-gradient(135deg, #1a472a 0%, #2d5f3f 50%, #1a472a 100%);
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
+      position: relative;
     }
     
-    .title-logo {
-      width: 160px;
-      height: 160px;
-      background: white;
-      border-radius: 50%;
+    .title-slide::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+      opacity: 0.5;
+    }
+    
+    .company-logo {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 32px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
-    
-    .title-logo-text {
-      font-size: 80px;
+      font-size: 64px;
       font-weight: 900;
-      color: #1a472a;
+      color: white;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+      position: relative;
+      z-index: 1;
     }
     
     .main-title {
-      font-size: 80px;
+      font-size: 96px;
       font-weight: 900;
       color: white;
+      letter-spacing: -2px;
       margin-bottom: 20px;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 1;
     }
     
     .main-subtitle {
       font-size: 32px;
-      color: rgba(255,255,255,0.95);
-      margin-bottom: 16px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .tagline {
+      font-size: 20px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 400;
+      max-width: 600px;
+      text-align: center;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* STANDARD SLIDE LAYOUT */
+    .slide-header {
+      height: 100px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 0 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .slide-logo {
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 900;
+      color: #667eea;
+    }
+    
+    .slide-number {
+      font-size: 16px;
+      color: rgba(255,255,255,0.8);
       font-weight: 600;
     }
     
-    .main-desc {
+    .slide-content {
+      padding: 60px 80px;
+      height: 620px;
+    }
+    
+    .slide-title {
+      font-size: 48px;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    
+    .slide-subtitle {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+    
+    /* CONTENT BLOCKS */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .content-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 30px 0;
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+    
+    .stat-number {
+      font-size: 64px;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 12px;
+      letter-spacing: -2px;
+    }
+    
+    .stat-label {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .info-card {
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 32px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .info-card-title {
       font-size: 22px;
-      color: rgba(255,255,255,0.8);
-      margin-top: 24px;
-      font-weight: 400;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+    
+    .info-card-text {
+      font-size: 16px;
+      color: #4a4a4a;
+      line-height: 1.7;
+    }
+    
+    /* COMPARISON LAYOUT */
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 30px 0;
+    }
+    
+    .comparison-bad {
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+      border-radius: 16px;
+      padding: 36px;
+      color: white;
+    }
+    
+    .comparison-good {
+      background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+      border-radius: 16px;
+      padding: 36px;
+      color: white;
+    }
+    
+    .comparison-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    
+    .comparison-content {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    
+    /* PROCESS STEPS */
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      margin: 24px 0;
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.2s;
+    }
+    
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 900;
+      color: white;
+      margin-right: 24px;
+      flex-shrink: 0;
+    }
+    
+    .step-content h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    
+    .step-content p {
+      font-size: 16px;
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+    
+    .highlight-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.5;
+    }
+    
+    /* GRANT ALLOCATION */
+    .grant-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .grant-amount {
+      font-size: 72px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: -2px;
+    }
+    
+    .grant-label {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    
+    .allocation-item {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px 28px;
+      margin: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 4px solid;
+    }
+    
+    .allocation-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    
+    .allocation-amount {
+      font-size: 28px;
+      font-weight: 900;
+      margin-right: 12px;
+    }
+    
+    .allocation-percent {
+      font-size: 16px;
+      color: #666;
+      font-weight: 600;
+    }
+    
+    /* TIMELINE */
+    .timeline-item {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px 28px;
+      margin: 16px 0;
+      border-left: 4px solid #667eea;
+    }
+    
+    .timeline-header {
+      font-size: 19px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+    
+    .timeline-content {
+      font-size: 15px;
+      color: #4a4a4a;
+      line-height: 1.7;
+    }
+    
+    /* IMAGE PLACEHOLDER */
+    .image-placeholder {
+      background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+      border-radius: 16px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 24px 0;
+      border: 2px dashed #adb5bd;
+    }
+    
+    .image-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+    
+    .image-label {
+      font-size: 15px;
+      color: #6c757d;
+      font-weight: 600;
+    }
+    
+    /* DETAILED BREAKDOWN */
+    .breakdown-section {
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 28px;
+      margin: 20px 0;
+    }
+    
+    .breakdown-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #667eea;
+    }
+    
+    .breakdown-text {
+      font-size: 15px;
+      color: #4a4a4a;
+      line-height: 1.8;
+    }
+    
+    .breakdown-list {
+      margin: 12px 0;
+      padding-left: 20px;
+    }
+    
+    .breakdown-list li {
+      margin: 8px 0;
+      font-size: 15px;
+      color: #4a4a4a;
     }
     
     @media print {
       body {
         background: white;
-        padding: 0;
       }
       .slide {
         margin: 0;
         box-shadow: none;
-        border-radius: 0;
       }
     }
   </style>
@@ -443,1002 +451,973 @@
 
 <!-- SLIDE 1: TITLE -->
 <div class="slide title-slide">
-  <div class="title-logo">
-    <div class="title-logo-text">R</div>
-  </div>
+  <div class="company-logo">R</div>
   <h1 class="main-title">RTCP</h1>
   <p class="main-subtitle">Real-Time Crop Price Platform</p>
-  <p class="main-desc">Empowering Indian Farmers with Fair Market Prices</p>
+  <p class="tagline">Empowering 146 Million Indian Farmers with Market Intelligence, Fair Pricing, and Financial Inclusion</p>
 </div>
 
-<!-- SLIDE 2: PROBLEM -->
+<!-- SLIDE 2: PROBLEM STATEMENT -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">2 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">02</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">The Problem</h2>
-    <p class="subtitle">Why Farmers Are Losing Money</p>
+  <div class="slide-content">
+    <h2 class="slide-title">The Problem</h2>
+    <p class="slide-subtitle">Market Inefficiency Costing Farmers ₹2.4 Lakh Crore Annually</p>
     
-    <div class="image-frame" style="height: 140px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Indian Farmer Concerned About Crop Prices</div>
-    </div>
-    
-    <div class="grid-2">
-      <div class="stat-box">
-        <div class="stat-num">146M</div>
-        <div class="stat-label">Total Farmers</div>
+    <div class="content-grid">
+      <div class="stat-card">
+        <div class="stat-number">146M</div>
+        <div class="stat-label">Farmers in India</div>
       </div>
-      <div class="stat-box">
-        <div class="stat-num">30-40%</div>
-        <div class="stat-label">Income Lost</div>
+      <div class="stat-card">
+        <div class="stat-number">30-40%</div>
+        <div class="stat-label">Income Lost to Middlemen</div>
       </div>
     </div>
     
-    <div class="card">
-      <div class="card-title">The Core Issue</div>
-      <div class="card-text">
-        Farmers lose 30-40% of their income to middlemen because they don't have access to real market prices.
+    <div class="info-card">
+      <div class="info-card-title">Core Issue: Information Asymmetry</div>
+      <div class="info-card-text">
+        Indian farmers lack access to real-time market prices, forcing them to accept exploitative rates from middlemen. This systemic inefficiency results in annual losses exceeding ₹2.4 lakh crore, perpetuating rural poverty and limiting agricultural growth.
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 3: THREE PROBLEMS -->
+<!-- SLIDE 3: PROBLEM BREAKDOWN -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">3 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">03</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Three Major Problems</h2>
-    <p class="subtitle">Root Causes of Farmer Exploitation</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Three Critical Challenges</h2>
+    <p class="slide-subtitle">Systemic Issues Preventing Fair Market Access</p>
     
-    <div class="step">
-      <div class="step-num">1</div>
+    <div class="process-step">
+      <div class="step-number">1</div>
       <div class="step-content">
-        <div class="step-title">Middlemen Exploitation</div>
-        <div class="step-desc">
-          When market price is ₹2,000, middlemen pay farmers only ₹1,400 and keep ₹600 for themselves.
-        </div>
+        <h3>Middlemen Exploitation</h3>
+        <p>Intermediaries capture 30-40% of crop value through price manipulation. When market rate is ₹2,000/quintal, farmers receive only ₹1,400, losing ₹600 per transaction.</p>
       </div>
     </div>
     
-    <div class="step">
-      <div class="step-num">2</div>
+    <div class="process-step">
+      <div class="step-number">2</div>
       <div class="step-content">
-        <div class="step-title">No Price Information</div>
-        <div class="step-desc">
-          Farmers have no way to check real market prices and must trust middlemen who manipulate prices.
-        </div>
+        <h3>Zero Price Transparency</h3>
+        <p>Farmers have no access to real-time APMC prices, MSP data, or market trends. This information gap enables systematic exploitation and prevents informed decision-making.</p>
       </div>
     </div>
     
-    <div class="step">
-      <div class="step-num">3</div>
+    <div class="process-step">
+      <div class="step-number">3</div>
       <div class="step-content">
-        <div class="step-title">Forced Immediate Sales</div>
-        <div class="step-desc">
-          Lack of storage facilities forces farmers to sell immediately after harvest when prices are lowest.
-        </div>
+        <h3>Forced Distress Sales</h3>
+        <p>Lack of storage infrastructure forces immediate post-harvest sales when prices are lowest. Farmers cannot wait for optimal market conditions, losing 15-20% potential income.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 4: REAL EXAMPLE -->
+<!-- SLIDE 4: CASE STUDY -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">4 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">04</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Case Study: Ramesh's Story</h2>
-    <p class="subtitle">Real Financial Impact on Farmers</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Case Study: Financial Impact</h2>
+    <p class="slide-subtitle">Ramesh Kumar - Wheat Farmer, Punjab (100 Quintals)</p>
     
-    <div class="card">
-      <div class="card-title">Background</div>
-      <div class="card-text">
-        Ramesh grows 100 bags of wheat. Market price is ₹2,000 per bag.<br>
-        <strong>Expected income: ₹2,00,000</strong>
+    <div class="info-card" style="margin-bottom: 24px;">
+      <div class="info-card-title">Scenario Parameters</div>
+      <div class="info-card-text">
+        <strong>Production:</strong> 100 quintals of wheat<br>
+        <strong>Market Price:</strong> ₹2,000 per quintal<br>
+        <strong>Expected Revenue:</strong> ₹2,00,000
       </div>
     </div>
     
-    <div class="compare-grid">
-      <div class="compare-bad">
-        <div class="compare-title" style="border-color: #ef5350; color: #c62828;">Without RTCP</div>
-        <div class="compare-text">
-          <strong>Middleman offers:</strong> ₹1,400/bag<br>
-          <strong>Total received:</strong> ₹1,40,000<br>
-          <strong>Middleman profit:</strong> ₹60,000<br>
-          <strong>Payment delay:</strong> 10 days
+    <div class="comparison-container">
+      <div class="comparison-bad">
+        <div class="comparison-title">Without RTCP</div>
+        <div class="comparison-content">
+          <strong>Middleman Rate:</strong> ₹1,400/quintal<br>
+          <strong>Total Received:</strong> ₹1,40,000<br>
+          <strong>Middleman Profit:</strong> ₹60,000<br>
+          <strong>Payment Delay:</strong> 10-15 days<br>
+          <strong>Farmer Loss:</strong> 30% of value
         </div>
       </div>
       
-      <div class="compare-good">
-        <div class="compare-title" style="border-color: #4caf50; color: #2e7d32;">With RTCP</div>
-        <div class="compare-text">
-          <strong>Verified trader offers:</strong> ₹1,950/bag<br>
-          <strong>Total received:</strong> ₹1,95,000<br>
-          <strong>Extra earned:</strong> ₹55,000<br>
-          <strong>Payment:</strong> 24 hours
+      <div class="comparison-good">
+        <div class="comparison-title">With RTCP</div>
+        <div class="comparison-content">
+          <strong>Verified Trader Rate:</strong> ₹1,950/quintal<br>
+          <strong>Total Received:</strong> ₹1,95,000<br>
+          <strong>Platform Fee:</strong> ₹5,000<br>
+          <strong>Payment:</strong> 24 hours<br>
+          <strong>Additional Income:</strong> ₹55,000 (39% increase)
         </div>
       </div>
     </div>
     
-    <div class="highlight">
-      <div class="highlight-text">Ramesh earns ₹55,000 MORE with RTCP!</div>
+    <div class="highlight-box">
+      <div class="highlight-text">₹55,000 additional income per harvest • ₹1,10,000 annually • ₹5,50,000 over 5 years</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 5: SOLUTION -->
+<!-- SLIDE 5: SOLUTION OVERVIEW -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">5 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">05</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Our Solution: RTCP Platform</h2>
-    <p class="subtitle">Comprehensive Digital Agriculture Solution</p>
+  <div class="slide-content">
+    <h2 class="slide-title">RTCP Platform</h2>
+    <p class="slide-subtitle">Comprehensive Digital Agriculture Ecosystem</p>
     
-    <div class="image-frame" style="height: 150px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">RTCP Mobile Platform Interface</div>
+    <div class="image-placeholder" style="height: 180px;">
+      <div class="image-icon">📱</div>
+      <div class="image-label">RTCP Platform Interface - Mobile & Web Dashboard</div>
     </div>
     
-    <div class="card">
-      <div class="card-title">What is RTCP?</div>
-      <div class="card-text">
-        A mobile-first web platform providing farmers with:<br><br>
-        • Real-time market prices (updates every 5 seconds)<br>
-        • Market trend analysis and optimal selling time<br>
-        • Verified trader network with ratings<br>
-        • Government subsidy information and tracking<br>
-        • AI-powered assistant in 6 languages
+    <div class="content-grid">
+      <div class="info-card">
+        <div class="info-card-title">Core Technology</div>
+        <div class="info-card-text">
+          Mobile-first web platform with real-time APMC price integration, AI-powered market analysis, and verified trader network. Updates every 5 seconds with live market data.
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-card-title">Key Features</div>
+        <div class="info-card-text">
+          • Real-time price tracking (50+ crops)<br>
+          • Market trend analysis & predictions<br>
+          • Verified trader marketplace<br>
+          • Government subsidy navigator<br>
+          • AI assistant (6 languages)
+        </div>
       </div>
     </div>
     
-    <div class="highlight">
-      <div class="highlight-text">Free for farmers • Works on any phone • Easy to use</div>
+    <div class="highlight-box">
+      <div class="highlight-text">Free for farmers • No app download • Works on any smartphone</div>
     </div>
   </div>
 </div>
 
 <!-- SLIDE 6: HOW IT WORKS -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">6 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">06</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">How RTCP Works</h2>
-    <p class="subtitle">Simple 4-Step Process</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Platform Workflow</h2>
+    <p class="slide-subtitle">Seamless 4-Step Process for Farmers</p>
     
-    <div class="step">
-      <div class="step-num">1</div>
+    <div class="process-step">
+      <div class="step-number">1</div>
       <div class="step-content">
-        <div class="step-title">Access Platform</div>
-        <div class="step-desc">Open website on any smartphone browser. No app download required.</div>
+        <h3>Access Platform</h3>
+        <p>Open web browser on any smartphone. No app installation required. Works on 2G/3G/4G networks. Available in Hindi, Punjabi, Marathi, Tamil, Telugu, and Bengali.</p>
       </div>
     </div>
     
-    <div class="step">
-      <div class="step-num">2</div>
+    <div class="process-step">
+      <div class="step-number">2</div>
       <div class="step-content">
-        <div class="step-title">View Real Prices</div>
-        <div class="step-desc">See current market prices updating every 5 seconds with trend indicators.</div>
+        <h3>View Real-Time Prices</h3>
+        <p>See current APMC prices for 50+ crops, updated every 5 seconds. View historical trends, price predictions, and optimal selling recommendations based on AI analysis.</p>
       </div>
     </div>
     
-    <div class="step">
-      <div class="step-num">3</div>
+    <div class="process-step">
+      <div class="step-number">3</div>
       <div class="step-content">
-        <div class="step-title">Contact Traders</div>
-        <div class="step-desc">Browse verified traders with ratings and contact directly via call or WhatsApp.</div>
+        <h3>Connect with Verified Traders</h3>
+        <p>Browse trader profiles with ratings, reviews, and payment history. Direct contact via phone or WhatsApp. All traders verified through APMC license and farmer feedback.</p>
       </div>
     </div>
     
-    <div class="step">
-      <div class="step-num">4</div>
+    <div class="process-step">
+      <div class="step-number">4</div>
       <div class="step-content">
-        <div class="step-title">Get Fair Price</div>
-        <div class="step-desc">Sell at market rate (₹2,120 vs ₹1,400) with payment in 24 hours.</div>
+        <h3>Receive Fair Payment</h3>
+        <p>Negotiate based on real market data. Receive payment within 24 hours via bank transfer. Track transaction history and generate invoices automatically.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 7: LIVE PRICES -->
+<!-- SLIDE 7: MARKET INTELLIGENCE -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">7 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">07</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Feature 1: Live Prices</h2>
-    <p class="subtitle">Real-Time Market Intelligence</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Market Intelligence Engine</h2>
+    <p class="slide-subtitle">AI-Powered Price Predictions & Optimal Selling Time</p>
     
-    <div class="image-frame" style="height: 130px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Live Price Dashboard with Real-Time Updates</div>
+    <div class="image-placeholder" style="height: 160px;">
+      <div class="image-icon">📊</div>
+      <div class="image-label">Annual Price Trend Analysis - Wheat (5-Year Historical Data)</div>
     </div>
     
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Wheat</div>
-        <div class="card-text">
-          <strong>Current Price:</strong> ₹2,150/bag<br>
-          <strong>Status:</strong> <span style="color: #4caf50; font-weight: 700;">Rising ↑</span>
+    <div class="content-grid-3">
+      <div class="info-card" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white;">
+        <div class="info-card-title" style="color: white;">April (Harvest)</div>
+        <div class="info-card-text" style="color: rgba(255,255,255,0.95);">
+          <strong>Price:</strong> ₹1,900/quintal<br>
+          <strong>Status:</strong> Lowest (-10-15%)<br>
+          <strong>Action:</strong> Avoid selling
         </div>
       </div>
       
-      <div class="card">
-        <div class="card-title">Rice</div>
-        <div class="card-text">
-          <strong>Current Price:</strong> ₹3,200/bag<br>
-          <strong>Status:</strong> <span style="color: #4caf50; font-weight: 700;">Rising ↑</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Cotton</div>
-        <div class="card-text">
-          <strong>Current Price:</strong> ₹6,850/bag<br>
-          <strong>Status:</strong> <span style="color: #f44336; font-weight: 700;">Falling ↓</span>
+      <div class="info-card" style="background: linear-gradient(135deg, #ffd93d 0%, #f9ca24 100%);">
+        <div class="info-card-title">June-August</div>
+        <div class="info-card-text">
+          <strong>Price:</strong> ₹2,000-2,100/quintal<br>
+          <strong>Status:</strong> Recovering<br>
+          <strong>Action:</strong> Wait for peak
         </div>
       </div>
       
-      <div class="card">
-        <div class="card-title">Maize</div>
-        <div class="card-text">
-          <strong>Current Price:</strong> ₹1,950/bag<br>
-          <strong>Status:</strong> <span style="color: #9e9e9e; font-weight: 700;">Stable →</span>
+      <div class="info-card" style="background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%); color: white;">
+        <div class="info-card-title" style="color: white;">October (Peak)</div>
+        <div class="info-card-text" style="color: rgba(255,255,255,0.95);">
+          <strong>Price:</strong> ₹2,200/quintal<br>
+          <strong>Status:</strong> Highest (+15-20%)<br>
+          <strong>Action:</strong> Optimal selling time
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- SLIDE 8: MARKET TRENDS -->
-<div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">8 / 22</div>
-  </div>
-  
-  <div class="content">
-    <h2 class="title">Feature 2: Market Trends</h2>
-    <p class="subtitle">Optimal Selling Time Analysis</p>
     
-    <div class="image-frame" style="height: 120px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Annual Price Trend Chart</div>
-    </div>
-    
-    <div class="card" style="background: #ffebee; border-color: #ef5350;">
-      <div class="card-title" style="color: #c62828;">April (Harvest) - Don't Sell</div>
-      <div class="card-text">
-        <strong>Price:</strong> ₹1,900/bag (Lowest)<br>
-        <strong>Reason:</strong> Oversupply drives prices down 10-15%
-      </div>
-    </div>
-    
-    <div class="card" style="background: #fff3e0; border-color: #ff9800;">
-      <div class="card-title" style="color: #e65100;">June-August - Wait</div>
-      <div class="card-text">
-        <strong>Price:</strong> ₹2,000-2,100/bag (Better)<br>
-        <strong>Reason:</strong> Supply reducing, prices recovering
-      </div>
-    </div>
-    
-    <div class="card" style="background: #e8f5e9; border-color: #4caf50;">
-      <div class="card-title" style="color: #2e7d32;">October - Best Time!</div>
-      <div class="card-text">
-        <strong>Price:</strong> ₹2,200/bag (Highest)<br>
-        <strong>Reason:</strong> Low supply, high demand (+15-20%)
-      </div>
+    <div class="highlight-box">
+      <div class="highlight-text">Timing optimization increases income by ₹30,000 per 100 quintals (15.8% gain)</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 9: PROFIT CALCULATION -->
+<!-- SLIDE 8: VERIFIED TRADER NETWORK -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">9 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">08</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Timing Impact on Income</h2>
-    <p class="subtitle">Financial Benefit of Optimal Selling</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Verified Trader Ecosystem</h2>
+    <p class="slide-subtitle">Trust-Based Marketplace with Quality Assurance</p>
     
-    <div class="card">
-      <div class="card-title">Example: 100 Bags of Wheat</div>
-      <div class="card-text">
-        <strong>Sell in April:</strong> ₹1,900/bag = ₹1,90,000<br>
-        <strong>Sell in October:</strong> ₹2,200/bag = ₹2,20,000<br><br>
-        <strong style="font-size: 20px; color: #4caf50;">Extra Income: ₹30,000 (15.8% increase)</strong>
-      </div>
+    <div class="image-placeholder" style="height: 150px;">
+      <div class="image-icon">⭐</div>
+      <div class="image-label">Trader Profile Dashboard with Ratings & Reviews</div>
     </div>
     
-    <div class="image-frame" style="height: 160px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Income Comparison by Selling Month</div>
-    </div>
-    
-    <div class="highlight">
-      <div class="highlight-text">RTCP recommends optimal selling time based on 5-year data!</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 10: VERIFIED TRADERS -->
-<div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">10 / 22</div>
-  </div>
-  
-  <div class="content">
-    <h2 class="title">Feature 3: Verified Traders</h2>
-    <p class="subtitle">Trusted Buyer Network</p>
-    
-    <div class="image-frame" style="height: 120px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Verified Trader Profile with Ratings</div>
-    </div>
-    
-    <div class="card">
-      <div class="card-title">Verification Process</div>
-      <div class="card-text">
-        • APMC business license verification<br>
-        • Minimum 2 years trading history<br>
-        • Farmer reviews and ratings (4.0+ required)<br>
-        • Payment speed tracking (24-48 hour target)<br>
-        • Continuous performance monitoring
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-title">Example: Rajesh Singh (Premium Verified)</div>
-      <div class="card-text">
-        <strong>Rating:</strong> 4.9/5.0 ⭐⭐⭐⭐⭐<br>
-        <strong>Deals:</strong> 2,847 successful transactions<br>
-        <strong>Payment:</strong> 24 hours average<br>
-        <strong>Current Price:</strong> Wheat ₹2,120/bag
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 11: BEFORE VS AFTER -->
-<div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">11 / 22</div>
-  </div>
-  
-  <div class="content">
-    <h2 class="title">Impact Comparison</h2>
-    <p class="subtitle">Before vs After RTCP</p>
-    
-    <div class="compare-grid">
-      <div class="compare-bad">
-        <div class="compare-title" style="border-color: #ef5350; color: #c62828;">Before RTCP</div>
-        <div class="compare-text">
-          <strong>Method:</strong> Middleman<br>
-          <strong>Price:</strong> ₹1,850/bag<br>
-          <strong>Income:</strong> ₹1,85,000<br>
-          <strong>Payment:</strong> 10 days<br>
-          <strong>Trust:</strong> Unknown
+    <div class="content-grid">
+      <div class="breakdown-section">
+        <div class="breakdown-title">Verification Process</div>
+        <div class="breakdown-text">
+          <ul class="breakdown-list">
+            <li><strong>APMC License Verification:</strong> Valid business registration</li>
+            <li><strong>Trading History:</strong> Minimum 2 years experience</li>
+            <li><strong>Farmer Reviews:</strong> 4.0+ star rating required</li>
+            <li><strong>Payment Tracking:</strong> 24-48 hour payment record</li>
+            <li><strong>Continuous Monitoring:</strong> Real-time performance tracking</li>
+          </ul>
         </div>
       </div>
       
-      <div class="compare-good">
-        <div class="compare-title" style="border-color: #4caf50; color: #2e7d32;">After RTCP</div>
-        <div class="compare-text">
-          <strong>Method:</strong> Verified Trader<br>
-          <strong>Price:</strong> ₹2,120/bag<br>
-          <strong>Income:</strong> ₹2,12,000<br>
-          <strong>Payment:</strong> 24 hours<br>
-          <strong>Trust:</strong> Verified 4.9★
+      <div class="breakdown-section">
+        <div class="breakdown-title">Example: Premium Trader</div>
+        <div class="breakdown-text">
+          <strong>Rajesh Singh Traders</strong><br>
+          Rating: 4.9/5.0 ⭐⭐⭐⭐⭐<br>
+          Transactions: 2,847 successful deals<br>
+          Average Payment: 22 hours<br>
+          Specialization: Wheat, Rice, Cotton<br>
+          Current Offer: Wheat ₹2,120/quintal<br>
+          Location: Ludhiana, Punjab
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: GOVERNMENT SUBSIDIES -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">09</div>
+  </div>
+  <div class="slide-content">
+    <h2 class="slide-title">Government Subsidy Navigator</h2>
+    <p class="slide-subtitle">Maximizing Farmer Income Through Financial Inclusion</p>
     
-    <div class="image-frame" style="height: 130px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Happy Farmer Using RTCP Platform</div>
+    <div class="content-grid-3">
+      <div class="stat-card">
+        <div class="stat-number">₹6K</div>
+        <div class="stat-label">PM-KISAN Annual</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">₹60K</div>
+        <div class="stat-label">Solar Pump Subsidy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">₹45K</div>
+        <div class="stat-label">Drip Irrigation</div>
+      </div>
     </div>
     
-    <div class="highlight">
-      <div class="highlight-text">Extra Income: ₹27,000/season • ₹54,000/year • ₹2,70,000 in 5 years</div>
+    <div class="breakdown-section">
+      <div class="breakdown-title">5-Year Financial Impact</div>
+      <div class="breakdown-text">
+        <strong>PM-KISAN:</strong> ₹30,000 (₹6,000 × 5 years)<br>
+        <strong>Solar Pump Savings:</strong> ₹1,50,000 (₹18,000/year × 5 + ₹60,000 subsidy)<br>
+        <strong>Drip Irrigation Savings:</strong> ₹1,80,000 (₹27,000/year × 5 + ₹45,000 subsidy)<br><br>
+        <strong>Total Government Benefits:</strong> ₹3,60,000 over 5 years
+      </div>
+    </div>
+    
+    <div class="highlight-box">
+      <div class="highlight-text">RTCP provides application assistance, status tracking, and eligibility verification</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 12: GOVERNMENT SUBSIDIES -->
+<!-- SLIDE 10: TOTAL IMPACT -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">12 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">10</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Feature 4: Government Subsidies</h2>
-    <p class="subtitle">Access to Financial Support Schemes</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Comprehensive Financial Impact</h2>
+    <p class="slide-subtitle">5-Year Farmer Benefit Analysis</p>
     
-    <div class="image-frame" style="height: 110px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Government Subsidy Programs</div>
-    </div>
-    
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-content">
-        <div class="step-title">PM-KISAN: ₹6,000/Year</div>
-        <div class="step-desc">Direct benefit transfer of ₹2,000 three times annually. RTCP provides status tracking and application assistance.</div>
+    <div class="content-grid">
+      <div class="stat-card">
+        <div class="stat-number">₹2.7L</div>
+        <div class="stat-label">Better Crop Prices</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">₹3.6L</div>
+        <div class="stat-label">Government Subsidies</div>
       </div>
     </div>
     
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-content">
-        <div class="step-title">Solar Pump: ₹60,000 Subsidy</div>
-        <div class="step-desc">60% government subsidy on solar pumps. Save ₹18,000/year on electricity costs.</div>
+    <div class="breakdown-section">
+      <div class="breakdown-title">Detailed Breakdown</div>
+      <div class="breakdown-text">
+        <strong>RTCP Trading Benefits:</strong><br>
+        • Per Season: ₹27,000 additional income<br>
+        • Per Year: ₹54,000 (2 seasons)<br>
+        • 5 Years: ₹2,70,000<br><br>
+        
+        <strong>Government Scheme Benefits:</strong><br>
+        • Per Year: ₹51,000 average savings<br>
+        • 5 Years: ₹3,60,000 total<br><br>
+        
+        <strong>Combined Impact:</strong> ₹6,30,000 over 5 years
       </div>
     </div>
     
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-content">
-        <div class="step-title">Drip Irrigation: ₹45,000 Subsidy</div>
-        <div class="step-desc">55% government subsidy on drip systems. Save ₹27,000/year on water and increase yield by 20-30%.</div>
-      </div>
+    <div class="highlight-box">
+      <div class="highlight-text">Life-changing income increase: ₹1,26,000 per year average</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 13: SUBSIDY TOTAL -->
+<!-- SLIDE 11: GRANT ALLOCATION OVERVIEW -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">13 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">11</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Total Subsidy Benefits</h2>
-    <p class="subtitle">5-Year Financial Impact</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Grant Allocation Strategy</h2>
+    <p class="slide-subtitle">₹2,50,000 Strategic Investment Plan</p>
     
-    <div class="grid-2">
-      <div class="stat-box">
-        <div class="stat-num">₹30K</div>
-        <div class="stat-label">PM-KISAN (5 years)</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">₹1.5L</div>
-        <div class="stat-label">Solar Pump (5 years)</div>
-      </div>
-    </div>
-    
-    <div class="stat-box">
-      <div class="stat-num">₹1.8L</div>
-      <div class="stat-label">Drip Irrigation (5 years)</div>
-    </div>
-    
-    <div class="image-frame" style="height: 130px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Subsidy Benefits Breakdown Chart</div>
-    </div>
-    
-    <div class="highlight">
-      <div class="highlight-text">Total Government Benefits: ₹3,60,000 in 5 years!</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 14: AI ASSISTANT -->
-<div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">14 / 22</div>
-  </div>
-  
-  <div class="content">
-    <h2 class="title">Feature 5: AI Assistant</h2>
-    <p class="subtitle">24/7 Intelligent Support</p>
-    
-    <div class="image-frame" style="height: 110px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">AI Chatbot Interface</div>
-    </div>
-    
-    <div class="card" style="background: #e3f2fd;">
-      <div class="card-title">Example 1: Price Inquiry</div>
-      <div class="card-text">
-        <strong>Farmer:</strong> "What is wheat price today?"<br>
-        <strong>AI:</strong> "Current wheat price is ₹2,150. Price is rising by 2.3%."
-      </div>
-    </div>
-    
-    <div class="card" style="background: #e3f2fd;">
-      <div class="card-title">Example 2: Selling Advice</div>
-      <div class="card-text">
-        <strong>Farmer:</strong> "Should I sell now?"<br>
-        <strong>AI:</strong> "Price is near maximum. Good time to sell!"
-      </div>
-    </div>
-    
-    <div class="card" style="background: #e3f2fd;">
-      <div class="card-title">Example 3: Subsidy Help</div>
-      <div class="card-text">
-        <strong>Farmer:</strong> "How to apply for PM-KISAN?"<br>
-        <strong>AI:</strong> "I'll guide you step-by-step. First, you need..."
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 15: TOTAL IMPACT -->
-<div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">15 / 22</div>
-  </div>
-  
-  <div class="content">
-    <h2 class="title">Total Financial Impact</h2>
-    <p class="subtitle">Comprehensive Benefit Analysis</p>
-    
-    <div class="card">
-      <div class="card-title">Better Crop Prices (RTCP Trading)</div>
-      <div class="card-text">
-        <strong>Per Season:</strong> ₹27,000 extra<br>
-        <strong>Per Year:</strong> ₹54,000 extra<br>
-        <strong>5 Years:</strong> ₹2,70,000 total
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-title">Government Subsidies</div>
-      <div class="card-text">
-        <strong>Per Year:</strong> ₹51,000 savings<br>
-        <strong>5 Years:</strong> ₹3,60,000 total
-      </div>
-    </div>
-    
-    <div class="image-frame" style="height: 130px;">
-      <div class="image-icon">📷</div>
-      <div class="image-desc">Total Benefit Calculation</div>
-    </div>
-    
-    <div class="highlight">
-      <div class="highlight-text">Total 5-Year Benefit: ₹6,30,000 • Life-Changing Impact!</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 16: GRANT ALLOCATION OVERVIEW -->
-<div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">16 / 22</div>
-  </div>
-  
-  <div class="content">
-    <h2 class="title">Grant Allocation Strategy</h2>
-    <p class="subtitle">₹2,50,000 Strategic Investment Plan</p>
-    
-    <div class="grant-total">
+    <div class="grant-header">
       <div class="grant-amount">₹2,50,000</div>
       <div class="grant-label">Total Grant Received</div>
     </div>
     
-    <div class="allocation-item" style="border-color: #2196f3;">
-      <div class="allocation-header">
-        <div class="allocation-title">1. Patent & IP Protection</div>
-        <div>
-          <span class="allocation-amount" style="color: #2196f3;">₹35,000</span>
-          <span class="allocation-percent">(14%)</span>
-        </div>
-      </div>
-      <div class="allocation-desc">
-        Secure legal protection for RTCP's innovative technology
+    <div class="allocation-item" style="border-color: #667eea;">
+      <div class="allocation-title">1. Patent & Intellectual Property Protection</div>
+      <div>
+        <span class="allocation-amount" style="color: #667eea;">₹35,000</span>
+        <span class="allocation-percent">(14%)</span>
       </div>
     </div>
     
-    <div class="allocation-item" style="border-color: #ff9800;">
-      <div class="allocation-header">
-        <div class="allocation-title">2. Farmer Awareness Campaign</div>
-        <div>
-          <span class="allocation-amount" style="color: #ff9800;">₹75,000</span>
-          <span class="allocation-percent">(30%)</span>
-        </div>
-      </div>
-      <div class="allocation-desc">
-        Reach 15,000+ farmers across 8 districts
+    <div class="allocation-item" style="border-color: #f59e0b;">
+      <div class="allocation-title">2. Farmer Awareness & Marketing Campaign</div>
+      <div>
+        <span class="allocation-amount" style="color: #f59e0b;">₹75,000</span>
+        <span class="allocation-percent">(30%)</span>
       </div>
     </div>
     
-    <div class="allocation-item" style="border-color: #4caf50;">
-      <div class="allocation-header">
-        <div class="allocation-title">3. Full-Stack Developer</div>
-        <div>
-          <span class="allocation-amount" style="color: #4caf50;">₹84,000</span>
-          <span class="allocation-percent">(33.6%)</span>
-        </div>
-      </div>
-      <div class="allocation-desc">
-        Dedicated technical expert for 12 months
+    <div class="allocation-item" style="border-color: #10b981;">
+      <div class="allocation-title">3. Full-Stack Developer (12 Months)</div>
+      <div>
+        <span class="allocation-amount" style="color: #10b981;">₹84,000</span>
+        <span class="allocation-percent">(33.6%)</span>
       </div>
     </div>
     
-    <div class="allocation-item" style="border-color: #9c27b0;">
-      <div class="allocation-header">
-        <div class="allocation-title">4. Cloud Infrastructure</div>
-        <div>
-          <span class="allocation-amount" style="color: #9c27b0;">₹36,000</span>
-          <span class="allocation-percent">(14.4%)</span>
-        </div>
-      </div>
-      <div class="allocation-desc">
-        Hosting, APIs, and technical infrastructure
+    <div class="allocation-item" style="border-color: #8b5cf6;">
+      <div class="allocation-title">4. Cloud Infrastructure & Technology</div>
+      <div>
+        <span class="allocation-amount" style="color: #8b5cf6;">₹36,000</span>
+        <span class="allocation-percent">(14.4%)</span>
       </div>
     </div>
     
-    <div class="allocation-item" style="border-color: #f44336;">
-      <div class="allocation-header">
-        <div class="allocation-title">5. Contingency Reserve</div>
-        <div>
-          <span class="allocation-amount" style="color: #f44336;">₹20,000</span>
-          <span class="allocation-percent">(8%)</span>
-        </div>
-      </div>
-      <div class="allocation-desc">
-        Buffer for unexpected costs and emergencies
+    <div class="allocation-item" style="border-color: #ef4444;">
+      <div class="allocation-title">5. Contingency & Emergency Reserve</div>
+      <div>
+        <span class="allocation-amount" style="color: #ef4444;">₹20,000</span>
+        <span class="allocation-percent">(8%)</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 17: PATENT DETAILS -->
+<!-- SLIDE 12: PATENT PROTECTION -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">17 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">12</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Patent & IP Protection</h2>
-    <p class="subtitle">₹35,000 (14%) - Securing Innovation</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Patent & IP Protection</h2>
+    <p class="slide-subtitle">₹35,000 (14%) - Securing Competitive Advantage</p>
     
-    <div class="card">
-      <div class="card-title">What We're Protecting</div>
-      <div class="card-text">
-        • Real-time price algorithm and data processing system<br>
-        • AI-powered recommendation engine for optimal selling time<br>
-        • Trader verification and rating methodology<br>
-        • Unique farmer-trader matching algorithm
+    <div class="breakdown-section">
+      <div class="breakdown-title">Innovation Assets Being Protected</div>
+      <div class="breakdown-text">
+        • Real-time price aggregation algorithm<br>
+        • AI-powered market prediction engine<br>
+        • Trader verification methodology<br>
+        • Farmer-trader matching algorithm
       </div>
     </div>
     
-    <div class="card">
-      <div class="card-title">Detailed Cost Breakdown</div>
-      <div class="card-text">
-        <strong>Provisional Patent (₹8,000):</strong> Gov fees ₹1,600 + Attorney ₹6,000<br>
-        <strong>Complete Patent (₹15,000):</strong> Drafting ₹10,000 + Gov ₹4,000 + Claims ₹1,000<br>
-        <strong>Attorney Consultation (₹8,000):</strong> Prior art ₹3,000 + Legal ₹3,000 + Review ₹2,000<br>
-        <strong>Examination Request (₹4,000):</strong> Form 18 + Attorney assistance
+    <div class="content-grid">
+      <div class="info-card">
+        <div class="info-card-title">Cost Breakdown</div>
+        <div class="info-card-text">
+          <strong>Provisional Patent:</strong> ₹8,000<br>
+          (Gov fees ₹1,600 + Attorney ₹6,400)<br><br>
+          <strong>Complete Application:</strong> ₹15,000<br>
+          (Drafting ₹10,000 + Gov ₹4,000 + Claims ₹1,000)<br><br>
+          <strong>Attorney Consultation:</strong> ₹8,000<br>
+          (Prior art ₹3,000 + Legal ₹3,000 + Review ₹2,000)<br><br>
+          <strong>Examination Request:</strong> ₹4,000<br>
+          (Form 18 filing + Attorney assistance)
+        </div>
       </div>
-    </div>
-    
-    <div class="highlight">
-      <div class="highlight-text">Patents protect our innovation and increase company valuation!</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 18: MARKETING DETAILS -->
-<div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">18 / 22</div>
-  </div>
-  
-  <div class="content">
-    <h2 class="title">Farmer Awareness Campaign</h2>
-    <p class="subtitle">₹75,000 (30%) - Reaching 15,000+ Farmers</p>
-    
-    <div class="card">
-      <div class="card-title">A. Digital Marketing - ₹35,000</div>
-      <div class="card-text">
-        <strong>WhatsApp (₹15,000):</strong> 130,000 messages × ₹0.115 = ₹15,000<br>
-        <strong>Facebook/Instagram (₹12,000):</strong> ₹1,000/day × 12 days<br>
-        <strong>YouTube Videos (₹8,000):</strong> 5 videos × ₹1,600 each
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-title">B. Ground Activities - ₹28,000</div>
-      <div class="card-text">
-        <strong>Village Demos (₹18,000):</strong> 30 villages × ₹600 each<br>
-        <strong>Printed Materials (₹7,000):</strong> 10,000 pamphlets + 500 posters<br>
-        <strong>Mandi Presence (₹3,000):</strong> 6 major mandis
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-title">C. Influencer Marketing - ₹12,000</div>
-      <div class="card-text">
-        6 progressive farmers × ₹2,000 each for testimonials
+      
+      <div class="info-card">
+        <div class="info-card-title">Strategic Value</div>
+        <div class="info-card-text">
+          <strong>Competitive Moat:</strong> 20-year protection period<br><br>
+          <strong>Valuation Impact:</strong> Increases company valuation by 2-3x for Series A funding<br><br>
+          <strong>Market Position:</strong> First-mover advantage in agri-tech IP<br><br>
+          <strong>Licensing Potential:</strong> Future revenue stream through technology licensing
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 19: DEVELOPER & INFRASTRUCTURE -->
+<!-- SLIDE 13: MARKETING CAMPAIGN -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">19 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">13</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Developer & Infrastructure</h2>
-    <p class="subtitle">₹1,20,000 (48%) - Technical Foundation</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Farmer Awareness Campaign</h2>
+    <p class="slide-subtitle">₹75,000 (30%) - Reaching 15,000+ Farmers Across 8 Districts</p>
     
-    <div class="card">
-      <div class="card-title">Full-Stack Developer - ₹84,000 (33.6%)</div>
-      <div class="card-text">
-        <strong>Salary:</strong> ₹7,000/month × 12 months = ₹84,000<br>
-        <strong>Profile:</strong> Junior developer, 1-2 years experience<br>
-        <strong>Skills:</strong> HTML, CSS, JavaScript, Node.js, Database<br><br>
-        <strong>Responsibilities:</strong> Maintenance, features, APIs, database, security, analytics<br><br>
-        <strong>Why ₹7K/month?</strong> Competitive for freshers in tier-2/3 cities with equity + remote work
+    <div class="breakdown-section">
+      <div class="breakdown-title">A. Digital Marketing - ₹35,000</div>
+      <div class="breakdown-text">
+        <strong>WhatsApp Campaigns (₹15,000):</strong> 130,000 messages @ ₹0.115 each. Target 50,000 farmers in 200+ WhatsApp groups.<br><br>
+        <strong>Facebook & Instagram Ads (₹12,000):</strong> ₹1,000/day × 12 days. Hyperlocal targeting in rural Punjab, Haryana, UP. Expected reach: 150,000 impressions.<br><br>
+        <strong>YouTube Tutorials (₹8,000):</strong> 5 educational videos in Hindi/Punjabi @ ₹1,600 each. Topics: Platform usage, price checking, trader verification.
       </div>
     </div>
     
-    <div class="card">
-      <div class="card-title">Cloud Infrastructure - ₹36,000 (14.4%)</div>
-      <div class="card-text">
-        <strong>Hosting (₹18,000):</strong> AWS/Google Cloud ₹1,500/month<br>
-        <strong>APIs (₹12,000):</strong> Market data ₹5K, SMS ₹4K, WhatsApp ₹3K<br>
-        <strong>Domain & Security (₹3,000):</strong> Domain + SSL + Tools<br>
-        <strong>Dev Tools (₹3,000):</strong> GitHub Pro, Analytics, Monitoring
+    <div class="content-grid">
+      <div class="info-card">
+        <div class="info-card-title">B. Ground Activities - ₹28,000</div>
+        <div class="info-card-text">
+          <strong>Village Demos:</strong> ₹18,000<br>
+          30 villages × ₹600 (projector, materials, refreshments)<br><br>
+          <strong>Print Materials:</strong> ₹7,000<br>
+          10,000 pamphlets + 500 posters<br><br>
+          <strong>Mandi Presence:</strong> ₹3,000<br>
+          Banners at 6 major mandis
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-card-title">C. Influencer Marketing - ₹12,000</div>
+        <div class="info-card-text">
+          <strong>Brand Ambassadors:</strong><br>
+          6 progressive farmers × ₹2,000 each<br><br>
+          <strong>Deliverables:</strong><br>
+          • Testimonial videos<br>
+          • Local promotion<br>
+          • Peer recommendations<br>
+          • Success stories
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 20: MILESTONES -->
+<!-- SLIDE 14: TECHNICAL TEAM -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">20 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">14</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">12-Month Milestones</h2>
-    <p class="subtitle">Measurable Goals with ₹2,50,000 Investment</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Technical Development</h2>
+    <p class="slide-subtitle">₹1,20,000 (48%) - Developer & Infrastructure</p>
     
-    <div class="milestone-box">
-      <div class="milestone-header">Month 1-3: Foundation & Protection</div>
-      <div class="milestone-list">
-        • File provisional patent (Month 1)<br>
-        • Hire developer (Month 1)<br>
-        • Setup infrastructure (Month 2)<br>
-        • Launch campaign in 2 districts (Month 3)<br>
-        <strong>Target:</strong> 2,000 farmers, patent filed
+    <div class="breakdown-section">
+      <div class="breakdown-title">Full-Stack Developer - ₹84,000 (33.6%)</div>
+      <div class="breakdown-text">
+        <strong>Compensation:</strong> ₹7,000/month × 12 months = ₹84,000<br><br>
+        <strong>Profile Requirements:</strong><br>
+        • 1-2 years experience in web development<br>
+        • Skills: HTML, CSS, JavaScript, Node.js, MongoDB/PostgreSQL<br>
+        • Experience with API integrations and mobile-responsive design<br><br>
+        <strong>Key Responsibilities:</strong><br>
+        • Platform maintenance and bug fixes<br>
+        • Feature development based on user feedback<br>
+        • API integrations (APMC data, SMS, WhatsApp Business)<br>
+        • Database optimization and security updates<br>
+        • Analytics implementation and reporting<br>
+        • Performance monitoring and optimization
       </div>
     </div>
     
-    <div class="milestone-box">
-      <div class="milestone-header">Month 4-6: Scale & Engagement</div>
-      <div class="milestone-list">
-        • Expand to 5 more districts (Month 4-5)<br>
-        • Complete patent application (Month 4)<br>
-        • Add 3 new crops (Month 5)<br>
-        • 20 village demos (Month 4-6)<br>
-        <strong>Target:</strong> 8,000 farmers, 500 daily active
-      </div>
-    </div>
-    
-    <div class="milestone-box">
-      <div class="milestone-header">Month 7-9: Optimization & Growth</div>
-      <div class="milestone-list">
-        • Launch influencer campaign (Month 7)<br>
-        • Advanced analytics (Month 8)<br>
-        • 20 verified traders (Month 7-9)<br>
-        • Platform optimization (Month 9)<br>
-        <strong>Target:</strong> 12,000 farmers, 1,500 daily active
-      </div>
-    </div>
-    
-    <div class="milestone-box">
-      <div class="milestone-header">Month 10-12: Consolidation & Proof</div>
-      <div class="milestone-list">
-        • Complete demos (Month 10-11)<br>
-        • Impact report (Month 11)<br>
-        • Series A prep (Month 12)<br>
-        • Patent examination (Month 12)<br>
-        <strong>Target:</strong> 15,000+ farmers, 2,000+ daily, ₹50L+ GMV
+    <div class="breakdown-section">
+      <div class="breakdown-title">Market Justification</div>
+      <div class="breakdown-text">
+        Junior developers in tier-2/3 cities earn ₹18,000-50,000/month. Our offer of ₹7,000/month is competitive when combined with:<br>
+        • Equity participation (0.5-1% vesting over 4 years)<br>
+        • Remote work flexibility<br>
+        • Startup experience and learning opportunities<br>
+        • Portfolio-building projects in social impact sector
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 21: EXPECTED IMPACT -->
+<!-- SLIDE 15: INFRASTRUCTURE -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">21 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">15</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Expected Impact</h2>
-    <p class="subtitle">What ₹2,50,000 Will Achieve</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Cloud Infrastructure</h2>
+    <p class="slide-subtitle">₹36,000 (14.4%) - Technology Stack & Operations</p>
     
-    <div class="grid-2">
-      <div class="stat-box">
-        <div class="stat-num">15,000+</div>
+    <div class="content-grid">
+      <div class="breakdown-section">
+        <div class="breakdown-title">A. Cloud Hosting - ₹18,000</div>
+        <div class="breakdown-text">
+          <strong>Provider:</strong> AWS/Google Cloud<br>
+          <strong>Cost:</strong> ₹1,500/month × 12 months<br><br>
+          <strong>Infrastructure:</strong><br>
+          • EC2/Compute Engine instances<br>
+          • RDS/Cloud SQL database<br>
+          • S3/Cloud Storage (50GB)<br>
+          • CloudFront/CDN<br>
+          • Load balancing<br><br>
+          <strong>Capacity:</strong> 50,000 monthly active users
+        </div>
+      </div>
+      
+      <div class="breakdown-section">
+        <div class="breakdown-title">B. API Subscriptions - ₹12,000</div>
+        <div class="breakdown-text">
+          <strong>Market Data API (₹5,000):</strong><br>
+          Real-time APMC prices, MSP data, weather integration<br><br>
+          <strong>SMS Gateway (₹4,000):</strong><br>
+          20,000 SMS @ ₹0.20 each for OTP and price alerts<br><br>
+          <strong>WhatsApp Business API (₹3,000):</strong><br>
+          Service messages and notifications
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-grid">
+      <div class="info-card">
+        <div class="info-card-title">C. Domain & Security - ₹3,000</div>
+        <div class="info-card-text">
+          • Premium .in domain: ₹1,000/year<br>
+          • SSL certificate: ₹1,500/year<br>
+          • Security tools: ₹500
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-card-title">D. Development Tools - ₹3,000</div>
+        <div class="info-card-text">
+          • GitHub Pro: ₹500<br>
+          • Analytics (Google Analytics Pro): ₹1,500<br>
+          • Monitoring (New Relic/Datadog): ₹1,000
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 16: MILESTONES Q1-Q2 -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">16</div>
+  </div>
+  <div class="slide-content">
+    <h2 class="slide-title">12-Month Execution Roadmap</h2>
+    <p class="slide-subtitle">Q1-Q2: Foundation & Initial Scale</p>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Month 1-3: Foundation & Protection</div>
+      <div class="timeline-content">
+        <strong>Week 1-2:</strong> File provisional patent application. Hire and onboard full-stack developer.<br>
+        <strong>Week 3-4:</strong> Set up cloud infrastructure, configure APIs, implement security protocols.<br>
+        <strong>Week 5-8:</strong> Launch initial awareness campaign in 2 pilot districts (Ludhiana, Amritsar).<br>
+        <strong>Week 9-12:</strong> Onboard first 5 verified traders. Conduct 10 village demonstrations.<br><br>
+        <strong>KPIs:</strong> 2,000 farmers registered • Patent filed • Platform live • 5 traders onboarded
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Month 4-6: Scale & Engagement</div>
+      <div class="timeline-content">
+        <strong>Week 13-16:</strong> Expand marketing to 5 additional districts. Complete patent application filing.<br>
+        <strong>Week 17-20:</strong> Add 3 new crop types (rice, cotton, maize). Implement advanced analytics dashboard.<br>
+        <strong>Week 21-24:</strong> Conduct 20 village demonstrations. Launch Facebook/Instagram ad campaigns.<br><br>
+        <strong>KPIs:</strong> 8,000 farmers registered • 500 daily active users • 15 traders • ₹5L GMV
+      </div>
+    </div>
+    
+    <div class="highlight-box">
+      <div class="highlight-text">Q1-Q2 Target: 8,000 farmers • 500 daily active • ₹5 lakh trading volume</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 17: MILESTONES Q3-Q4 -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">17</div>
+  </div>
+  <div class="slide-content">
+    <h2 class="slide-title">12-Month Execution Roadmap</h2>
+    <p class="slide-subtitle">Q3-Q4: Optimization & Proof of Concept</p>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Month 7-9: Optimization & Growth</div>
+      <div class="timeline-content">
+        <strong>Week 25-28:</strong> Launch influencer marketing campaign with 6 progressive farmers.<br>
+        <strong>Week 29-32:</strong> Implement AI-powered price prediction model. Optimize platform based on user data.<br>
+        <strong>Week 33-36:</strong> Onboard 20 verified traders across all 8 districts. Launch YouTube tutorial series.<br><br>
+        <strong>KPIs:</strong> 12,000 farmers registered • 1,500 daily active users • 20 traders • ₹20L GMV
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Month 10-12: Consolidation & Proof</div>
+      <div class="timeline-content">
+        <strong>Week 37-40:</strong> Complete remaining 10 village demonstrations. Generate comprehensive impact report.<br>
+        <strong>Week 41-44:</strong> Prepare Series A pitch deck with traction data. Patent examination response (if required).<br>
+        <strong>Week 45-48:</strong> Optimize unit economics. Finalize expansion strategy for 20 additional districts.<br><br>
+        <strong>KPIs:</strong> 15,000+ farmers • 2,000+ daily active • 25 traders • ₹50L+ GMV • Patent secured
+      </div>
+    </div>
+    
+    <div class="highlight-box">
+      <div class="highlight-text">Q3-Q4 Target: 15,000+ farmers • 2,000+ daily active • ₹50 lakh+ GMV • Series A ready</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 18: EXPECTED IMPACT -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">18</div>
+  </div>
+  <div class="slide-content">
+    <h2 class="slide-title">Expected Impact</h2>
+    <p class="slide-subtitle">12-Month Outcomes with ₹2,50,000 Investment</p>
+    
+    <div class="content-grid">
+      <div class="stat-card">
+        <div class="stat-number">15,000+</div>
         <div class="stat-label">Farmers Empowered</div>
       </div>
-      <div class="stat-box">
-        <div class="stat-num">₹50L+</div>
-        <div class="stat-label">Trading Volume</div>
+      <div class="stat-card">
+        <div class="stat-number">₹50L+</div>
+        <div class="stat-label">Trading Volume (GMV)</div>
       </div>
     </div>
     
-    <div class="grid-2">
-      <div class="stat-box">
-        <div class="stat-num">2,000+</div>
+    <div class="content-grid">
+      <div class="stat-card">
+        <div class="stat-number">2,000+</div>
         <div class="stat-label">Daily Active Users</div>
       </div>
-      <div class="stat-box">
-        <div class="stat-num">7.5x</div>
+      <div class="stat-card">
+        <div class="stat-number">7.5x</div>
         <div class="stat-label">Platform Growth</div>
       </div>
     </div>
     
-    <div class="card">
-      <div class="card-title">Social Impact</div>
-      <div class="card-text">
-        • 15,000 farmers earning ₹27,000 extra per season<br>
-        • Total farmer benefit: ₹40.5 crore annually<br>
-        • 20 verified traders with transparent pricing<br>
-        • Patent secured for competitive advantage<br>
-        • Platform ready for Series A funding
+    <div class="breakdown-section">
+      <div class="breakdown-title">Social & Economic Impact</div>
+      <div class="breakdown-text">
+        <strong>Direct Farmer Benefit:</strong> 15,000 farmers × ₹27,000 extra per season = ₹40.5 crore annually<br><br>
+        <strong>Market Efficiency:</strong> Reduced middlemen exploitation by 70% in target districts<br><br>
+        <strong>Financial Inclusion:</strong> 5,000+ farmers accessing government subsidies for first time<br><br>
+        <strong>Technology Adoption:</strong> 80% smartphone penetration in target farmer base<br><br>
+        <strong>Competitive Advantage:</strong> Patent secured, first-mover advantage in agri-tech IP
       </div>
     </div>
     
-    <div class="highlight">
-      <div class="highlight-text">₹2.5L investment → ₹40.5 crore farmer benefit → 162x social return!</div>
+    <div class="highlight-box">
+      <div class="highlight-text">ROI: ₹2.5L investment → ₹40.5 crore farmer benefit → 162x social return</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 19: BUSINESS MODEL -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">19</div>
+  </div>
+  <div class="slide-content">
+    <h2 class="slide-title">Revenue Model & Unit Economics</h2>
+    <p class="slide-subtitle">Sustainable Business with Social Impact</p>
+    
+    <div class="content-grid">
+      <div class="breakdown-section">
+        <div class="breakdown-title">Revenue Streams</div>
+        <div class="breakdown-text">
+          <strong>1. Transaction Fee (Primary):</strong><br>
+          2.5% commission on verified trades<br>
+          Example: ₹2,000/quintal × 100 quintals = ₹5,000 fee<br><br>
+          <strong>2. Premium Trader Listings:</strong><br>
+          ₹5,000/month for featured placement<br><br>
+          <strong>3. Data Analytics (Future):</strong><br>
+          Market intelligence reports for agri-businesses<br><br>
+          <strong>4. Insurance Integration (Future):</strong><br>
+          Crop insurance referral commissions
+        </div>
+      </div>
+      
+      <div class="breakdown-section">
+        <div class="breakdown-title">Unit Economics (Year 1)</div>
+        <div class="breakdown-text">
+          <strong>Average Transaction Value:</strong> ₹2,00,000<br>
+          <strong>Platform Fee (2.5%):</strong> ₹5,000<br>
+          <strong>Cost per Transaction:</strong> ₹500<br>
+          <strong>Gross Margin:</strong> ₹4,500 (90%)<br><br>
+          <strong>Monthly Projections (Month 12):</strong><br>
+          Transactions: 250<br>
+          Revenue: ₹12,50,000<br>
+          Costs: ₹1,25,000<br>
+          Gross Profit: ₹11,25,000
+        </div>
+      </div>
+    </div>
+    
+    <div class="highlight-box">
+      <div class="highlight-text">Path to profitability: Month 18 • Break-even: ₹15L monthly GMV</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 20: COMPETITIVE ADVANTAGE -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">20</div>
+  </div>
+  <div class="slide-content">
+    <h2 class="slide-title">Competitive Landscape</h2>
+    <p class="slide-subtitle">Differentiation & Market Position</p>
+    
+    <div class="content-grid">
+      <div class="breakdown-section">
+        <div class="breakdown-title">Existing Solutions</div>
+        <div class="breakdown-text">
+          <strong>Government Portals:</strong><br>
+          • Complex interfaces, poor mobile experience<br>
+          • No trader connection, only price display<br>
+          • Limited language support<br><br>
+          <strong>E-NAM Platform:</strong><br>
+          • Requires physical mandi presence<br>
+          • Limited to registered mandis<br>
+          • No real-time updates<br><br>
+          <strong>Agri-Tech Startups:</strong><br>
+          • Focus on B2B, not farmer-centric<br>
+          • High transaction fees (5-10%)<br>
+          • Limited regional coverage
+        </div>
+      </div>
+      
+      <div class="breakdown-section">
+        <div class="breakdown-title">RTCP Advantages</div>
+        <div class="breakdown-text">
+          <strong>Technology:</strong><br>
+          • Real-time updates (5-second refresh)<br>
+          • AI-powered predictions<br>
+          • Mobile-first design<br><br>
+          <strong>User Experience:</strong><br>
+          • 6 regional languages<br>
+          • No app download required<br>
+          • Works on 2G networks<br><br>
+          <strong>Business Model:</strong><br>
+          • Low fees (2.5% vs 5-10%)<br>
+          • Free for farmers<br>
+          • Verified trader network<br><br>
+          <strong>IP Protection:</strong><br>
+          • Patented algorithms<br>
+          • First-mover advantage
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 21: RISK MITIGATION -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">21</div>
+  </div>
+  <div class="slide-content">
+    <h2 class="slide-title">Risk Analysis & Mitigation</h2>
+    <p class="slide-subtitle">Comprehensive Risk Management Strategy</p>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Technology Risk</div>
+      <div class="timeline-content">
+        <strong>Risk:</strong> Platform downtime, data security breaches<br>
+        <strong>Mitigation:</strong> AWS/GCP redundancy, daily backups, SSL encryption, regular security audits, 99.9% uptime SLA
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Adoption Risk</div>
+      <div class="timeline-content">
+        <strong>Risk:</strong> Low farmer adoption, digital literacy barriers<br>
+        <strong>Mitigation:</strong> Village demonstrations, influencer marketing, 6 regional languages, voice-based interface (future), offline support via call center
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Market Risk</div>
+      <div class="timeline-content">
+        <strong>Risk:</strong> Price volatility, seasonal demand fluctuations<br>
+        <strong>Mitigation:</strong> Diversified crop portfolio (50+ crops), multiple revenue streams, government subsidy integration for stable income
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Regulatory Risk</div>
+      <div class="timeline-content">
+        <strong>Risk:</strong> APMC regulations, data privacy laws<br>
+        <strong>Mitigation:</strong> Legal compliance team, APMC partnerships, GDPR-compliant data handling, regular regulatory audits
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-header">Financial Risk</div>
+      <div class="timeline-content">
+        <strong>Risk:</strong> Burn rate exceeds projections, delayed funding<br>
+        <strong>Mitigation:</strong> 8% contingency reserve, lean operations, revenue generation from Month 6, multiple funding sources (grants, angel investors)
+      </div>
     </div>
   </div>
 </div>
 
 <!-- SLIDE 22: CONCLUSION -->
 <div class="slide">
-  <div class="header">
-    <div class="header-left">
-      <div class="logo">R</div>
-      <span class="brand-name">RTCP</span>
-    </div>
-    <div class="slide-num">22 / 22</div>
+  <div class="slide-header">
+    <div class="slide-logo">R</div>
+    <div class="slide-number">22</div>
   </div>
-  
-  <div class="content">
-    <h2 class="title">Summary</h2>
-    <p class="subtitle">Complete Overview</p>
+  <div class="slide-content">
+    <h2 class="slide-title">Investment Summary</h2>
+    <p class="slide-subtitle">Transforming Indian Agriculture Through Technology</p>
     
-    <div class="card" style="background: #ffebee;">
-      <div class="card-title" style="color: #c62828;">Problem</div>
-      <div class="card-text">
-        146M farmers lose 30-40% income to middlemen
+    <div class="content-grid">
+      <div class="info-card" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white;">
+        <div class="info-card-title" style="color: white;">Problem</div>
+        <div class="info-card-text" style="color: rgba(255,255,255,0.95);">
+          146M farmers lose ₹2.4 lakh crore annually to middlemen exploitation due to information asymmetry
+        </div>
+      </div>
+      
+      <div class="info-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <div class="info-card-title" style="color: white;">Solution</div>
+        <div class="info-card-text" style="color: rgba(255,255,255,0.95);">
+          RTCP: Real-time price platform with verified traders, AI predictions, and government subsidy integration
+        </div>
       </div>
     </div>
     
-    <div class="card" style="background: #e8f5e9;">
-      <div class="card-title" style="color: #2e7d32;">Solution</div>
-      <div class="card-text">
-        RTCP: Real-time prices, verified traders, trends, subsidies, AI
+    <div class="content-grid">
+      <div class="info-card" style="background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%); color: white;">
+        <div class="info-card-title" style="color: white;">Impact</div>
+        <div class="info-card-text" style="color: rgba(255,255,255,0.95);">
+          ₹6,30,000 additional income per farmer over 5 years • 15,000 farmers in Year 1 • ₹40.5 crore total benefit
+        </div>
+      </div>
+      
+      <div class="info-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;">
+        <div class="info-card-title" style="color: white;">Investment</div>
+        <div class="info-card-text" style="color: rgba(255,255,255,0.95);">
+          ₹2,50,000 grant: Patent (14%) • Marketing (30%) • Developer (33.6%) • Infrastructure (14.4%) • Contingency (8%)
+        </div>
       </div>
     </div>
     
-    <div class="card" style="background: #e3f2fd;">
-      <div class="card-title" style="color: #1565c0;">Farmer Impact</div>
-      <div class="card-text">
-        ₹6,30,000 extra in 5 years per farmer
+    <div class="breakdown-section">
+      <div class="breakdown-title">12-Month Milestones</div>
+      <div class="breakdown-text">
+        <strong>Q1-Q2:</strong> 8,000 farmers • Patent filed • 15 traders • ₹5L GMV<br>
+        <strong>Q3-Q4:</strong> 15,000 farmers • 2,000 daily active • 25 traders • ₹50L GMV • Series A ready
       </div>
     </div>
     
-    <div class="card" style="background: #fff3e0;">
-      <div class="card-title" style="color: #e65100;">Grant Utilization</div>
-      <div class="card-text">
-        ₹2,50,000: Patent ₹35K • Marketing ₹75K • Developer ₹84K • Infrastructure ₹36K • Contingency ₹20K
-      </div>
-    </div>
-    
-    <div class="card" style="background: #f3e5f5;">
-      <div class="card-title" style="color: #6a1b9a;">12-Month Goal</div>
-      <div class="card-text">
-        15,000+ farmers • ₹50L+ GMV • Patent secured • 7.5x growth • Series A ready
-      </div>
-    </div>
-    
-    <div class="highlight">
-      <div class="highlight-text">Try RTCP: kapasiraj84-beep.github.io/rtcp-crop-price-app</div>
+    <div class="highlight-box">
+      <div class="highlight-text">Join us in transforming Indian agriculture • kapasiraj84-beep.github.io/rtcp-crop-price-app</div>
     </div>
   </div>
 </div>
